@@ -1,0 +1,113 @@
+Date,Site,Treatment,Biomass,Fencing,%OM,P,K,CA,MG,ZN,NA,PH,% N,MQH,MQK,MQCA,MQMG,PCH,PCK,PCCA,PCMG
+4/12/2019,DF,MME Herbivore Exclusion,MME,Herbivore Exclusion,5.1,27,406,9540,250,3.4,52,7.1,0.307,0,0.52,23.85,1.04,0,2.05,93.86,4.09
+4/12/2019,GG,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.3,27,317,6379,310,1.1,12,6.2,0.248,3.5,0.41,15.95,1.29,16.55,1.94,75.41,6.1
+4/12/2019,OS,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.1,9,382,5008,295,0.7,10,6.1,0.223,3.2,0.49,12.52,1.23,18.35,2.81,71.79,7.05
+4/12/2019,WP,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.5,29,296,5897,196,2.6,22,6.5,0.272,2.2,0.38,14.74,0.82,12.13,2.09,81.26,4.52
+5/19/2020,DF,MME Herbivore Exclusion,MME,Herbivore Exclusion,5.88756,72,672,5951,318,6.8,60,7.7,0.349,0,0.86,14.88,1.33,0,5.04,87.17,7.79
+5/19/2020,GG,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.5666,93,725,5983,428,3.4,59,6.8,0.264,1.2,0.93,14.96,1.78,6.36,4.93,79.28,9.43
+5/19/2020,OS,MME Herbivore Exclusion,MME,Herbivore Exclusion,3.1648,83,495,4795,357,2.5,53,5.8,0.193,3.1,0.63,11.99,1.49,18.01,3.66,69.67,8.66
+5/19/2020,WP,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.60616,87,465,6235,198,5.1,51,6.9,0.284,0.5,0.6,15.59,0.83,2.85,3.42,88.98,4.74
+7/21/2020,DF,MME Herbivore Exclusion,MME,Herbivore Exclusion,5.78092,57,608,8717,280,5.6,41,7.4,0.343,0,0.78,21.79,1.17,0,3.29,91.79,4.93
+7/21/2020,GG,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.73,158,854,6524,589,4.5,48,6.6,0.272,1.9,1.09,16.31,2.45,8.74,5.01,74.99,11.26
+7/21/2020,OS,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.55628,240,980,4608,291,5.7,53,5.4,0.287,4.2,1.26,11.52,1.21,23.09,6.93,63.33,6.65
+7/21/2020,WP,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.64744,43,389,7681,201,4.4,42,7.7,0.304,0,0.5,19.2,0.84,0,2.43,93.48,4.09
+5/5/2021,DF,MME Herbivore Exclusion,MME,Herbivore Exclusion,5.84628,35,583,5751,315,5.7,25,7.9,0.356,0,0.75,14.38,1.31,0,4.56,87.47,7.97
+5/5/2021,GG,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.42212,87,525,5408,369,2.2,26,6.6,0.274,1.2,0.67,13.52,1.54,7.09,3.96,79.86,9.1
+5/5/2021,OS,MME Herbivore Exclusion,MME,Herbivore Exclusion,3.34368,71,381,4361,357,2.4,30,5.6,0.21,2.5,0.49,10.9,1.49,16.25,3.19,70.87,9.69
+5/5/2021,WP,MME Herbivore Exclusion,MME,Herbivore Exclusion,4.55456,124,591,4138,228,5.5,30,6.4,0.309,0.6,0.76,10.35,0.95,4.74,6,81.75,7.5
+4/12/2019,DF,MME Open,MME,Open,3.8,12,291,6287,223,3.8,27,7.3,0.391,0,0.37,15.72,0.93,0,2.17,92.36,5.46
+4/12/2019,GG,MME Open,MME,Open,4,17,246,5941,337,0.5,16,6.3,0.226,2.7,0.32,14.85,1.4,14.01,1.66,77.06,7.27
+4/12/2019,OS,MME Open,MME,Open,3.6,7,344,5014,264,0.7,13,6.1,0.202,3.2,0.44,12.54,1.1,18.52,2.55,72.57,6.37
+4/12/2019,WP,MME Open,MME,Open,4.3,22,271,6762,172,2.2,14,7.3,0.273,0,0.35,16.91,0.72,0,1.95,94.05,4
+5/19/2020,DF,MME Open,MME,Open,5.60892,76,510,6152,267,6.4,52,8,0.348,0,0.65,15.38,1.11,0,3.79,89.73,6.48
+5/19/2020,GG,MME Open,MME,Open,3.46408,71,300,6344,353,1.9,48,6.2,0.206,2.3,0.38,15.86,1.47,11.49,1.9,79.26,7.35
+5/19/2020,OS,MME Open,MME,Open,3.182,110,481,5324,288,2.4,45,6.2,0.195,2.6,0.62,13.31,1.2,14.66,3.5,75.07,6.77
+5/19/2020,WP,MME Open,MME,Open,4.7902,64,469,7838,194,4,61,7.8,0.306,0,0.6,19.6,0.81,0,2.86,93.29,3.86
+7/21/2020,DF,MME Open,MME,Open,5.848,94,440,6287,268,7.4,43,7.8,0.363,0,0.56,15.72,1.12,0,3.22,90.34,6.44
+7/21/2020,GG,MME Open,MME,Open,5.18408,131,467,5286,365,5.2,44,5.6,0.297,4.4,0.6,13.22,1.52,22.29,3.04,66.97,7.7
+7/21/2020,OS,MME Open,MME,Open,4.31376,193,795,5452,316,5.7,43,6,0.25,3.4,1.02,13.63,1.32,17.55,5.27,70.37,6.81
+7/21/2020,WP,MME Open,MME,Open,4.74032,58,413,8243,201,4.9,42,7.5,0.3,0,0.53,20.61,0.84,0,2.41,93.77,3.82
+5/5/2021,DF,MME Open,MME,Open,6.95912,41,410,6161,326,6.7,27,8,0.427,0,0.53,15.4,1.36,0,3.07,89.07,7.87
+5/5/2021,GG,MME Open,MME,Open,3.8012,31,336,5279,392,1.9,27,7.2,0.224,0,0.43,13.2,1.63,0,2.82,86.5,10.68
+5/5/2021,OS,MME Open,MME,Open,3.5862,45,365,4215,261,2.3,28,6.1,0.22,1.8,0.47,10.54,1.09,12.95,3.38,75.83,7.84
+5/5/2021,WP,MME Open,MME,Open,4.61132,37,406,4933,196,3.4,27,7.5,0.313,0,0.52,12.33,0.82,0,3.8,90.2,6
+4/12/2019,DF,MME Scavenger Exclusion,MME,Scavenger Exclusion,4,5,580,5949,433,2.2,14,6.2,0.217,2.8,0.74,14.87,1.8,13.85,3.66,73.58,8.91
+4/12/2019,GG,MME Scavenger Exclusion,MME,Scavenger Exclusion,3.9,6,327,8342,255,0.2,24,6.9,0.241,1.2,0.42,20.86,1.06,5.1,1.78,88.62,4.5
+4/12/2019,OS,MME Scavenger Exclusion,MME,Scavenger Exclusion,3.7,6,322,5932,237,0.7,13,6.6,0.22,2,0.41,14.83,0.99,10.97,2.25,81.35,5.43
+4/12/2019,WP,MME Scavenger Exclusion,MME,Scavenger Exclusion,5.3,19,354,8097,237,3.5,14,6.9,0.314,0.8,0.45,20.24,0.99,3.56,2,90.04,4.4
+5/19/2020,DF,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.0248,51,699,6258,460,3,60,6.2,0.226,1.7,0.9,15.65,1.92,8.43,4.46,77.59,9.52
+5/19/2020,GG,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.45996,111,488,8447,302,3.7,51,7.1,0.264,0,0.63,21.12,1.26,0,2.74,91.79,5.48
+5/19/2020,OS,MME Scavenger Exclusion,MME,Scavenger Exclusion,3.89236,111,545,6623,249,2.9,48,6.8,0.238,1.2,0.7,16.56,1.04,6.15,3.59,84.92,5.33
+5/19/2020,WP,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.7386,100,546,7657,246,5.5,60,7.4,0.289,0,0.7,19.14,1.03,0,3.35,91.71,4.94
+7/21/2020,DF,MME Scavenger Exclusion,MME,Scavenger Exclusion,5.50916,239,1032,6363,510,8.5,50,6.1,0.324,3,1.32,15.91,2.13,13.42,5.9,71.15,9.53
+7/21/2020,GG,MME Scavenger Exclusion,MME,Scavenger Exclusion,6.20232,118,545,6930,278,4.8,42,6.4,0.343,2.4,0.7,17.33,1.16,11.12,3.24,80.27,5.37
+7/21/2020,OS,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.73344,172,691,6022,284,6.7,44,6.2,0.293,2.6,0.89,15.06,1.18,13.18,4.51,76.33,5.98
+7/21/2020,WP,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.91232,216,655,7116,276,10.4,43,7.2,0.3,0,0.84,17.79,1.15,0,4.25,89.94,5.81
+5/5/2021,DF,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.3516,33,845,5755,605,2.8,30,6.9,0.248,0.7,1.08,14.39,2.52,3.75,5.78,76.99,13.48
+5/5/2021,GG,MME Scavenger Exclusion,MME,Scavenger Exclusion,4.57004,78,409,5520,270,2.7,24,7,0.288,0,0.52,13.8,1.13,0,3.37,89.32,7.31
+5/5/2021,OS,MME Scavenger Exclusion,MME,Scavenger Exclusion,3.97664,65,500,4751,275,2.2,31,6.7,0.24,0.7,0.64,11.88,1.15,4.87,4.45,82.67,8
+5/5/2021,WP,MME Scavenger Exclusion,MME,Scavenger Exclusion,5.70868,175,594,5424,260,7,26,7.5,0.384,0,0.76,13.56,1.08,0,4.94,88.05,7.01
+4/12/2019,DF,No Carrion Reference,Reference,Reference,3.5,15,362,6281,232,3,13,7.4,0.365,0,0.46,15.7,0.97,0,2.69,91.65,5.66
+4/12/2019,GG,No Carrion Reference,Reference,Reference,4.4,12,232,6402,239,1,11,6.8,0.281,1.7,0.3,16.01,1,8.94,1.58,84.22,5.26
+4/12/2019,OS,No Carrion Reference,Reference,Reference,4.3,6,410,5554,278,0.9,9,6.4,0.232,2.7,0.53,13.89,1.16,14.77,2.9,75.98,6.35
+4/12/2019,WP,No Carrion Reference,Reference,Reference,4.4,33,221,5609,203,1.8,11,6.5,0.247,3,0.28,14.02,0.85,16.53,1.54,77.25,4.68
+5/19/2020,DF,No Carrion Reference,Reference,Reference,5.19956,29,441,5843,261,4.3,62,7.9,0.323,0,0.57,14.61,1.09,0,3.5,89.8,6.7
+5/19/2020,GG,No Carrion Reference,Reference,Reference,4.49264,26,304,7650,247,1.7,49,7.4,0.285,0,0.39,19.13,1.03,0,1.9,93.09,5.01
+5/19/2020,OS,No Carrion Reference,Reference,Reference,3.46236,26,416,5744,431,2.1,48,6.5,0.197,1.7,0.53,14.36,1.8,9.24,2.88,78.09,9.79
+5/19/2020,WP,No Carrion Reference,Reference,Reference,3.96116,38,408,7180,211,2.8,43,7.3,0.24,0,0.52,17.95,0.88,0,2.69,92.76,4.55
+7/21/2020,DF,No Carrion Reference,Reference,Reference,5.42488,38,467,5825,256,4.3,41,7.7,0.343,0,0.6,14.56,1.07,0,3.7,89.71,6.59
+7/21/2020,GG,No Carrion Reference,Reference,Reference,4.69216,32,331,7246,255,2.8,41,7,0.288,0,0.42,18.12,1.06,0,2.14,92.45,5.41
+7/21/2020,OS,No Carrion Reference,Reference,Reference,5.95636,34,604,5935,374,5.5,44,6.4,0.322,2.2,0.77,14.84,1.56,11.36,3.98,76.61,8.05
+7/21/2020,WP,No Carrion Reference,Reference,Reference,4.69732,51,354,7901,244,4,42,6.8,0.272,1.8,0.45,19.75,1.02,7.82,1.95,85.79,4.43
+5/5/2021,DF,No Carrion Reference,Reference,Reference,5.42488,17,359,5628,260,3.8,25,7.8,0.349,0,0.46,14.07,1.08,0,2.95,90.13,6.92
+5/5/2021,GG,No Carrion Reference,Reference,Reference,4.30516,18,279,5330,245,1.7,27,7.2,0.285,0,0.36,13.33,1.02,0,2.45,90.62,6.93
+5/5/2021,OS,No Carrion Reference,Reference,Reference,3.49676,11,332,4681,355,3.3,32,6.5,0.207,1,0.43,11.7,1.48,6.84,2.94,80.08,10.13
+5/5/2021,WP,No Carrion Reference,Reference,Reference,4.386,28,364,4932,265,2.8,24,7.2,0.278,0,0.47,12.33,1.1,0,3.38,88.71,7.91
+4/12/2019,DF,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.2,19,325,5842,201,1.4,11,7.1,0.254,0,0.42,14.61,0.84,0,2.65,92.06,5.29
+4/12/2019,GG,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.9,15,282,5039,263,0.4,10,6.2,0.221,3.2,0.36,12.6,1.1,18.54,2.09,73,6.37
+4/12/2019,OS,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.1,5,414,5442,262,1,10,6.6,0.227,2.2,0.53,13.61,1.09,12.62,3.04,78.08,6.25
+4/12/2019,WP,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4,19,337,5283,220,1.8,10,6.7,0.231,2,0.43,13.21,0.92,12.08,2.6,79.77,5.56
+5/19/2020,DF,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.11424,32,391,6904,212,2,45,7.4,0.249,0,0.5,17.26,0.88,0,2.68,92.6,4.72
+5/19/2020,GG,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.56212,40,340,6068,329,1.7,49,6.5,0.213,2,0.44,15.17,1.37,10.54,2.32,79.93,7.22
+5/19/2020,OS,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.48816,29,532,5905,297,2.2,43,6.6,0.203,1.5,0.68,14.76,1.24,8.25,3.74,81.19,6.82
+5/19/2020,WP,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.43828,65,478,5437,236,2.9,44,6.9,0.21,0.7,0.61,13.59,0.98,4.41,3.84,85.58,6.17
+7/21/2020,DF,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.66636,39,400,6492,240,3.4,41,7.4,0.278,0,0.51,16.23,1,0,2.87,91.49,5.64
+7/21/2020,GG,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,5.11184,50,408,5266,333,3.6,40,6,0.284,3.1,0.52,13.17,1.39,17.05,2.86,72.44,7.65
+7/21/2020,OS,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.85556,18,516,4571,308,3.6,40,6.5,0.256,2,0.66,11.43,1.28,13.01,4.29,74.37,8.33
+7/21/2020,WP,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.71968,62,520,5272,252,5.4,42,6.6,0.274,1.6,0.67,13.18,1.05,9.7,4.06,79.88,6.36
+5/5/2021,DF,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.56316,46,405,4689,245,2.9,23,7.1,0.287,0,0.52,11.72,1.02,0,3.92,88.39,7.69
+5/5/2021,GG,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,4.00416,21,335,4616,302,2.9,37,6.5,0.243,0.9,0.43,11.54,1.26,6.37,3.04,81.67,8.92
+5/5/2021,OS,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.72208,16,483,4511,298,1.9,25,6.6,0.219,0.7,0.62,11.28,1.24,5.06,4.48,81.5,8.96
+5/5/2021,WP,Single Carcass Herbivore Exclusion,Single Carcass,Herbivore Exclusion,3.80808,28,368,4293,219,2.2,25,6.8,0.24,0,0.47,10.73,0.91,0,3.88,88.6,7.51
+4/12/2019,DF,Single Carcass Open,Single Carcass,Open,4.1,7,475,5844,298,1.1,12,6.8,0.231,1.7,0.61,14.61,1.24,9.36,3.36,80.45,6.83
+4/12/2019,GG,Single Carcass Open,Single Carcass,Open,5,15,286,7705,220,0.7,10,7.1,0.298,0,0.37,19.26,0.92,0,1.8,93.72,4.48
+4/12/2019,OS,Single Carcass Open,Single Carcass,Open,3.7,5,407,5163,332,1,10,6.3,0.2,3,0.52,12.91,1.38,16.84,2.92,72.49,7.75
+4/12/2019,WP,Single Carcass Open,Single Carcass,Open,4.1,23,247,6772,159,2,12,7.2,0.266,0,0.32,16.93,0.66,0,1.79,94.53,3.69
+5/19/2020,DF,Single Carcass Open,Single Carcass,Open,3.69112,24,437,6812,307,1.5,47,7,0.204,0,0.56,17.03,1.28,0,2.97,90.25,6.78
+5/19/2020,GG,Single Carcass Open,Single Carcass,Open,5.07744,28,410,6449,254,2.6,54,7.5,0.302,0,0.53,16.12,1.06,0,2.99,91.02,5.99
+5/19/2020,OS,Single Carcass Open,Single Carcass,Open,3.63264,28,567,5532,388,2.2,46,6.5,0.195,2,0.73,13.83,1.62,11,4.02,76.07,8.91
+5/19/2020,WP,Single Carcass Open,Single Carcass,Open,4.11424,39,378,8072,195,4,48,7.6,0.265,0,0.48,20.18,0.81,0,2.24,93.99,3.77
+7/21/2020,DF,Single Carcass Open,Single Carcass,Open,4.77816,28,579,6417,346,3.3,40,6.9,0.266,1,0.74,16.04,1.44,5.2,3.85,83.45,7.49
+7/21/2020,GG,Single Carcass Open,Single Carcass,Open,5.2632,40,344,7044,250,2.8,44,6.7,0.31,1.6,0.44,17.61,1.04,7.73,2.13,85.11,5.03
+7/21/2020,OS,Single Carcass Open,Single Carcass,Open,4.77128,34,705,5290,421,4.3,45,6.4,0.248,2.2,0.9,13.23,1.75,12.17,4.98,73.17,9.68
+7/21/2020,WP,Single Carcass Open,Single Carcass,Open,4.85556,162,567,8056,206,7.6,39,7.3,0.302,0,0.73,20.14,0.86,0,3.36,92.68,3.96
+5/5/2021,DF,Single Carcass Open,Single Carcass,Open,3.86312,20,517,5405,343,1.6,24,7,0.22,0,0.66,13.51,1.43,0,4.23,86.6,9.17
+5/5/2021,GG,Single Carcass Open,Single Carcass,Open,5.33372,18,374,6015,260,2.2,22,7.5,0.338,0,0.48,15.04,1.08,0,2.89,90.6,6.51
+5/5/2021,OS,Single Carcass Open,Single Carcass,Open,3.45376,31,351,4556,333,1.1,31,6.1,0.205,1.5,0.45,11.39,1.39,10.18,3.05,77.33,9.44
+5/5/2021,WP,Single Carcass Open,Single Carcass,Open,4.17616,26,302,4734,180,2.8,26,7.8,0.288,0,0.39,11.84,0.75,0,3,91.22,5.78
+4/12/2019,DF,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.6,12,404,7930,224,1.2,10,7.2,0.285,0,0.52,19.83,0.93,0,2.44,93.19,4.37
+4/12/2019,GG,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4,13,269,5944,243,0.4,9,6.4,0.242,2.6,0.34,14.86,1.01,13.82,1.81,79,5.37
+4/12/2019,OS,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.6,6,397,5015,307,1.1,10,6.4,0.201,2.8,0.51,12.54,1.28,16.35,2.98,73.2,7.47
+4/12/2019,WP,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.8,16,231,6127,193,1.2,10,7.1,0.236,0,0.3,15.32,0.8,0,1.83,93.3,4.87
+5/19/2020,DF,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.65776,30,463,5657,268,2.9,51,7.6,0.287,0,0.59,14.14,1.12,0,3.72,89.21,7.07
+5/19/2020,GG,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.28108,40,411,7524,294,2.3,60,6.8,0.257,0.9,0.53,18.81,1.23,4.19,2.47,87.61,5.73
+5/19/2020,OS,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.7582,28,452,5593,370,2.4,57,6.6,0.204,1.5,0.58,13.98,1.54,8.52,3.3,79.43,8.75
+5/19/2020,WP,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.76852,27,290,7174,217,2.4,46,7.4,0.231,0,0.37,17.94,0.9,0,1.93,93.39,4.69
+7/21/2020,DF,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.94844,41,365,7132,230,2.9,40,7.3,0.31,0,0.47,17.83,0.96,0,2.44,92.58,4.98
+7/21/2020,GG,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,5.60204,51,413,7387,293,3.7,41,6.7,0.318,1.8,0.53,18.47,1.22,8.17,2.41,83.88,5.54
+7/21/2020,OS,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.90716,46,552,5773,385,4.9,42,6.3,0.263,2.6,0.71,14.43,1.6,13.44,3.67,74.61,8.27
+7/21/2020,WP,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.87448,38,366,6163,255,3.8,40,7,0.296,0,0.47,15.41,1.06,0,2.77,90.97,6.26
+5/5/2021,DF,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,5.92024,22,411,5526,264,2.7,25,7.6,0.375,0,0.53,13.82,1.1,0,3.43,89.45,7.12
+5/5/2021,GG,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,4.41524,29,342,5128,273,1.8,21,7.1,0.273,0,0.44,12.82,1.14,0,3.06,89.03,7.92
+5/5/2021,OS,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.29208,29,397,4292,389,1.7,26,6.4,0.191,1.3,0.51,10.73,1.62,9.18,3.6,75.78,11.44
+5/5/2021,WP,Single Carcass Scavenger Exclusion,Single Carcass,Scavenger Exclusion,3.99556,36,304,4536,200,1.5,32,6.7,0.265,0.5,0.39,11.34,0.83,3.83,2.99,86.83,6.36

@@ -1,0 +1,369 @@
+## Author: David S. Mason, UF D.E.E.R. Lab
+## Department: Wildlife Ecology and Conservation
+## Affiliaton: University of Florida
+## Date Created: 2022-04-07
+## Date Last modified: 2022-04-15
+## Copyright (c) David S. Mason, 2022
+## Contact: masond@ufl.edu, @EcoGraffito
+
+
+# Notes  
+Baskin, C. C., & Baskin, J. M. (2004). Germinating seeds of wildflowers, an ecological perspective. HortTechnology, 14(4), 467-473.
+
+CD dormancy is very similar to nondormancy. May be more important to say species that CAN be nondormant
+Same with combination PY and PD (Trifolium). May be more important to say species HAS physical dormancy.
+
+Whats the diffference in terms of evenness among plants constituting the dormancy classes. In other words, are different physical dormancy species popping up in different sites while PD is constituted by few dominant species?
+
+Species including PD (MPD) are PD [have physiological components]
+Species including some degree of PY are PY [have physical capabilities]
+Species including ND are ND [have non dormant capabilities]
+
+## List of species seed dormancy types
+
+### Digitaria ciliaris [ND]
+
+Chauhan, B. S., & Johnson, D. E. (2008). Germination ecology of southern crabgrass (Digitaria ciliaris) and India crabgrass (Digitaria longiflora): two important weeds of rice in tropics. Weed Science, 56(5), 722-728.
+
+*Digitaria ciliaris has dormant and non-dormant seeds. 
+
+### Aristida purpurescens and Aristida [NA]
+
+No sources found
+
+### Opuntia [PD]
+
+Orozco-Segovia, A., Márquez-Guzmán, J., Sánchez-Coronado, M. E., Gamboa de Buen, A., Baskin, J. M., & Baskin, C. C. (2007). Seed anatomy and water uptake in relation to seed dormancy in Opuntia tomentosa (Cactaceae, Opuntioideae). Annals of Botany, 99(4), 581-592.
+
+### Tragia ramosa [PD]
+
+No sources found.
+
+### Ambrosia psilostachya [PD] [non-deep]
+
+Bassett, I. J., & Crompton, C. W. (1975). THE BIOLOGY OF CANADIAN WEEDS.: 11. Ambrosia artemisiifolia L. and A. psilostachya DC. Canadian Journal of Plant Science, 55(2), 463-476.
+
+Savić, A., Oveisi, M., Božić, D., Pavlović, D., Saulić, M., Schärer, H. M., & Vrbničanin, S. (2021). Competition between Ambrosia artemisiifolia and Ambrosia trifida: Is there a threat of a stronger competitor?. Weed Research, 61(4), 298-306.
+
+Similar ecological niche and all pd in database.
+
+### Nasella leucotricha [PD]
+
+Van Auken, O. W. (1997). Germination requirements of aerial chasmogamous florets and seeds of Nassella leucotricha (Poaceae). The Southwestern Naturalist, 194-200.
+
+### Eriogonum longifolium [ND]
+
+Eriogonum species can be physiological dormant or non-dormant. In the study below, the seeds were collected and sown within two weeks; those seeds germinated within two weeks. That sounds like a nondormant seed, but the physiological change may have occured within that period.
+
+	How long do physiological changes take to affect germination
+	Talk to Eric Menges
+
+Satterthwaite, W. H., Menges, E. S., & Quintana-Ascencio, P. F. (2002). Assessing scrub buckwheat population viability in relation to fire using multiple modeling techniques. Ecological Applications, 12(6), 1672-1687.
+
+### Gaura villosa [PD]
+
+Related species, Gaura neomexicana, has physiological dormancy. 
+Burgess, L. M., Hild, A. L., & Shaw, N. L. (2005). Capsule treatments to enhance seedling emergence of Gaura neomexicana ssp. coloradensis. Restoration Ecology, 13(1), 8-14.
+Aliscioni, S. S., Giussani, L. M., Zuloaga, F. O., & Kellogg, E. A. (2003). A molecular phylogeny of Panicum (Poaceae: Paniceae): tests of monophyly and phylogenetic placement within the Panicoideae. American Journal of Botany, 90(5), 796-821.
+
+### Linum pratense [PD]
+
+No sources found.
+
+### Lolium perenne [PD]
+
+Fernández, R., Chantre, G. R., & Renzi, J. P. (2021). Seed dormancy of Lolium perenne L. related to the maternal environment during seed filling. Seed Science Research, 31(3), 217-223.
+
+### Castilleja sp [PD]
+
+Infereed from Baskin database (all included species are PD)
+
+### Pyrrhopappus carolinianus [PD]
+
+Inferred similarity with Pyrrhopappus multicaulis/Pyrrhopappus pauciflorus
+
+Likely hybridization when sympatric
+
+Turner, B. L., & Kim, K. J. (1990). An overview of the genus Pyrrhopappus (Asteraceae: Lactuceae) with emphasis on chloroplast DNA restriction site data. American Journal of Botany, 77(7), 845-850.
+
+Source? 
+
+### Asclepias asperula [ND]
+
+Kaye, T. N., Sandlin, I. J., & Bahm, M. A. (2018). Seed dormancy and germination vary within and among species of milkweeds. AoB Plants, 10(2), ply018.
+
+### Sida sp [PY]
+
+All Sida species in Baskin database are PY. Also, the only Sida species occuring on the site (check?) are included in the database.
+
+### Croton spp [PD]
+
+Baskin and Baskin book says PD is more common in temperate
+
+All croton species in database are PD
+
+### Paronychia jamesii [N]
+
+P. jamesii is generally similar ecologically to P. chartacea, which has ND. However, the description of dornmancy for P. erect sounds like PD.
+
+Miller, Debbie, Mack Thetford, Chris Verlinde, Gabriel Campbell, and Ashlynn Smith. "Squareflower, Paronychia erecta: SGEB-75-18/SG179, 9/2018." EDIS 2018, no. 5 (2018).
+Stephens, E.L., L. Castro-Morales, and P.F. Quintana-Ascencio. 2012. “Post-dispersal seed predation, germination, and seedling survival of five rare Florida scrub species in intact and degraded habitats.” American Midland Naturalist. 167:223–239.
+
+Boufford, D. E. Paronychia. In: Flora of North America Editorial Committee, eds. 1993+. Flora of North America North of Mexico [Online]. 22+ vols. New York and Oxford. Vol. 5. http://beta.floranorthamerica.org/Paronychia. Accessed [7 April 2022].
+
+Paronychia jamesii
+Phenology: Flowering summer–fall.
+Habitat: Limestone rocky ledges, slopes, hilltops, grasslands
+Elevation: 500-2500 m
+
+Paronychia erecta
+Phenology: Flowering spring–fall.
+Habitat: Coastal dunes, sandflats, pine/oak woodlands
+Elevation: 0-100 m
+
+Paronychia chartacea var. chartaceae 
+Phenology: Flowering year-round (mainly Aug–Mar).
+Habitat: Sandhills, pine/oak woodland, open scrub
+Elevation: 30-50 m
+
+### Helianthus hirsutus [PD]
+
+Found in Baskin database under synonym based on plantlist.org
+
+### Engelmannia peristenia [PD]
+
+Found as synonym on Integrated Taxonomic Information System (ITIS)
+Listed as disitnct speices from E. pinnatifida on plantlist.org 
+Inferred similarity and used record for E. pinnatifida from Baskin database
+
+### Evax verna [PD]
+
+Evax verna includes Evax multicaulis, which is listed in the Baskin database
+Morefield, J. D. (2004). New taxa and names in North American Ancistrocarphus, Diaperia, and Logfia (Asteraceae: Gnaphalieae: Filagininae) and related taxa. Novon, 463-475.
+
+### Trifolium sp [PY]
+
+Trifolium sp in database are PY
+
+### Allium sp [PD]
+
+Allium sp in database all include PD
+
+### Vicia sp [PY]
+
+Vicia sp in database all include PY
+
+### Byrophyta sp [NA]
+
+Mosses possess spores rather than 
+.
+
+### Sporobolus compositus [PD]
+
+synonym with Sporobolus asper in plant.org and ITIS 
+Sporobolus asper is PD in Baskins database
+
+### Scutellaria ovata [PD]
+
+Scutellaria species are all PD in Baskin database and there is evidence of seed banking.
+
+Schuler, J. L., & Liechty, H. O. (2008). Seed bank emergence following prescribed burning in the Ozark Highlands. In In: Jacobs, Douglass F.; Michler, Charles H., eds. 2008. Proceedings, 16th Central Hardwood Forest Conference; 2008 April 8-9; West Lafayette, IN. Gen. Tech. Rep. NRS-P-24. Newtown Square, PA: US Department of Agriculture, Forest Service, Northern Research Station: 516-524. (Vol. 24).
+
+### Solidago sp [PD]
+
+Widespread/common species of Solidago are listed as conditional dormancy (cyclic ND/PD) but most species are PD in the database.  
+
+Walck, J. L., Baskin, J. M., & Baskin, C. C. (1997). A comparative study of the seed germination biology of a narrow endemic and two geographically-widespread species of Solidago (Asteraceae). 4. Role of soil moisture in regulating germination. Seed Science Research, 7(3), 303-310.
+
+Walck, J. L., Baskin, J. M., & Baskin, C. C. (2000). SHORT COMMUNICATION Increased sensitivity to green light during transition from conditional dormancy to nondormancy in seeds of three species of Solidago (Asteraceae). Seed Science Research, 10(4), 495-499.
+
+### Convolvulus equitans [PY]
+
+All Convolvulus species in Baskin database are PY.
+
+### Linum rigidum [PD]
+
+Most species of temperate Linum sp are PD. Also, there is data indicating physiological dormancy associated with plant hormones.
+
+Not peer reviewed:
+Twitty, B. P., & Montgomery, B. (2014). Factors Influencing Seed Germination for Linum rigidum (Yellow Stiff Flax). George Manuel and Dr. Cole Cheek Spartanburg Methodist College, 141.
+
+### Diodia teres [PD]
+
+This species is in the Baskins database as PD. However, the name is mispelled in our data, which prevented merging with the Baskin database (Diodia is correctly spelled Diodea).
+
+### Phyllanthus polygonoides [NA]
+
+No sources. Genus has both ND and PD. 
+
+### Houstonia pusilla [PD]
+
+Listed as emerging from seed bank
+Beauchamp, V. B., Ghuznavi, N., Koontz, S. M., & Roberts, R. P. (2013). Edges, exotics and deer: the seed bank of a suburban secondary successional temperate deciduous forest. Applied Vegetation Science, 16(4), 571-584.
+
+However, only Houstonia species in Baskin & Baskin is ND and the seed bank samples may be contaminated with transient species. In this study, the plant was not recorded.
+
+### Hedeoma drummondii [NA]
+
+Indications of presence in seed bank but no distinguishing transients. Only Heodeoma entry in Baskins database is PD.
+
+Helms, E. R. (2012). Contributions of Seed Bank and Vegetative Propagules to Vegetation Composition on Prairie Dog Colonies in Western South Dakota. The Journal of Undergraduate Research, 10(1), 5.
+Iverson, L. R., & Wali, M. K. (1982). Buried, viable seeds and their relation to revegetation after surface mining. Rangeland Ecology & Management/Journal of Range Management Archives, 35(5), 648-652.
+
+### Asclepias verticillata [PD]
+
+All Ascelpias species in Baskins database are PD.
+
+### Sisyrinchium sp [PD]
+
+Sisyrinchium species in Baskins database include PD.
+
+### Cirsium texanum [PD]
+
+All but one Cirsium species in Baskins database are PD. Also, a closely related species is in database as PD.
+
+Häffner, E., & Hellwig, F. H. (1999). Phylogeny of the tribe Cardueae (Compositae) with emphasis on the subtribe Carduinae: an analysis based on ITS sequence data. Willdenowia, 29(1/2), 27-39.
+
+### Lobelia sp [PD]
+
+Lobelia species at NRI is most likely Lobelia cardinalis, which is in the Baskins database as PD.
+
+### Dalea purpurea [PY]
+
+All four specis of Dalea in the Baskins database are PY. This plant also belongs to Fabaceae.
+
+### Krameria lanceolata [PD]
+
+Temperature appeared to have some impact on germination.
+Musselman, L. J., & Mann Jr, W. F. (1977). Seed germination and seedlings of Krameria lanceolata (Krameriaceae)[a hemiparasite, forming haustoria on roots of neighboring plants]. Sida.
+
+### Agalinis heterophylla [PD]
+
+All Agalinis species in the Baskins database are PD
+
+### Andropogon sp [PD]
+
+All Andropogon species in the Baskins database are PD
+
+### Sabatia camprestris [PD]
+
+All Sabatia species in the Baskins database are MPD
+
+### Eryngium leavenworthii [PD]
+
+All but one of the five species in the database are MPD. None of these species are closely related to E. leavenworthii.
+
+Calviño, C. I., Martínez, S. G., & Downie, S. R. (2010). Unraveling the taxonomic complexity of Eryngium L.(Apiaceae, Saniculoideae): Phylogenetic analysis of 11 non-coding cpDNA loci corroborates rapid radiations. Plant Diversity and Evolution, 128(1), 137.
+
+### Hymenopappus tenuifolius [NA]
+
+No sources. Only other species in database is PD.
+
+### Setaria spp [PD]
+
+All 15 Setaria species in the Baskins database are PD.
+
+### Verbena halei [PD]
+
+Verbena halei is a synonym for Verbena officinalis, which is in the Baskin database as PD.
+plant.org and ITIS 
+
+### Verbena halei [PD]
+
+Verbena halei is a synonym for Verbena officinalis, which is in the Baskin database as PD.
+plant.org and ITIS 
+
+### Eragrostis curtipedicellata [PD]
+
+17 out of 20 Eragrostis species in the Baskins database are PD. No sources for phylogenetic relatedness discovered. However, all the nondormant species are tropical.
+
+### Lesquerella sp [PD]
+
+All eight Lesquerella species in the Baskins database are PD.
+
+### Erioneuron pilosum [NA]
+
+Evidence of seed banking but may include transient species.
+Kinucan, R. J., & Smeins, F. E. (1992). Soil seed bank of a semiarid Texas grassland under three long-term (36-years) grazing regimes. American Midland Naturalist, 11-21.
+
+### Panicum sp [PD]
+
+All 19 Panicum species in the Baskins database are PD.
+
+### Bothriochloa ischaemum [PD]
+
+Six of seven species in the Baskins database are PD. The one example with ND was also listed as PD. No phylogenetic sources discovered.
+
+Ahring, R. M., & Harlan, J. R. (1961). Germination Characteristics of Some Accessions of'Bothriochloa ischaemum'(L.) Keng.
+
+### Bothriochloa laguroides [PD]
+
+Six of seven species in the Baskins database are PD. No phylogenetic sources discovered.
+
+### Glandularia bipinnatifida [PD]
+
+G. bipinnatifida is a synoynm for Verbena bipinnatifida on plant.org   
+
+### Stylosanthes biflora [PY]
+
+All five of the Stylosanthes species in the Baskins database are PY.
+
+### Chamaesyce sp [NA]
+
+Chamaesyce is a synonym for Euphorbia on plantlist.org
+18 out of 24 Euphorbia species are PD in the Baskins database; the remaining entries are ND.
+Two of the eight Euphorbia species at Nobel are listed as PD in the Baskins database.
+
+### Oxalis sp [ND]
+
+Oxalis dillenii occurs at Nobel Research Institute.
+This species may be a synonym for Oxalis corniculata according to plant.org
+Oxalis corniculata is ND in the Baskins database.
+
+### Packera obovata [NA] *MIGHT NEED TO DO MORE WORK HERE*
+
+Species of Packera hybridize
+Seglias AE, Williams E, Bilge A, Kramer AT (2018) Phylogeny and source climate impact seed dormancy and germination of restoration-relevant forb species. PLoS ONE 13(2): e0191931. https://doi.org/10.1371/journal.pone.0191931
+
+Closely related to genera Pericallis and Emilia 
+Bain, J. F., & Golden, J. L. (2000). A phylogeny of Packera (Senecioneae; Asteraceae) based on internal transcribed spacer region sequence data and a broad sampling of outgroups. Molecular Phylogenetics and Evolution, 16(3), 331-338.
+Pelser, P. B., Nordenstam, B., Kadereit, J. W., & Watson, L. E. (2007). An ITS phylogeny of tribe Senecioneae (Asteraceae) and a new delimitation of Senecio L. Taxon, 56(4), 1077-1104.
+
+Packera tomentosa has dimorphic seeds; one type is nondormant?
+Leverett, L. D., & Jolls, C. L. (2014). Cryptic seed heteromorphism in Packera tomentosa (Asteraceae): differences in mass and germination. Plant Species Biology, 29(2), 169-180. 
+
+### Bothriochloa saccharoides [PD]
+
+Six of seven species in the Baskins database are PD. The one example with ND was also listed as PD. No phylogenetic sources discovered.
+
+### Erigeron lonchophyllus / Erigeron sp
+
+Erigeron lonchophyllus does not occur in Oklahoma. 
+Boufford, D. E. Paronychia. In: Flora of North America Editorial Committee, eds. 1993+. Flora of North America North of Mexico [Online]. 22+ vols. New York and Oxford. Vol. 20. http://beta.floranorthamerica.org/Erigeron. Accessed [8 April 2022].
+
+Two species of Erigeron occur at the Noble Research Institute: E. annus and E. philadelphicus. Both occuring species are listed as ND in the Baskins database.
+
+### Dyschoriste linearis [NA]
+
+No information in database. Family (Acanthaceae) contains different seed dormancy classes. Related genera are also not included. No sources found.
+
+Tripp, E. A., Daniel, T. F., Fatimah, S., & McDade, L. A. (2013). Phylogenetic relationships within Ruellieae (Acanthaceae) and a revised classification. International Journal of Plant Sciences, 174(1), 97-137.
+
+### Cassia marilandica [PY]
+
+Cassia marilandica is a synonym for Senna marilandica on www.theplantlist.org
+Senna marilandica is listed as PY in the Baskins database.
+
+### Lamiaceae sp [NA]
+
+Species present at the Noble Research Institute belong to both PD and ND dormancy classes in the Baskins database.
+
+### Gaura suffulta [PD] combined with other Gaura
+
+Related species, Gaura neomexicana, has physiological dormancy. 
+Burgess, L. M., Hild, A. L., & Shaw, N. L. (2005). Capsule treatments to enhance seedling emergence of Gaura neomexicana ssp. coloradensis. Restoration Ecology, 13(1), 8-14.
+Aliscioni, S. S., Giussani, L. M., Zuloaga, F. O., & Kellogg, E. A. (2003). A molecular phylogeny of Panicum (Poaceae: Paniceae): tests of monophyly and phylogenetic placement within the Panicoideae. American Journal of Botany, 90(5), 796-821.
+
+### Phyllanthus polygonoides [NA]
+
+No sources found

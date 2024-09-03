@@ -1,0 +1,529 @@
+"Date","Site","Biomass","Fencing","Variable","Effect.size"
+2020-08-01,"DF","MME","Herbivore exclusion","N",0.495461561941247
+2020-08-01,"DF","MME","Herbivore exclusion","Ca",-0.184769538432594
+2020-08-01,"DF","MME","Herbivore exclusion","K",0.743717424493861
+2020-08-01,"DF","MME","Herbivore exclusion","Mg",0.0723206615796261
+2020-08-01,"DF","MME","Herbivore exclusion","P",0.711839313572098
+2020-08-01,"DF","MME","Herbivore exclusion","S",0.238411023444998
+2020-08-01,"DF","MME","Herbivore exclusion","Cu",0.278565298203347
+2020-08-01,"DF","MME","Herbivore exclusion","Zn",-0.0560795506252001
+2020-08-01,"DF","MME","Herbivore exclusion","Mn",-0.0875623312124087
+2020-08-01,"DF","MME","Herbivore exclusion","Fe",-0.337724765363784
+2020-08-01,"DF","MME","Herbivore exclusion","B",-0.238666251054719
+2020-08-01,"DF","Single carcass","Herbivore exclusion","N",0.0848603357113155
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Ca",0.268551590853205
+2020-08-01,"DF","Single carcass","Herbivore exclusion","K",0.57695726297191
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Mg",0.117783035656383
+2020-08-01,"DF","Single carcass","Herbivore exclusion","P",0.424157241120317
+2020-08-01,"DF","Single carcass","Herbivore exclusion","S",0.26826398659468
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Cu",0.0399448976544657
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Zn",-0.420654654591646
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Mn",0.0196180378047998
+2020-08-01,"DF","Single carcass","Herbivore exclusion","Fe",-0.263791860534193
+2020-08-01,"DF","Single carcass","Herbivore exclusion","B",-0.618001606526652
+2020-08-01,"DF","MME","Open control","N",0.152547858519218
+2020-08-01,"DF","MME","Open control","Ca",0.145380232449131
+2020-08-01,"DF","MME","Open control","K",0.161412875869043
+2020-08-01,"DF","MME","Open control","Mg",0.182321556793955
+2020-08-01,"DF","MME","Open control","P",0.360441426734209
+2020-08-01,"DF","MME","Open control","S",0.074107972153722
+2020-08-01,"DF","MME","Open control","Cu",-0.201127420749835
+2020-08-01,"DF","MME","Open control","Zn",-0.245193234092507
+2020-08-01,"DF","MME","Open control","Mn",-0.0905186418758031
+2020-08-01,"DF","MME","Open control","Fe",-0.251455060053633
+2020-08-01,"DF","MME","Open control","B",-0.00284765261251162
+2020-08-01,"DF","Single carcass","Open control","N",0.145787813461499
+2020-08-01,"DF","Single carcass","Open control","Ca",0.0775947260348964
+2020-08-01,"DF","Single carcass","Open control","K",0.652360616251035
+2020-08-01,"DF","Single carcass","Open control","Mg",0.0953101798043247
+2020-08-01,"DF","Single carcass","Open control","P",0.306374205463933
+2020-08-01,"DF","Single carcass","Open control","S",0.159630145591884
+2020-08-01,"DF","Single carcass","Open control","Cu",0.146292093214737
+2020-08-01,"DF","Single carcass","Open control","Zn",0.186211581603551
+2020-08-01,"DF","Single carcass","Open control","Mn",0.57186476940813
+2020-08-01,"DF","Single carcass","Open control","Fe",-0.1980980385345
+2020-08-01,"DF","Single carcass","Open control","B",0.117537262082827
+2020-08-01,"DF","MME","Scavenger exclusion","N",0.958009185441447
+2020-08-01,"DF","MME","Scavenger exclusion","Ca",2.11545984086899
+2020-08-01,"DF","MME","Scavenger exclusion","K",1.50935445387712
+2020-08-01,"DF","MME","Scavenger exclusion","Mg",1.82656339142275
+2020-08-01,"DF","MME","Scavenger exclusion","P",1.19449406037139
+2020-08-01,"DF","MME","Scavenger exclusion","S",2.27133254948994
+2020-08-01,"DF","MME","Scavenger exclusion","Cu",0.0396157878933907
+2020-08-01,"DF","MME","Scavenger exclusion","Zn",0.519120165117884
+2020-08-01,"DF","MME","Scavenger exclusion","Mn",0.779557385945914
+2020-08-01,"DF","MME","Scavenger exclusion","Fe",-0.155993754361156
+2020-08-01,"DF","MME","Scavenger exclusion","B",1.94780408901538
+2020-08-01,"DF","Single carcass","Scavenger exclusion","N",-0.0817257375238296
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Ca",0.03129015799321
+2020-08-01,"DF","Single carcass","Scavenger exclusion","K",0.368509401585735
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Mg",0.0368139731227164
+2020-08-01,"DF","Single carcass","Scavenger exclusion","P",0.124052648669979
+2020-08-01,"DF","Single carcass","Scavenger exclusion","S",-0.0392207131532812
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Cu",-0.483241550086371
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Zn",-0.221257194263777
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Mn",-0.198429974143496
+2020-08-01,"DF","Single carcass","Scavenger exclusion","Fe",-0.402750805007532
+2020-08-01,"DF","Single carcass","Scavenger exclusion","B",-0.518490521871086
+2021-05-04,"DF","MME","Herbivore exclusion","N",0.377556319991088
+2021-05-04,"DF","MME","Herbivore exclusion","Ca",0.0397824933871504
+2021-05-04,"DF","MME","Herbivore exclusion","K",1.2121361149651
+2021-05-04,"DF","MME","Herbivore exclusion","Mg",0
+2021-05-04,"DF","MME","Herbivore exclusion","P",1.57003536456807
+2021-05-04,"DF","MME","Herbivore exclusion","S",1.06087196068526
+2021-05-04,"DF","MME","Herbivore exclusion","Cu",-0.18788921562525
+2021-05-04,"DF","MME","Herbivore exclusion","Zn",-0.446477643157833
+2021-05-04,"DF","MME","Herbivore exclusion","Mn",0.727603044430109
+2021-05-04,"DF","MME","Herbivore exclusion","Fe",-0.0243499582098522
+2021-05-04,"DF","MME","Herbivore exclusion","B",-0.995085143438475
+2021-05-04,"DF","Single carcass","Herbivore exclusion","N",0.401458031444185
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Ca",-0.0330062964681701
+2021-05-04,"DF","Single carcass","Herbivore exclusion","K",1.07994394846815
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Mg",-0.290689593515736
+2021-05-04,"DF","Single carcass","Herbivore exclusion","P",1.26566637333128
+2021-05-04,"DF","Single carcass","Herbivore exclusion","S",0.652655819205208
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Cu",-0.128125460582595
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Zn",-0.959347054214377
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Mn",0.184140344599684
+2021-05-04,"DF","Single carcass","Herbivore exclusion","Fe",-0.0829752848891296
+2021-05-04,"DF","Single carcass","Herbivore exclusion","B",-0.954067773727457
+2021-05-04,"DF","MME","Open control","N",0.266102991696444
+2021-05-04,"DF","MME","Open control","Ca",0.119224996973285
+2021-05-04,"DF","MME","Open control","K",0.760794043599378
+2021-05-04,"DF","MME","Open control","Mg",0
+2021-05-04,"DF","MME","Open control","P",1.04412410338404
+2021-05-04,"DF","MME","Open control","S",0.610455464714832
+2021-05-04,"DF","MME","Open control","Cu",0.027146659527458
+2021-05-04,"DF","MME","Open control","Zn",-0.710659434091974
+2021-05-04,"DF","MME","Open control","Mn",0.353566390609584
+2021-05-04,"DF","MME","Open control","Fe",-0.135964940615661
+2021-05-04,"DF","MME","Open control","B",-0.955676568819054
+2021-05-04,"DF","Single carcass","Open control","N",0.0825908941481987
+2021-05-04,"DF","Single carcass","Open control","Ca",-0.173271721274037
+2021-05-04,"DF","Single carcass","Open control","K",0.357683262652849
+2021-05-04,"DF","Single carcass","Open control","Mg",-0.198670694795484
+2021-05-04,"DF","Single carcass","Open control","P",0.276253376628158
+2021-05-04,"DF","Single carcass","Open control","S",0.322773392263051
+2021-05-04,"DF","Single carcass","Open control","Cu",-0.0516187456349552
+2021-05-04,"DF","Single carcass","Open control","Zn",-0.7647535146999
+2021-05-04,"DF","Single carcass","Open control","Mn",0.864683635141039
+2021-05-04,"DF","Single carcass","Open control","Fe",-0.113201469410066
+2021-05-04,"DF","Single carcass","Open control","B",-0.835228512565451
+2021-05-04,"DF","MME","Scavenger exclusion","N",0.371247150797823
+2021-05-04,"DF","MME","Scavenger exclusion","Ca",-0.451985123743057
+2021-05-04,"DF","MME","Scavenger exclusion","K",0.830218956883274
+2021-05-04,"DF","MME","Scavenger exclusion","Mg",0.18081892690942
+2021-05-04,"DF","MME","Scavenger exclusion","P",1.18562366565774
+2021-05-04,"DF","MME","Scavenger exclusion","S",0.819709903868375
+2021-05-04,"DF","MME","Scavenger exclusion","Cu",-0.100938792316937
+2021-05-04,"DF","MME","Scavenger exclusion","Zn",-0.898029772739546
+2021-05-04,"DF","MME","Scavenger exclusion","Mn",1.90631949159718
+2021-05-04,"DF","MME","Scavenger exclusion","Fe",-0.0571298190803855
+2021-05-04,"DF","MME","Scavenger exclusion","B",-1.29094196654086
+2021-05-04,"DF","Single carcass","Scavenger exclusion","N",0.394347311746216
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Ca",0
+2021-05-04,"DF","Single carcass","Scavenger exclusion","K",0.697551088275201
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Mg",-0.155653309711793
+2021-05-04,"DF","Single carcass","Scavenger exclusion","P",0.920825887039546
+2021-05-04,"DF","Single carcass","Scavenger exclusion","S",0.627549898074132
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Cu",-0.0068118497189171
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Zn",-0.814449932720711
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Mn",-0.0235826945671093
+2021-05-04,"DF","Single carcass","Scavenger exclusion","Fe",0.00854682416852777
+2021-05-04,"DF","Single carcass","Scavenger exclusion","B",-0.877379648200074
+2020-08-01,"OS","MME","Herbivore exclusion","N",0.307432549869197
+2020-08-01,"OS","MME","Herbivore exclusion","Ca",-0.144039370222938
+2020-08-01,"OS","MME","Herbivore exclusion","K",0.384579594815266
+2020-08-01,"OS","MME","Herbivore exclusion","Mg",0.246133069538909
+2020-08-01,"OS","MME","Herbivore exclusion","P",0.676617878608735
+2020-08-01,"OS","MME","Herbivore exclusion","S",0.474093614497261
+2020-08-01,"OS","MME","Herbivore exclusion","Cu",0.0839329908539095
+2020-08-01,"OS","MME","Herbivore exclusion","Zn",-0.204830727554377
+2020-08-01,"OS","MME","Herbivore exclusion","Mn",0.27041861872415
+2020-08-01,"OS","MME","Herbivore exclusion","Fe",0.0812737705085916
+2020-08-01,"OS","MME","Herbivore exclusion","B",-0.47798593327042
+2020-08-01,"OS","Single carcass","Herbivore exclusion","N",-0.169636397266639
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Ca",0.357589160062136
+2020-08-01,"OS","Single carcass","Herbivore exclusion","K",-0.147969148483044
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Mg",-0.123613955967177
+2020-08-01,"OS","Single carcass","Herbivore exclusion","P",-0.0165293019512106
+2020-08-01,"OS","Single carcass","Herbivore exclusion","S",-0.198850858745165
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Cu",-0.554629961394616
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Zn",0.129879690527007
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Mn",0.128126222742423
+2020-08-01,"OS","Single carcass","Herbivore exclusion","Fe",-0.0297871127929945
+2020-08-01,"OS","Single carcass","Herbivore exclusion","B",0.657858655540241
+2020-08-01,"OS","MME","Open control","N",0.0391184165954713
+2020-08-01,"OS","MME","Open control","Ca",0.160229725903641
+2020-08-01,"OS","MME","Open control","K",0.185698037210561
+2020-08-01,"OS","MME","Open control","Mg",0.0782521968997483
+2020-08-01,"OS","MME","Open control","P",0.634058264189939
+2020-08-01,"OS","MME","Open control","S",0.0635134057223259
+2020-08-01,"OS","MME","Open control","Cu",-0.421886694385563
+2020-08-01,"OS","MME","Open control","Zn",-0.475274345783525
+2020-08-01,"OS","MME","Open control","Mn",0.400590501396221
+2020-08-01,"OS","MME","Open control","Fe",0.208671334171707
+2020-08-01,"OS","MME","Open control","B",0.0778317848184663
+2020-08-01,"OS","Single carcass","Open control","N",0.0158314652166807
+2020-08-01,"OS","Single carcass","Open control","Ca",-0.00305343748689034
+2020-08-01,"OS","Single carcass","Open control","K",0.134798909166308
+2020-08-01,"OS","Single carcass","Open control","Mg",0.0342890734786322
+2020-08-01,"OS","Single carcass","Open control","P",0.137621377876048
+2020-08-01,"OS","Single carcass","Open control","S",0.0787808778531144
+2020-08-01,"OS","Single carcass","Open control","Cu",-0.580163263399781
+2020-08-01,"OS","Single carcass","Open control","Zn",-0.0439882580935902
+2020-08-01,"OS","Single carcass","Open control","Mn",0.198364723242685
+2020-08-01,"OS","Single carcass","Open control","Fe",-0.0666266263888033
+2020-08-01,"OS","Single carcass","Open control","B",-0.0857272676639009
+2020-08-01,"OS","MME","Scavenger exclusion","N",-0.19948936041632
+2020-08-01,"OS","MME","Scavenger exclusion","Ca",0.0706175672139532
+2020-08-01,"OS","MME","Scavenger exclusion","K",-0.149277193143059
+2020-08-01,"OS","MME","Scavenger exclusion","Mg",-0.0848994437864862
+2020-08-01,"OS","MME","Scavenger exclusion","P",0.193191229030859
+2020-08-01,"OS","MME","Scavenger exclusion","S",-0.219053566062685
+2020-08-01,"OS","MME","Scavenger exclusion","Cu",-0.681495232419152
+2020-08-01,"OS","MME","Scavenger exclusion","Zn",0.0169784261992262
+2020-08-01,"OS","MME","Scavenger exclusion","Mn",-0.290440382898709
+2020-08-01,"OS","MME","Scavenger exclusion","Fe",0.0151181739518371
+2020-08-01,"OS","MME","Scavenger exclusion","B",0.470238252779552
+2020-08-01,"OS","Single carcass","Scavenger exclusion","N",-0.150905360560576
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Ca",0.0903087801041351
+2020-08-01,"OS","Single carcass","Scavenger exclusion","K",0.0332624899468853
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Mg",-0.0848994437864862
+2020-08-01,"OS","Single carcass","Scavenger exclusion","P",0.137621377876048
+2020-08-01,"OS","Single carcass","Scavenger exclusion","S",-0.0333364202675918
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Cu",-0.254569832162088
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Zn",-0.0526243006437031
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Mn",-0.149718165010389
+2020-08-01,"OS","Single carcass","Scavenger exclusion","Fe",-0.148064771472477
+2020-08-01,"OS","Single carcass","Scavenger exclusion","B",-0.0432127697585083
+2021-05-04,"OS","MME","Herbivore exclusion","N",-0.0944846431586513
+2021-05-04,"OS","MME","Herbivore exclusion","Ca",-0.20367144790139
+2021-05-04,"OS","MME","Herbivore exclusion","K",0.347729391145847
+2021-05-04,"OS","MME","Herbivore exclusion","Mg",0.345361184038459
+2021-05-04,"OS","MME","Herbivore exclusion","P",0.796943974241589
+2021-05-04,"OS","MME","Herbivore exclusion","S",0.380055392582796
+2021-05-04,"OS","MME","Herbivore exclusion","Cu",0.0748478907964325
+2021-05-04,"OS","MME","Herbivore exclusion","Zn",-0.531878448714996
+2021-05-04,"OS","MME","Herbivore exclusion","Mn",0.553957211363662
+2021-05-04,"OS","MME","Herbivore exclusion","Fe",0.0818071702776549
+2021-05-04,"OS","MME","Herbivore exclusion","B",-0.435818164370707
+2021-05-04,"OS","Single carcass","Herbivore exclusion","N",-0.00759934572538859
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Ca",0.0777929879395208
+2021-05-04,"OS","Single carcass","Herbivore exclusion","K",-0.198911237926442
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Mg",0.0124225199985571
+2021-05-04,"OS","Single carcass","Herbivore exclusion","P",0.10848064299407
+2021-05-04,"OS","Single carcass","Herbivore exclusion","S",-0.0782521968997483
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Cu",-0.0478974621192862
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Zn",-0.22643038152228
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Mn",0.109375109271728
+2021-05-04,"OS","Single carcass","Herbivore exclusion","Fe",-0.0145161045390463
+2021-05-04,"OS","Single carcass","Herbivore exclusion","B",0.473755650173761
+2021-05-04,"OS","MME","Open control","N",0.482910342880235
+2021-05-04,"OS","MME","Open control","Ca",0.339677367570161
+2021-05-04,"OS","MME","Open control","K",0.587367289764918
+2021-05-04,"OS","MME","Open control","Mg",0.388657989791783
+2021-05-04,"OS","MME","Open control","P",1.50869634263257
+2021-05-04,"OS","MME","Open control","S",0.649184057138829
+2021-05-04,"OS","MME","Open control","Cu",0.224288246323508
+2021-05-04,"OS","MME","Open control","Zn",-0.374800797677945
+2021-05-04,"OS","MME","Open control","Mn",0.830248680014534
+2021-05-04,"OS","MME","Open control","Fe",0.231524641478508
+2021-05-04,"OS","MME","Open control","B",-0.0403540487934193
+2021-05-04,"OS","Single carcass","Open control","N",0.0516373508161982
+2021-05-04,"OS","Single carcass","Open control","Ca",0.134373734384283
+2021-05-04,"OS","Single carcass","Open control","K",-0.249913792378815
+2021-05-04,"OS","Single carcass","Open control","Mg",0.128832871842968
+2021-05-04,"OS","Single carcass","Open control","P",0.255933374137201
+2021-05-04,"OS","Single carcass","Open control","S",-0.125880245889003
+2021-05-04,"OS","Single carcass","Open control","Cu",-0.181612781582318
+2021-05-04,"OS","Single carcass","Open control","Zn",-0.378763259585691
+2021-05-04,"OS","Single carcass","Open control","Mn",0.37068400592379
+2021-05-04,"OS","Single carcass","Open control","Fe",0.169458799059914
+2021-05-04,"OS","Single carcass","Open control","B",0.628749066134046
+2021-05-04,"OS","MME","Scavenger exclusion","N",0.258704656575042
+2021-05-04,"OS","MME","Scavenger exclusion","Ca",0.242285021561512
+2021-05-04,"OS","MME","Scavenger exclusion","K",0.443717766974811
+2021-05-04,"OS","MME","Scavenger exclusion","Mg",0.44628710262842
+2021-05-04,"OS","MME","Scavenger exclusion","P",1.07400647786591
+2021-05-04,"OS","MME","Scavenger exclusion","S",0.719673934893374
+2021-05-04,"OS","MME","Scavenger exclusion","Cu",0.196783336885945
+2021-05-04,"OS","MME","Scavenger exclusion","Zn",-0.232267343541403
+2021-05-04,"OS","MME","Scavenger exclusion","Mn",0.773473134234526
+2021-05-04,"OS","MME","Scavenger exclusion","Fe",0.124036597820889
+2021-05-04,"OS","MME","Scavenger exclusion","B",0.16171120810602
+2021-05-04,"OS","Single carcass","Scavenger exclusion","N",-0.16661621520382
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Ca",0.0353237608304083
+2021-05-04,"OS","Single carcass","Scavenger exclusion","K",0.143855275966159
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Mg",0.271933715483642
+2021-05-04,"OS","Single carcass","Scavenger exclusion","P",0.847297860387204
+2021-05-04,"OS","Single carcass","Scavenger exclusion","S",0.303682413798222
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Cu",0.0678650654955425
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Zn",-0.397097544930456
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Mn",0.533243439657405
+2021-05-04,"OS","Single carcass","Scavenger exclusion","Fe",0.118384756596375
+2021-05-04,"OS","Single carcass","Scavenger exclusion","B",0.213123945887497
+2020-08-01,"WP","MME","Herbivore exclusion","N",0.044899891639503
+2020-08-01,"WP","MME","Herbivore exclusion","Ca",0.0913280939052029
+2020-08-01,"WP","MME","Herbivore exclusion","K",0.588906956295019
+2020-08-01,"WP","MME","Herbivore exclusion","Mg",0.457581109247178
+2020-08-01,"WP","MME","Herbivore exclusion","P",0.324049716622656
+2020-08-01,"WP","MME","Herbivore exclusion","S",0.443205436091011
+2020-08-01,"WP","MME","Herbivore exclusion","Cu",-0.13689941688003
+2020-08-01,"WP","MME","Herbivore exclusion","Zn",-0.0828730956031211
+2020-08-01,"WP","MME","Herbivore exclusion","Mn",-0.183652519155766
+2020-08-01,"WP","MME","Herbivore exclusion","Fe",0.120579148932411
+2020-08-01,"WP","MME","Herbivore exclusion","B",-0.917271845516751
+2020-08-01,"WP","Single carcass","Herbivore exclusion","N",0.109942318053547
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Ca",0.569712961099534
+2020-08-01,"WP","Single carcass","Herbivore exclusion","K",0.175361705858895
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Mg",0.296898727556705
+2020-08-01,"WP","Single carcass","Herbivore exclusion","P",-0.0377403279828471
+2020-08-01,"WP","Single carcass","Herbivore exclusion","S",0.392561703272257
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Cu",-0.0469511802170909
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Zn",0.260603234238865
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Mn",-0.639350915638678
+2020-08-01,"WP","Single carcass","Herbivore exclusion","Fe",0.160742918211946
+2020-08-01,"WP","Single carcass","Herbivore exclusion","B",0.564239737006282
+2020-08-01,"WP","MME","Open control","N",0.114131683208824
+2020-08-01,"WP","MME","Open control","Ca",0.364567215139996
+2020-08-01,"WP","MME","Open control","K",0.291143916979135
+2020-08-01,"WP","MME","Open control","Mg",0.0941872150597011
+2020-08-01,"WP","MME","Open control","P",0.495899973549315
+2020-08-01,"WP","MME","Open control","S",0.253448900809539
+2020-08-01,"WP","MME","Open control","Cu",-0.143495517865444
+2020-08-01,"WP","MME","Open control","Zn",-0.0390608098289174
+2020-08-01,"WP","MME","Open control","Mn",-0.954620114657937
+2020-08-01,"WP","MME","Open control","Fe",0.198323735652212
+2020-08-01,"WP","MME","Open control","B",0.279682522069979
+2020-08-01,"WP","Single carcass","Open control","N",-0.194959657666637
+2020-08-01,"WP","Single carcass","Open control","Ca",0.125645186829332
+2020-08-01,"WP","Single carcass","Open control","K",-0.32668423025505
+2020-08-01,"WP","Single carcass","Open control","Mg",-0.14595391262308
+2020-08-01,"WP","Single carcass","Open control","P",-0.334006144126019
+2020-08-01,"WP","Single carcass","Open control","S",-0.0392207131532812
+2020-08-01,"WP","Single carcass","Open control","Cu",-0.0706322868418414
+2020-08-01,"WP","Single carcass","Open control","Zn",-0.204026109575209
+2020-08-01,"WP","Single carcass","Open control","Mn",-1.09966488077311
+2020-08-01,"WP","Single carcass","Open control","Fe",0.377147242227703
+2020-08-01,"WP","Single carcass","Open control","B",0.280732261275333
+2020-08-01,"WP","MME","Scavenger exclusion","N",0.117470584474338
+2020-08-01,"WP","MME","Scavenger exclusion","Ca",0.414531353345918
+2020-08-01,"WP","MME","Scavenger exclusion","K",0.0599567926074787
+2020-08-01,"WP","MME","Scavenger exclusion","Mg",0
+2020-08-01,"WP","MME","Scavenger exclusion","P",0.200670695462151
+2020-08-01,"WP","MME","Scavenger exclusion","S",0.0560894666510436
+2020-08-01,"WP","MME","Scavenger exclusion","Cu",0.0425344682567275
+2020-08-01,"WP","MME","Scavenger exclusion","Zn",0.0330371505747425
+2020-08-01,"WP","MME","Scavenger exclusion","Mn",-0.789620288165742
+2020-08-01,"WP","MME","Scavenger exclusion","Fe",0.0500596540804543
+2020-08-01,"WP","MME","Scavenger exclusion","B",0.543433538531139
+2020-08-01,"WP","Single carcass","Scavenger exclusion","N",0.0757801574201293
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Ca",0.455208933106733
+2020-08-01,"WP","Single carcass","Scavenger exclusion","K",0.0811091676127054
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Mg",0.240279833557197
+2020-08-01,"WP","Single carcass","Scavenger exclusion","P",-0.0769610411361284
+2020-08-01,"WP","Single carcass","Scavenger exclusion","S",0.159630145591884
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Cu",-0.00211448500471547
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Zn",0.280133004900199
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Mn",-0.830125100365563
+2020-08-01,"WP","Single carcass","Scavenger exclusion","Fe",0.0782528970810603
+2020-08-01,"WP","Single carcass","Scavenger exclusion","B",0.525862769314959
+2021-05-04,"WP","MME","Herbivore exclusion","N",0.303054411139971
+2021-05-04,"WP","MME","Herbivore exclusion","Ca",-0.0509794376082833
+2021-05-04,"WP","MME","Herbivore exclusion","K",0.22062745437518
+2021-05-04,"WP","MME","Herbivore exclusion","Mg",-0.148420005118273
+2021-05-04,"WP","MME","Herbivore exclusion","P",0.403580093412393
+2021-05-04,"WP","MME","Herbivore exclusion","S",0.280077473066562
+2021-05-04,"WP","MME","Herbivore exclusion","Cu",0.141466814889658
+2021-05-04,"WP","MME","Herbivore exclusion","Zn",-0.185513285847658
+2021-05-04,"WP","MME","Herbivore exclusion","Mn",-0.223033682607204
+2021-05-04,"WP","MME","Herbivore exclusion","Fe",-0.0146671048292406
+2021-05-04,"WP","MME","Herbivore exclusion","B",0.13675277583146
+2021-05-04,"WP","Single carcass","Herbivore exclusion","N",-0.108514976697066
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Ca",-0.231628753209876
+2021-05-04,"WP","Single carcass","Herbivore exclusion","K",0.0190342496225138
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Mg",-0.310938934616048
+2021-05-04,"WP","Single carcass","Herbivore exclusion","P",0.199128675110336
+2021-05-04,"WP","Single carcass","Herbivore exclusion","S",0.105360515657826
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Cu",-0.0327796819150753
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Zn",-0.24333546938132
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Mn",1.13032727484563
+2021-05-04,"WP","Single carcass","Herbivore exclusion","Fe",-0.0388951216591959
+2021-05-04,"WP","Single carcass","Herbivore exclusion","B",-0.1584620637511
+2021-05-04,"WP","MME","Open control","N",0.218783367356914
+2021-05-04,"WP","MME","Open control","Ca",0.0598056688604556
+2021-05-04,"WP","MME","Open control","K",0.27821388698864
+2021-05-04,"WP","MME","Open control","Mg",-0.128617377822094
+2021-05-04,"WP","MME","Open control","P",0.476339447694821
+2021-05-04,"WP","MME","Open control","S",0.31015492830384
+2021-05-04,"WP","MME","Open control","Cu",0.122268784927641
+2021-05-04,"WP","MME","Open control","Zn",-0.047831714524903
+2021-05-04,"WP","MME","Open control","Mn",-0.478207877661283
+2021-05-04,"WP","MME","Open control","Fe",0.0525884230601064
+2021-05-04,"WP","MME","Open control","B",0.153994582265966
+2021-05-04,"WP","Single carcass","Open control","N",0.162683714865207
+2021-05-04,"WP","Single carcass","Open control","Ca",-0.057275366065098
+2021-05-04,"WP","Single carcass","Open control","K",-0.0562458265919453
+2021-05-04,"WP","Single carcass","Open control","Mg",-0.346870943842112
+2021-05-04,"WP","Single carcass","Open control","P",-0.178937458809714
+2021-05-04,"WP","Single carcass","Open control","S",0.123379021160505
+2021-05-04,"WP","Single carcass","Open control","Cu",0.0521599707382026
+2021-05-04,"WP","Single carcass","Open control","Zn",-0.246876120645983
+2021-05-04,"WP","Single carcass","Open control","Mn",-0.51019986651275
+2021-05-04,"WP","Single carcass","Open control","Fe",0.0784597995333442
+2021-05-04,"WP","Single carcass","Open control","B",0.0417284396249935
+2021-05-04,"WP","MME","Scavenger exclusion","N",0.255188843741924
+2021-05-04,"WP","MME","Scavenger exclusion","Ca",0.0522868364464284
+2021-05-04,"WP","MME","Scavenger exclusion","K",0.278773327562671
+2021-05-04,"WP","MME","Scavenger exclusion","Mg",-0.0807613566444586
+2021-05-04,"WP","MME","Scavenger exclusion","P",0.649850374806621
+2021-05-04,"WP","MME","Scavenger exclusion","S",0.360707207466671
+2021-05-04,"WP","MME","Scavenger exclusion","Cu",-0.057122622859272
+2021-05-04,"WP","MME","Scavenger exclusion","Zn",-0.0537776054143151
+2021-05-04,"WP","MME","Scavenger exclusion","Mn",-0.251422881959875
+2021-05-04,"WP","MME","Scavenger exclusion","Fe",0.0100732977023906
+2021-05-04,"WP","MME","Scavenger exclusion","B",0.0360798203365867
+2021-05-04,"WP","Single carcass","Scavenger exclusion","N",0.0978837216382919
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Ca",0.223541086600701
+2021-05-04,"WP","Single carcass","Scavenger exclusion","K",0.198450938723838
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Mg",-0.00865806274311454
+2021-05-04,"WP","Single carcass","Scavenger exclusion","P",0.429652333722168
+2021-05-04,"WP","Single carcass","Scavenger exclusion","S",0.287682072451781
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Cu",0.251043966127055
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Zn",-0.136311454136786
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Mn",0.304431754594095
+2021-05-04,"WP","Single carcass","Scavenger exclusion","Fe",0.107404141509837
+2021-05-04,"WP","Single carcass","Scavenger exclusion","B",0.268272020368665
+2020-08-01,"GG","MME","Herbivore exclusion","N",0.404802197908217
+2020-08-01,"GG","MME","Herbivore exclusion","Ca",0.141694703263684
+2020-08-01,"GG","MME","Herbivore exclusion","K",0.566920133904505
+2020-08-01,"GG","MME","Herbivore exclusion","Mg",0.215708572826692
+2020-08-01,"GG","MME","Herbivore exclusion","P",0.535142931416697
+2020-08-01,"GG","MME","Herbivore exclusion","S",0.164755233076055
+2020-08-01,"GG","MME","Herbivore exclusion","Cu",0.437343157468728
+2020-08-01,"GG","MME","Herbivore exclusion","Zn",0.21384564504048
+2020-08-01,"GG","MME","Herbivore exclusion","Mn",0.865252397684359
+2020-08-01,"GG","MME","Herbivore exclusion","Fe",-0.0949946299561006
+2020-08-01,"GG","MME","Herbivore exclusion","B",0.0591746679948667
+2020-08-01,"GG","Single carcass","Herbivore exclusion","N",0.0847722915909166
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Ca",0.0345258688490736
+2020-08-01,"GG","Single carcass","Herbivore exclusion","K",0.286294147176933
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Mg",-0.0571584138399486
+2020-08-01,"GG","Single carcass","Herbivore exclusion","P",0.302949544582569
+2020-08-01,"GG","Single carcass","Herbivore exclusion","S",-0.0938187552176549
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Cu",0.15019555857323
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Zn",-0.103439702129648
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Mn",0.977214853455472
+2020-08-01,"GG","Single carcass","Herbivore exclusion","Fe",-0.0311059703182961
+2020-08-01,"GG","Single carcass","Herbivore exclusion","B",0.349125304372177
+2020-08-01,"GG","MME","Open control","N",0.379960369941753
+2020-08-01,"GG","MME","Open control","Ca",0.0116415750154858
+2020-08-01,"GG","MME","Open control","K",0.404077182833316
+2020-08-01,"GG","MME","Open control","Mg",0.154150679827258
+2020-08-01,"GG","MME","Open control","P",0.629633774837619
+2020-08-01,"GG","MME","Open control","S",0.126040720895365
+2020-08-01,"GG","MME","Open control","Cu",0.281687737426763
+2020-08-01,"GG","MME","Open control","Zn",-0.53250273916497
+2020-08-01,"GG","MME","Open control","Mn",0.516848066765437
+2020-08-01,"GG","MME","Open control","Fe",-0.208742598609368
+2020-08-01,"GG","MME","Open control","B",0.101960723632108
+2020-08-01,"GG","Single carcass","Open control","N",-0.154482079995991
+2020-08-01,"GG","Single carcass","Open control","Ca",-0.170679981778469
+2020-08-01,"GG","Single carcass","Open control","K",-0.162274201348738
+2020-08-01,"GG","Single carcass","Open control","Mg",-0.462623521948113
+2020-08-01,"GG","Single carcass","Open control","P",-0.0800427076735365
+2020-08-01,"GG","Single carcass","Open control","S",-0.0938187552176549
+2020-08-01,"GG","Single carcass","Open control","Cu",-0.0506235731135699
+2020-08-01,"GG","Single carcass","Open control","Zn",0.0448084560984445
+2020-08-01,"GG","Single carcass","Open control","Mn",0.354647325333955
+2020-08-01,"GG","Single carcass","Open control","Fe",-0.0933035504225492
+2020-08-01,"GG","Single carcass","Open control","B",0.0266617434471715
+2020-08-01,"GG","MME","Scavenger exclusion","N",0.219558604236384
+2020-08-01,"GG","MME","Scavenger exclusion","Ca",-0.0504308536268919
+2020-08-01,"GG","MME","Scavenger exclusion","K",0.400366603436781
+2020-08-01,"GG","MME","Scavenger exclusion","Mg",-0.0670107102829602
+2020-08-01,"GG","MME","Scavenger exclusion","P",0.67764299402398
+2020-08-01,"GG","MME","Scavenger exclusion","S",-0.0458095360312942
+2020-08-01,"GG","MME","Scavenger exclusion","Cu",-0.108435368224721
+2020-08-01,"GG","MME","Scavenger exclusion","Zn",-0.203624164205548
+2020-08-01,"GG","MME","Scavenger exclusion","Mn",0.424676017018065
+2020-08-01,"GG","MME","Scavenger exclusion","Fe",-0.0199895170577303
+2020-08-01,"GG","MME","Scavenger exclusion","B",0.0604937758486059
+2020-08-01,"GG","Single carcass","Scavenger exclusion","N",-0.0839436131472593
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Ca",-0.145987369188097
+2020-08-01,"GG","Single carcass","Scavenger exclusion","K",-0.0396091380950458
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Mg",-0.325422400434628
+2020-08-01,"GG","Single carcass","Scavenger exclusion","P",-0.0635134057223259
+2020-08-01,"GG","Single carcass","Scavenger exclusion","S",-0.179340928655817
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Cu",-0.047363055063636
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Zn",-0.39045139156136
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Mn",0.840430414479135
+2020-08-01,"GG","Single carcass","Scavenger exclusion","Fe",-0.150206993075872
+2020-08-01,"GG","Single carcass","Scavenger exclusion","B",-0.296757370929462
+2021-05-04,"GG","MME","Herbivore exclusion","N",0.0258685794503889
+2021-05-04,"GG","MME","Herbivore exclusion","Ca",0.145050161996723
+2021-05-04,"GG","MME","Herbivore exclusion","K",1.14727339560048
+2021-05-04,"GG","MME","Herbivore exclusion","Mg",0.700473220652018
+2021-05-04,"GG","MME","Herbivore exclusion","P",1.2363016914413
+2021-05-04,"GG","MME","Herbivore exclusion","S",0.777704568588008
+2021-05-04,"GG","MME","Herbivore exclusion","Cu",-0.102019567583849
+2021-05-04,"GG","MME","Herbivore exclusion","Zn",-0.488706272731791
+2021-05-04,"GG","MME","Herbivore exclusion","Mn",1.74055089092287
+2021-05-04,"GG","MME","Herbivore exclusion","Fe",-0.248324694011672
+2021-05-04,"GG","MME","Herbivore exclusion","B",-1.01739470281688
+2021-05-04,"GG","Single carcass","Herbivore exclusion","N",-0.154945118796549
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Ca",0.0288481543376583
+2021-05-04,"GG","Single carcass","Herbivore exclusion","K",0.882893678653637
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Mg",0.344840486291729
+2021-05-04,"GG","Single carcass","Herbivore exclusion","P",1.11748077297249
+2021-05-04,"GG","Single carcass","Herbivore exclusion","S",0.453321129285799
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Cu",-0.157056250878673
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Zn",-0.819470760955431
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Mn",1.28382402403167
+2021-05-04,"GG","Single carcass","Herbivore exclusion","Fe",-0.453000361881174
+2021-05-04,"GG","Single carcass","Herbivore exclusion","B",-0.797237021974701
+2021-05-04,"GG","MME","Open control","N",0.351000746244901
+2021-05-04,"GG","MME","Open control","Ca",0.0522684285457569
+2021-05-04,"GG","MME","Open control","K",0.907471468440074
+2021-05-04,"GG","MME","Open control","Mg",0.63252255874351
+2021-05-04,"GG","MME","Open control","P",1.01419494685553
+2021-05-04,"GG","MME","Open control","S",0.525424423187143
+2021-05-04,"GG","MME","Open control","Cu",-0.057727468655282
+2021-05-04,"GG","MME","Open control","Zn",-0.75317554621963
+2021-05-04,"GG","MME","Open control","Mn",1.71172984824732
+2021-05-04,"GG","MME","Open control","Fe",-0.354736962171561
+2021-05-04,"GG","MME","Open control","B",-0.734676943638665
+2021-05-04,"GG","Single carcass","Open control","N",-0.237540920580587
+2021-05-04,"GG","Single carcass","Open control","Ca",-0.119003292061613
+2021-05-04,"GG","Single carcass","Open control","K",0.699630185438024
+2021-05-04,"GG","Single carcass","Open control","Mg",0.137201121513485
+2021-05-04,"GG","Single carcass","Open control","P",0.315852949418477
+2021-05-04,"GG","Single carcass","Open control","S",0.395612811665153
+2021-05-04,"GG","Single carcass","Open control","Cu",-0.0364392851065362
+2021-05-04,"GG","Single carcass","Open control","Zn",-0.539237875657614
+2021-05-04,"GG","Single carcass","Open control","Mn",0.576252015715377
+2021-05-04,"GG","Single carcass","Open control","Fe",-0.33011061365866
+2021-05-04,"GG","Single carcass","Open control","B",-0.914262520613744
+2021-05-04,"GG","MME","Scavenger exclusion","N",-0.373232607845218
+2021-05-04,"GG","MME","Scavenger exclusion","Ca",0.188400602870337
+2021-05-04,"GG","MME","Scavenger exclusion","K",0.86798825364465
+2021-05-04,"GG","MME","Scavenger exclusion","Mg",0.280301965154158
+2021-05-04,"GG","MME","Scavenger exclusion","P",1.27695769708242
+2021-05-04,"GG","MME","Scavenger exclusion","S",0.63252255874351
+2021-05-04,"GG","MME","Scavenger exclusion","Cu",-0.0916693990836691
+2021-05-04,"GG","MME","Scavenger exclusion","Zn",-0.985329264419081
+2021-05-04,"GG","MME","Scavenger exclusion","Mn",0.36269892885331
+2021-05-04,"GG","MME","Scavenger exclusion","Fe",-0.362625902523683
+2021-05-04,"GG","MME","Scavenger exclusion","B",-0.542705315787106
+2021-05-04,"GG","Single carcass","Scavenger exclusion","N",-0.123457233350215
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Ca",0.390722826370961
+2021-05-04,"GG","Single carcass","Scavenger exclusion","K",0.816155924116925
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Mg",0.385662480811985
+2021-05-04,"GG","Single carcass","Scavenger exclusion","P",0.801360765200178
+2021-05-04,"GG","Single carcass","Scavenger exclusion","S",0.516690743218389
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Cu",-0.127588482007199
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Zn",-0.855604336650615
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Mn",0.933054924636005
+2021-05-04,"GG","Single carcass","Scavenger exclusion","Fe",-0.412350629185658
+2021-05-04,"GG","Single carcass","Scavenger exclusion","B",-0.562591788061592

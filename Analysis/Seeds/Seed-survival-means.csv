@@ -1,0 +1,145 @@
+"BIOMASS","TREATMENT","PACKET","TYPE","prob","std.error","p.value"
+"High biomass","Herbivore exclusion","Bank
+adjacent","No dormancy",0.57170662472385,0.117885016793023,0.54857224904102
+"Low biomass","Herbivore exclusion","Bank
+adjacent","No dormancy",0.207917952144299,0.080730133606463,0.00636191118407963
+"High biomass","Open","Bank
+adjacent","No dormancy",0.200348735389292,0.0820601207358701,0.00688692428941989
+"Low biomass","Open","Bank
+adjacent","No dormancy",0.581407522517229,0.116377600560021,0.492030088940046
+"High biomass","Scavenger exclusion","Bank
+adjacent","No dormancy",0.285678041545896,0.0990439338375119,0.0589918419868346
+"Low biomass","Scavenger exclusion","Bank
+adjacent","No dormancy",0.323711600708688,0.107112399977232,0.132106864183512
+"High biomass","Herbivore exclusion","Bank
+adjacent","Physical dormancy",0.24968520158146,0.0902352754425506,0.0223493496831082
+"Low biomass","Herbivore exclusion","Bank
+adjacent","Physical dormancy",0.227402369050499,0.0856085902058518,0.0120737044992146
+"High biomass","Open","Bank
+adjacent","Physical dormancy",0.147411354853796,0.0610792028768129,0.000304635792569242
+"Low biomass","Open","Bank
+adjacent","Physical dormancy",0.119127822104005,0.0548643789773205,0.000129888701650333
+"High biomass","Scavenger exclusion","Bank
+adjacent","Physical dormancy",0.160923791508577,0.0663734932264955,0.000780904317434711
+"Low biomass","Scavenger exclusion","Bank
+adjacent","Physical dormancy",0.207407060516497,0.0826994622234644,0.00770141532359855
+"High biomass","Herbivore exclusion","Bank
+adjacent","Physiological dormancy",0.352866090283908,0.113790316492626,0.22358965264365
+"Low biomass","Herbivore exclusion","Bank
+adjacent","Physiological dormancy",0.272624238057607,0.101130547451075,0.0543216870918581
+"High biomass","Open","Bank
+adjacent","Physiological dormancy",0.341267845782072,0.113048519363217,0.190948888371673
+"Low biomass","Open","Bank
+adjacent","Physiological dormancy",0.353955873761954,0.115904291983571,0.235186793521589
+"High biomass","Scavenger exclusion","Bank
+adjacent","Physiological dormancy",0.0000000109354667563986,0.0000114492412922711,0.986030827791157
+"Low biomass","Scavenger exclusion","Bank
+adjacent","Physiological dormancy",0.281559271261661,0.100317485722591,0.058908526847543
+"High biomass","Herbivore exclusion","Bank
+proximal","No dormancy",0.00000000964810392955524,0.00000935449476329368,0.984812548044378
+"Low biomass","Herbivore exclusion","Bank
+proximal","No dormancy",0.0595893960466147,0.0280630630168788,0.0000000360747742407879
+"High biomass","Open","Bank
+proximal","No dormancy",0.117617389973109,0.0532173028870072,0.0000849496284609231
+"Low biomass","Open","Bank
+proximal","No dormancy",0.218215013195994,0.0883103180832199,0.0136952695356828
+"High biomass","Scavenger exclusion","Bank
+proximal","No dormancy",0.0408918158194608,0.020094311803101,0.000000000736646574966864
+"Low biomass","Scavenger exclusion","Bank
+proximal","No dormancy",0.00000000739831212893464,0.00000675281717211955,0.983635232913084
+"High biomass","Herbivore exclusion","Bank
+proximal","Physical dormancy",0.00000000705944191666419,0.00000623495119034384,0.983045558060133
+"Low biomass","Herbivore exclusion","Bank
+proximal","Physical dormancy",0.119682448223732,0.052485633071814,0.0000618587136425536
+"High biomass","Open","Bank
+proximal","Physical dormancy",0.00000000756044523121635,0.00000678120878832166,0.983365940344463
+"Low biomass","Open","Bank
+proximal","Physical dormancy",0.0819895025932905,0.0394523481921648,0.0000040555052429043
+"High biomass","Scavenger exclusion","Bank
+proximal","Physical dormancy",0.138576580256339,0.0586488238976399,0.000200024336949575
+"Low biomass","Scavenger exclusion","Bank
+proximal","Physical dormancy",0.0000000151076019627928,0.00000912106817352616,0.976204621897421
+"High biomass","Herbivore exclusion","Bank
+proximal","Physiological dormancy",0.123307380709472,0.0573022635245716,0.000215267052323523
+"Low biomass","Herbivore exclusion","Bank
+proximal","Physiological dormancy",0.0734320736141612,0.0396830954588724,0.0000138216863012568
+"High biomass","Open","Bank
+proximal","Physiological dormancy",0.268249526983425,0.0982044770830719,0.0448726907878871
+"Low biomass","Open","Bank
+proximal","Physiological dormancy",0.0564396699607114,0.0330530457550978,0.00000568294559053165
+"High biomass","Scavenger exclusion","Bank
+proximal","Physiological dormancy",0.343859481861377,0.110832251140394,0.18839406265246
+"Low biomass","Scavenger exclusion","Bank
+proximal","Physiological dormancy",0.315010246060132,0.107023886918322,0.11731082159633
+"High biomass","Herbivore exclusion","Rain
+adjacent","No dormancy",0.707690721068657,0.0972693968381899,0.0600491210326759
+"Low biomass","Herbivore exclusion","Rain
+adjacent","No dormancy",0.527937746157132,0.120130502243789,0.816477987765899
+"High biomass","Open","Rain
+adjacent","No dormancy",0.704607144306805,0.0981751064835671,0.0653246181469797
+"Low biomass","Open","Rain
+adjacent","No dormancy",0.749754845737638,0.0903369547562383,0.0226662436800631
+"High biomass","Scavenger exclusion","Rain
+adjacent","No dormancy",0.497321310181953,0.117064665329696,0.981744637790129
+"Low biomass","Scavenger exclusion","Rain
+adjacent","No dormancy",0.586480171768773,0.121790233264999,0.486536836548222
+"High biomass","Herbivore exclusion","Rain
+adjacent","Physical dormancy",0.369550789417684,0.110141132785194,0.258525620030412
+"Low biomass","Herbivore exclusion","Rain
+adjacent","Physical dormancy",0.500689802416382,0.120271703252078,0.995423869726692
+"High biomass","Open","Rain
+adjacent","Physical dormancy",0.086540459261039,0.0403497328825764,0.00000389350591768432
+"Low biomass","Open","Rain
+adjacent","Physical dormancy",0.334578768877222,0.105021474547264,0.144967914017659
+"High biomass","Scavenger exclusion","Rain
+adjacent","Physical dormancy",0.183666376810834,0.0776063834736072,0.00395259226201795
+"Low biomass","Scavenger exclusion","Rain
+adjacent","Physical dormancy",0.30611346375162,0.101809763159848,0.0877574661966777
+"High biomass","Herbivore exclusion","Rain
+adjacent","Physiological dormancy",0.000000010747330416097,0.0000105111564766083,0.985031860797219
+"Low biomass","Herbivore exclusion","Rain
+adjacent","Physiological dormancy",0.180775413558782,0.077709781486878,0.0039794139691745
+"High biomass","Open","Rain
+adjacent","Physiological dormancy",0.236994636909303,0.090581038246346,0.0195881243906246
+"Low biomass","Open","Rain
+adjacent","Physiological dormancy",0.442645886380853,0.123574831777881,0.645485725875597
+"High biomass","Scavenger exclusion","Rain
+adjacent","Physiological dormancy",0.245176984089635,0.0937769613636533,0.0264756090802788
+"Low biomass","Scavenger exclusion","Rain
+adjacent","Physiological dormancy",0.403817413876475,0.124302070844235,0.450519853802968
+"High biomass","Herbivore exclusion","Rain
+proximal","No dormancy",0.0411858660565396,0.020625571876813,0.0000000016767349063746
+"Low biomass","Herbivore exclusion","Rain
+proximal","No dormancy",0.00862677219634507,0.00547416012722623,0.000000000000124448961893216
+"High biomass","Open","Rain
+proximal","No dormancy",0.0109275722969523,0.00738281405435243,0.0000000000422826493925758
+"Low biomass","Open","Rain
+proximal","No dormancy",0.65512864084176,0.111435804760564,0.193272066258598
+"High biomass","Scavenger exclusion","Rain
+proximal","No dormancy",0.195785160218839,0.0749859784955759,0.00301056264369404
+"Low biomass","Scavenger exclusion","Rain
+proximal","No dormancy",0.0440081976427446,0.0216691464739537,0.0000000022759170789719
+"High biomass","Herbivore exclusion","Rain
+proximal","Physical dormancy",0.147436114590544,0.0610871001594895,0.000305071480201554
+"Low biomass","Herbivore exclusion","Rain
+proximal","Physical dormancy",0.0408702515219354,0.0217338254247277,0.000000012586054986913
+"High biomass","Open","Rain
+proximal","Physical dormancy",0.00000000612641834479616,0.00000528597276983254,0.982513874088791
+"Low biomass","Open","Rain
+proximal","Physical dormancy",0.125722939860494,0.0539445239054361,0.0000776539987972191
+"High biomass","Scavenger exclusion","Rain
+proximal","Physical dormancy",0.14285898822672,0.0602292482161046,0.000269748775706729
+"Low biomass","Scavenger exclusion","Rain
+proximal","Physical dormancy",0.13731154105217,0.0581612867431596,0.000181800409788818
+"High biomass","Herbivore exclusion","Rain
+proximal","Physiological dormancy",0.00000000937136338786717,0.00000859783592055132,0.983924739473025
+"Low biomass","Herbivore exclusion","Rain
+proximal","Physiological dormancy",0.0852541680914836,0.0438072898094196,0.0000239536096869358
+"High biomass","Open","Rain
+proximal","Physiological dormancy",0.0000000120379004604395,0.0000132931482977023,0.986824901053571
+"Low biomass","Open","Rain
+proximal","Physiological dormancy",0.217679030955102,0.0891504551025998,0.0145412916653892
+"High biomass","Scavenger exclusion","Rain
+proximal","Physiological dormancy",0.0237893176318345,0.0171933826196351,0.000000524414677767375
+"Low biomass","Scavenger exclusion","Rain
+proximal","Physiological dormancy",0.0000000139860699344986,0.0000107240798975114,0.98118263295986

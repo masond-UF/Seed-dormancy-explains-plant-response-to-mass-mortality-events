@@ -1,0 +1,51 @@
+## Author: David S. Mason, UF D.E.E.R. Lab
+## Department: Wildlife Ecology and Conservation
+## Affiliaton: University of Florida
+## Date Created: 2022-04-14
+## Date Last modified: 2022-04-15
+## Copyright (c) David S. Mason, 2022
+## Contact: masond@ufl.edu, @EcoGraffito
+
+### 1a_Plant-survey-combine ###
+
+The data is brought into R in two pieces becasue the first two years of vegetation sampling (2019 and 2020) was in wide format, but the final year (2021) was recorded in long form. 
+
+Before combining the data, I first fix typos in the treatment labels for the final year's dataframe and add columns representing the treatment (Carrion/exclusion) as two columns, rather than combined. Then, I calculate percent cover for this dataframe.
+
+Next, I convert the dataframe for the first two years into long form and combine it with the final year's dataframe. Finally, I convert the combined long data into wide format and save the new csv.
+
+### 1b_Plant-survey-clean ###
+
+First, I combine like species. In the list below, the redundant species are on the left hand side of the equation; the final combined species label is presented on the right hand side after the equal symbol. Most of these species are being combined with an existing column. However, new columns are indicated with an asterisk.
+
+REDUNDANT = KEEP, AMOR = AMDR, BOHI + BIHI = BOHI2, BOYS = BOIS, ENP + ENPI = ENPE4, GASU + GASUS = GASU2, GREENT + GREENT + GREENT2 + GREENTHREAD + THIFI + WIREASTER = THFI, LACE + LASE.1  = LASE, LEPIDIUM = LEVI, CHAER = APIAC, GABI = GAVI, MILKWEED = ASAS, PARON = PAJA, PANICLE + DICHA2 + DICO2 + DILO? + DIOL + DICO = PANIC, NEEDLE = NALE3, RIBS = RIB, SPCOC2 = SGSC
+
+I merge Dichanthelium with Panicum because both species at NRI (sphaerocarpon and oligosanthes) are Panicum.
+
+Before saving the final clean data, I rearrange some columns and round sampling dates by week so that samples within a couple days are represented as a single event.
+
+### 2a_Plant-func-clean ###
+
+I am looking to calculate relative cover of each plant species. Later I will calculate relative cover of seed dormancy classes by combining the relative cover values of species according to class. To accomplish this task, I will need the relative cover of unknown species too because none of these species will have a dormany class value. I also need to remove non-plants.
+
+To calculate the relative cover of unknowns, I need to extract all unknown species and sum their cover up as if they were a single species. First, I create a vector of unknowns and separate the plant survey into knowns and unknowns. Then, I calculate the total percent cover of unknowns and recombine with the known species.
+
+To remove the non-plants, I create a vector of non-plants and filter the plant survey data.
+
+Next, I calculate the total cover of plants at each plot/sample and add this value as a column to the plant survey data. Then, I calculate relative cover and check to make sure the values for each plot/sample at up to 1.
+
+Now, I want to add dormancy class for each species, which I will pull from the Baskin and Baskin seed dormancy database. However, that database uses full species name, so I need to add a column with the correct Genus species label for each symbol in my plant survey. Then, I join the dataframes to add the genus species to the plant survey data.
+
+Next, I bring in the seed dormancy database. I am looking to pull the seed dormancy class from this database and add it to my plant surve data. However, there may be multiple observations in the database for a single species. First, I extract the names of all species found multiple times in the seed dormancy database. Then, I use a for loop to add a value distinguishing whether or not a species is represented multiple times in the database. One species, Digitaria ciliaris, has two entires in the database (non-dormant and physiological dormancy). I remove the physiological dormancy entry (see below) for Digitaria ciliaris and merge the resulting seed dormancy dataframe with the plant survey dataframe. 
+
+Many of the species in the plant survey data are not represented in the Baskins and Baskins seed dormancy database. I searched for evidence of dormancy by searching for the species/genus in Baskins and Baskins (2004) and google scholar using the following terminology until I found sources: Genus species seed dormancy, Genus species germination, Genus seed dormancy, Genus germination, Family seed dormancy, Family seed germination, Genus species seed banking, Genus seed banking, Family seed banking, Genus species seed bank, Genus seed bank, Family seed bank.
+
+If using data from a species other than the species in the plant survey database, I searched google scholar for evidence of phylogenetic relatedness by using the following terminology: Family phylogeny, Genus phylogeny, Genus species phylogency.
+
+I also searched plant name databases for evidences of synonymy.  
+
+For sources and explanation of decisions regarding seed dormancy classes see: "NRI-MME/Animals-plants-seeds/Documents/Plant-seed-dormancy-class-citations.txt"
+
+Based on this information, I run a for loop adding dormancy class from the search above for species not included in the Baskins and Baskins database. Then I fix some of the seed dormancy class levels, summarize the data by plot/sample, and save the dataframe as a csv.
+
+
