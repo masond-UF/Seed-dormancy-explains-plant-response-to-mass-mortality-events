@@ -4,7 +4,7 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliaton: University of Florida
 ## Date Created: 2021-11-23
-## Date Last Modified: 2021-06-04
+## Date Last Modified: 2024-09-04
 ## Copyright (c) David S. Mason, 2022
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script conducts a basic general linear model on the
@@ -12,11 +12,7 @@
 ## summary and coefficients.
 
 ## --------------- SET—UP WORKSPACE --------------------------------------------
-library(tidyverse)
-library(tidylog)
-library(lubridate)
-library(styler)
-library(DataExplorer)
+
 library(lme4)
 library(lmerTest)
 library(emmeans)
@@ -27,11 +23,18 @@ library(MuMIn)
 library(glmmTMB)
 library(broom)
 
+library(tidyverse)
+library(tidylog)
+library(lubridate)
+library(styler)
+library(DataExplorer)
+
+
 # Clear the decks
 rm(list = ls())
 
 # Bring in the data
-cam <- read.csv('Animals-plants-seeds/Clean-data/Animals/Camera-traps.csv')
+cam <- read.csv('Clean-data/Animals/Camera-traps.csv')
 
 cam$Date <- as_date(cam$Date)
 
@@ -47,9 +50,6 @@ herbivory <- cam %>%
 
 ## --------------- SUMMARIZE DECOMP DATA ---------------------------------------
 
-# decomp$Date <- as_date(decomp$Date)
-# decomp$Week <- round_date(decomp$Date, "week")
-
 decomp.sum <- decomp %>% 
 							group_by(Site, Treatment, Carrion, Exclusion, Functional) %>% 
 							summarize(Total.detections = n())
@@ -64,80 +64,6 @@ decomp.sum <- decomp.sum.wd %>%
 
 decomp.sum <- decomp.sum %>% 
 	filter(Functional == "Scavenger")
-
-# # Add numeric value for date
-# decomp.sum$WeekNum <- NA
-# 
-# for (i in 1:nrow(decomp.sum)){
-# 	if (decomp.sum$Week[i] == "2019-04-14"){
-# 		decomp.sum$WeekNum[i] <- 1
-# 	}
-# 	if (decomp.sum$Week[i] == "2019-04-21"){
-# 		decomp.sum$WeekNum[i] <- 2
-# 	}
-# 	if (decomp.sum$Week[i] == "2019-04-28"){
-# 		decomp.sum$WeekNum[i] <- 3
-# 	}
-# 	if (decomp.sum$Week[i] == "2019-05-05"){
-# 		decomp.sum$WeekNum[i] <- 4
-# 	}
-# }
-# 
-# # Check data frame
-# 6*4 # There should be 24 plots
-# 24*4 # There should be 4 rows for each plot
-# nrow(decomp.sum) - (24*4)
-# # We are missing 14 rows
-# 
-# # Complete the dataframe 
-# decomp.sum <- decomp.sum |>
-# 	dplyr::select(-Week)
-# 
-# # Create missing rows
-# decomp.sum <- complete(decomp.sum, Site, Treatment, WeekNum)
-# 
-# # Replace NA detection values with 0
-# for(i in 1:nrow(decomp.sum)){
-# 	if(is.na(decomp.sum$Total.detections[i])){
-# 		decomp.sum$Total.detections[i] <- 0
-# 	}
-# }
-# 
-# # Fix functional
-# decomp.sum$Functional <- "Scavenger"
-# 
-# # Fix carrion and exclusion
-# for (i in 1:nrow(decomp.sum)) {
-#   if (decomp.sum$Treatment[i] == "CO") {
-#     decomp.sum$Carrion[i] <- "Single"
-#     decomp.sum$Exclusion[i] <- "Open"
-#   } else {
-#     if (decomp.sum$Treatment[i] == "CS") {
-#       decomp.sum$Carrion[i] <- "Single"
-#       decomp.sum$Exclusion[i] <- "Scavenger"
-#     } else {
-#       if (decomp.sum$Treatment[i] == "CH") {
-#         decomp.sum$Carrion[i] <- "Single"
-#         decomp.sum$Exclusion[i] <- "Herbivore"
-#       } else {
-#         if (decomp.sum$Treatment[i] == "MO") {
-#           decomp.sum$Carrion[i] <- "Mass"
-#           decomp.sum$Exclusion[i] <- "Open"
-#         } else {
-#           if (decomp.sum$Treatment[i] == "MS") {
-#             decomp.sum$Carrion[i] <- "Mass"
-#             decomp.sum$Exclusion[i] <- "Scavenger"
-#           } else {
-#             if (decomp.sum$Treatment[i] == "MH") {
-#               decomp.sum$Carrion[i] <- "Mass"
-#               decomp.sum$Exclusion[i] <- "Herbivore"
-#             }
-#           }
-#         }
-#       }
-#     }
-#   }
-# }
 
 # Clear the decks
 rm(decomp, decomp.sum.wd)
@@ -162,141 +88,6 @@ herbivory.sum <- herbivory.sum.wd %>%
 herbivory.sum <- herbivory.sum %>% 
 	filter(Functional == "Herbivore")
 herbivory.sum <- as.data.frame(herbivory.sum)
-
-# herbivory.sum$Total.detections <- as.numeric(herbivory.sum$Total.detections)
-# herbivory.sum$Functional <- as.character(herbivory.sum$Functional)
-
-# d <- data.frame("Site" = c("DF", "DF", "DF", "OS", "OS", "WP", "WP", "WP"),
-								# "Treatment" = c("CO", "CH", "MO", "CO", "CH", "CO", "CH", "MO"), 
-								# "Carrion" = c("Single", "Single", "Mass", "Single", "Single",
-															# "Single", "Single", "Mass"),
-								# "Exclusion" = c("Open", "Herbivore", "Open", "Open", "Herbivore",
-																# "Open", "Herbivore", "Open"), 
-								# "Functional" = "Herbivore",
-								# "Total.detections" = 0)
-
-# herbivory.sum <- rbind(herbivory.sum, d)
-
-# herbivory.sum$WeekNum <- NA
-# 
-# for (i in 1:nrow(herbivory.sum)){
-# 	if (herbivory.sum$Week[i] == "2019-05-05"){
-# 		herbivory.sum$WeekNum[i] <- 1
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-05-12"){
-# 		herbivory.sum$WeekNum[i] <- 2
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-05-19"){
-# 		herbivory.sum$WeekNum[i] <- 3
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-05-26"){
-# 		herbivory.sum$WeekNum[i] <- 4
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-06-02"){
-# 		herbivory.sum$WeekNum[i] <- 5
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-06-09"){
-# 		herbivory.sum$WeekNum[i] <- 6
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-06-16"){
-# 		herbivory.sum$WeekNum[i] <- 7
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-06-23"){
-# 		herbivory.sum$WeekNum[i] <- 8
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-06-30"){
-# 		herbivory.sum$WeekNum[i] <- 9
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-07-07"){
-# 		herbivory.sum$WeekNum[i] <- 10
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-07-14"){
-# 		herbivory.sum$WeekNum[i] <- 11
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-07-21"){
-# 		herbivory.sum$WeekNum[i] <- 12
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-07-28"){
-# 		herbivory.sum$WeekNum[i] <- 13
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-08-04"){
-# 		herbivory.sum$WeekNum[i] <- 14
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-08-11"){
-# 		herbivory.sum$WeekNum[i] <- 15
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-08-25"){ # Missing dates
-# 		herbivory.sum$WeekNum[i] <- 16
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-09-01"){
-# 		herbivory.sum$WeekNum[i] <- 17
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-09-22"){
-# 		herbivory.sum$WeekNum[i] <- 18
-# 	}
-# 	if (herbivory.sum$Week[i] == "2019-10-06"){
-# 		herbivory.sum$WeekNum[i] <- 19
-# 	}
-# }
-# 
-# # Drop everything over week 15 because there is not complete data
-# 
-# herbivory.sum$WeekNum <- as.numeric(herbivory.sum$WeekNum)
-# herbivory.sum <- herbivory.sum %>%
-# 	filter(WeekNum < 16)
-# 
-# length(unique(herbivory.sum$WeekNum))
-# (4*6)*15 # Missing rows again
-# 
-# # Complete the dataframe 
-# herbivory.sum <- herbivory.sum |>
-# 	dplyr::select(-Week)
-# 
-# # Create missing rows
-# herbivory.sum <- complete(herbivory.sum, Site, Treatment, WeekNum)
-# 
-# # Replace NA detection values with 0
-# for(i in 1:nrow(herbivory.sum)){
-# 	if(is.na(herbivory.sum$Total.detections[i])){
-# 		herbivory.sum$Total.detections[i] <- 0
-# 	}
-# }
-# 
-# # Fix functional
-# herbivory.sum$Functional <- "Herbivore"
-# 
-# # Fix carrion and exclusion
-# for (i in 1:nrow(herbivory.sum)) {
-#   if (herbivory.sum$Treatment[i] == "CO") {
-#     herbivory.sum$Carrion[i] <- "Single"
-#     herbivory.sum$Exclusion[i] <- "Open"
-#   } else {
-#     if (herbivory.sum$Treatment[i] == "CS") {
-#       herbivory.sum$Carrion[i] <- "Single"
-#       herbivory.sum$Exclusion[i] <- "Scavenger"
-#     } else {
-#       if (herbivory.sum$Treatment[i] == "CH") {
-#         herbivory.sum$Carrion[i] <- "Single"
-#         herbivory.sum$Exclusion[i] <- "Herbivore"
-#       } else {
-#         if (herbivory.sum$Treatment[i] == "MO") {
-#           herbivory.sum$Carrion[i] <- "Mass"
-#           herbivory.sum$Exclusion[i] <- "Open"
-#         } else {
-#           if (herbivory.sum$Treatment[i] == "MS") {
-#             herbivory.sum$Carrion[i] <- "Mass"
-#             herbivory.sum$Exclusion[i] <- "Scavenger"
-#           } else {
-#             if (herbivory.sum$Treatment[i] == "MH") {
-#               herbivory.sum$Carrion[i] <- "Mass"
-#               herbivory.sum$Exclusion[i] <- "Herbivore"
-#             }
-#           }
-#         }
-#       }
-#     }
-#   }
-# }
 
 # Clear the decks
 rm(herbivory, herbivory.sum.wd)
@@ -334,12 +125,15 @@ p  <- length(coef(m1)) # '+1' is for variance parameter in NB
 sum(E2^2) / (N - p)
 
 # Check residuals
+library(DHARMa)
 sim_m1 <- simulateResiduals(fittedModel = m1, n = 250)
 plot(sim_m1)
 
+library(car)
 Anova(m1)
 
 # Means
+library(emmeans)
 emmeans(m1, pairwise~Treatment, type='response')
 
 decomp.means <- data.frame(
@@ -350,11 +144,11 @@ decomp.means <- data.frame(
 	UCL = c(23.62, 612.78, 6.15, 730.09, 705.86,11.57)
 )
 
-mean(c(180.52, 174.51)) 177.515
-mean(c(5.32, 151.42)) 78.37
+mean(c(180.52, 174.51)) # 177.515
+mean(c(5.32, 151.42)) # 78.37
 177.515/78.37
 
-write.csv(decomp.means, "Animals-plants-seeds/Analysis/Animals/Decomp-means.csv",
+write.csv(decomp.means, "Analysis/Animals/Decomp-means.csv",
 					row.names = FALSE
 )
 
@@ -385,7 +179,7 @@ pvals <- c('0.0013', '0.1705', '0.0007', '0.0008', '0.4653', '<.0001',
 
 decomp.p$p.value <- pvals
 
-write.csv(decomp.p, "Animals-plants-seeds/Analysis/Animals/Decomp-contrasts.csv",
+write.csv(decomp.p, "Analysis/Animals/Decomp-contrasts.csv",
 					row.names = FALSE
 )
 
@@ -393,7 +187,7 @@ write.csv(decomp.p, "Animals-plants-seeds/Analysis/Animals/Decomp-contrasts.csv"
 # Anova
 decomp.aov <- as.data.frame(Anova(m1))
 decomp.aov <- format(decomp.aov, scientific = FALSE)
-write.csv(decomp.aov, "Animals-plants-seeds/Analysis/Animals/Decomp-aov.csv",
+write.csv(decomp.aov, "Analysis/Animals/Decomp-aov.csv",
 					row.names = FALSE
 )
 
@@ -409,6 +203,7 @@ m2 <- glm(Total.detections ~ Treatment + Site, family = 'poisson',
 
 library(performance)
 check_zeroinflation(m2) # underfitting zeroes
+dev.new()
 check_model(m2)
 check_singularity(m2, tolerance = 1e-05)
 
@@ -421,7 +216,7 @@ sum(E2^2) / (N - p) # overdispersed
 # Check residuals
 sim_m2 <- simulateResiduals(fittedModel = m2, n = 250)
 plot(sim_m2)
-Anova(m)
+Anova(m2)
 
 # Means
 options(scipen=999)
@@ -441,7 +236,7 @@ herb.means$se <- round(herb.means$se, digits = 2)
 herb.means$LCL <- round(herb.means$LCL, digits = 2)
 herb.means$UCL <- round(herb.means$UCL, digits = 2)
 
-write.csv(herb.means, "Animals-plants-seeds/Analysis/Animals/Herb-means.csv",
+write.csv(herb.means, "Analysis/Animals/Herb-means.csv",
 					row.names = FALSE
 )
 
@@ -474,14 +269,14 @@ pvals <- c('<.0001', '0.0188', '0.2150', '0.0024', '0.9946', '<.0001',
 
 herb.p$p.value <- pvals
 
-write.csv(herb.p, "Animals-plants-seeds/Analysis/Animals/Herb-contrasts.csv",
+write.csv(herb.p, "Analysis/Animals/Herb-contrasts.csv",
 					row.names = FALSE
 )
 
 
 # Anova
 herb.aov <- as.data.frame(Anova(m2))
-write.csv(herb.aov, "Animals-plants-seeds/Analysis/Animals/Herb-aov.csv",
+write.csv(herb.aov, "Analysis/Animals/Herb-aov.csv",
 					row.names = FALSE
 )
 

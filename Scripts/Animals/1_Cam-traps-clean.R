@@ -4,7 +4,7 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2021-11-19
-## Date Last Modified: 2022-12-23
+## Date Last Modified: 2024-09-04
 ## Copyright (c) David S. Mason, 2022
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script cleans the camera trap data, adds functional
@@ -24,7 +24,7 @@ library(lubridate)
 library(styler)
 
 # cam <- read.csv("Animals-plants-seeds/Raw-data/Animals/2022-06-4_Cam-traps.csv")
-cam <- read.csv("Animals-plants-seeds/Raw-data/Animals/2023-12-16_Cam-traps.csv")
+cam <- read.csv("Raw-data/Animals/2023-12-16_Cam-traps.csv")
 
 ## --------------- MUNGE DATA --------------------------------------------------
 
@@ -232,13 +232,13 @@ cam <- cam %>% dplyr::select(Date, Time, Site, Treatment, Group.Size,
 cam <- cam |> 
 	drop_na()
 
-## --------------- DROP MISSING DATES ------------------------------------------
+## --------------- DUPLICATES --------------------------------------------------
 
 
 # Dupes that were caused by typos in the time, or individual observed were
 # corrected in the raw data.
 
-# The rest are potentially true duplications and are therefore removed
+# The rest are potentially true duplicates and are therefore removed
 
 cam <- cam[!duplicated(cam[-11]), ]
 
@@ -250,62 +250,14 @@ library(janitor)
 dupes <- test |>
 	get_dupes()
 
-## --------------- SUMMARIZE BY WEEK -------------------------------------------
-# cam$Date <- round_date(cam$Date, unit = "week")
-
-# cam.trmt.wk <- cam %>%
-  # group_by(Treatment, Date, Functional) %>%
-  # summarise(Detections = n())
-
-## --------------- ADD ZEROES TO DATA ------------------------------------------
-
-# cam.trmt.wk.wd <- cam.trmt.wk %>%
-  # pivot_wider(names_from = Functional, values_from = Detections)
-
-# cam.trmt.wk.wd[is.na(cam.trmt.wk.wd)] <- 0
-
-# cam.trmt.wk <- cam.trmt.wk.wd %>%
-  # pivot_longer(3:7, names_to = "Functional", values_to = "Detections")
-
 ## --------------- WRITE TO CSV ------------------------------------------------
 
 # Detections by treatment, functional group, and week for MME
-write.csv(cam, "Animals-plants-seeds/Clean-data/Animals/Camera-traps.csv",
+write.csv(cam, "Clean-data/Animals/Camera-traps.csv",
   row.names = FALSE
 )
 
 # For special issue
-write.csv(coyote, "Animals-plants-seeds/Clean-data/Animals/Coyote.csv",
+write.csv(coyote, "Clean-data/Animals/Coyote.csv",
 					row.names = FALSE
 )
-
-## --------------- SUMMARIZE TOTALS --------------------------------------------
-
-# cam.totals <- cam %>%
-  # group_by(Treatment, Carrion, Exclusion, Functional) %>%
-  # summarise(Detections = n())
-
-## --------------- ADD ZEROES TO DATA ------------------------------------------
-
-# cam.totals.wd <- cam.totals %>%
-  # pivot_wider(names_from = Functional, values_from = Detections)
-
-# cam.totals.wd[is.na(cam.totals.wd)] <- 0
-
-# cam.totals <- cam.totals.wd %>%
-  # pivot_longer(4:8, names_to = "Functional", values_to = "Detections")
-
-# cam.totals <- cam.totals %>%
-  # filter(Treatment %in% c("CO", "MO", "CH", "MH", "CS", "MS"))
-
-## --------------- WRITE TO CSV ------------------------------------------------
-
-# Long total detections by treatment and functional group
-# write.csv(cam.totals, "Animals-plants-seeds/Clean-data/Animals/Cam-trap-totals-lg.csv",
-  # row.names = FALSE
-# )
-
-# Wide total detections by treatment and functional group
-# write.csv(cam.totals.wd, "Animals-plants-seeds/Clean-data/Animals/Cam-trap-totals-wd.csv",
-					# row.names = FALSE
-# )

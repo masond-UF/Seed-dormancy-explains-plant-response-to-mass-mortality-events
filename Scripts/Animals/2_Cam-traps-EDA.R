@@ -4,11 +4,12 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliaton: University of Florida
 ## Date Created: 2021-11-19
-## Date Last Modified: 2021-06-04
+## Date Last Modified: 2024-09-04
 ## Copyright (c) David S. Mason, 2022
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script does basic data exploratory analysis on the 
 ## camera trap data. 
+
 ## --------------- SET—UP WORKSPACE --------------------------------------------
 library(tidyverse)
 library(tidylog)
@@ -19,7 +20,7 @@ library(styler)
 rm(list=ls())
 
 # Bring in the data
-cam <- read.csv('Animals-plants-seeds/Clean-data/Animals/Camera-traps.csv')
+cam <- read.csv('Clean-data/Animals/Camera-traps.csv')
 
 cam$Date <- as_date(cam$Date)
 
@@ -44,6 +45,7 @@ daily <- cam |>
 daily$Date <- as_date(daily$Date)
 sites <- as_vector(unique(cam$Site))
 
+library(scales)
 for(i in 1:length(sites)){
 	site.i <- sites[i]
 	tmp.d <- daily |>
@@ -59,8 +61,6 @@ for(i in 1:length(sites)){
 	print(p)
 }
 
-# Investigate cut off in August?
-# OS MH June and July missing? MS July?
 rm(daily, sites)
 
 # Monthly totals
@@ -129,29 +129,24 @@ rm(species)
 
 library(data.table)
 cam$Time <- as.ITime(cam$Time)
-cam$Time <- hms(cam$Time)
-
 class(cam$Time)
 
-install.packages("remotes")
-remotes::install_github("ellisvalentiner/lubridateExtras")
+# Round time
+cam <- cam |>
+	mutate(Time = as.ITime(round_date(as.POSIXct(Time, format="%H:%M:%S"), unit = "hour"))
+)
 
-library(lubridateExtras)
-
-# Group by hour
+# Summarize
 Time <- cam |>
-	mutate(Hour = lubridateExtras::round_hms(Time, 'hour')) |>
-	group_by(Hour) |>
+	group_by(Time) |>
 	summarize(Total = n ())
 
-ggplot(Time, aes(x = Hour, y = Total))+
+# Plot
+ggplot(Time, aes(x = Time, y = Total))+
+	scale_x_time()+
 	geom_bar(stat = 'identity')
 
-
 rm(Time, hour)
-
-
-
 
 library(data.table)
 cam$Time <- as.ITime(cam$Time)
@@ -164,7 +159,7 @@ Time <- cam |>
 	summarize(Total = n ())
 
 Time$Hour <- NA
-Time$Hour <- seq(0,24,1)
+Time$Hour <- seq(0,23,1)
 
 ggplot(Time, aes(x = Hour, y = Total))+
 	scale_x_continuous(breaks = seq(0,24,1))+
