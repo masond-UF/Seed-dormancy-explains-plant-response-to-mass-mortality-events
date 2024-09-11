@@ -4,7 +4,7 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2022-6-25
-## Date Last Modified: 2022-6-25
+## Date Last Modified: 2024-09-11
 ## Copyright (c) David S. Mason, 2022
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script prepares the soil nutrient data for analysis
@@ -20,7 +20,7 @@ library(styler)
 rm(list = ls())
 
 # Bring in the data
-soil <- read.csv("Animals-plants-seeds/Raw-data/Soils/Soil-nutrients.csv")
+soil <- read.csv("Raw-data/Soils/Soil-nutrients.csv")
 
 # Convert to year
 soil$Date <- mdy(soil$Date)
@@ -31,13 +31,13 @@ soil$Date <- mdy(soil$Date)
 soil.pre <- soil %>% filter(Date == "2019-04-12")
 soil.post1 <- soil %>%
   filter(Date == "2020-05-19") %>%
-  select(!Date:Fencing)
+  dplyr::select(!Date:Fencing)
 soil.post2 <- soil %>%
   filter(Date == "2020-07-21") %>%
-  select(!Date:Fencing)
+  dplyr::select(!Date:Fencing)
 soil.post3 <- soil %>%
   filter(Date == "2021-05-05") %>%
-  select(!Date:Fencing)
+  dplyr::select(!Date:Fencing)
 
 # Bring together the data in wide time-series format
 soil.merged <- cbind(soil.pre, soil.post1, soil.post2, soil.post3)
@@ -75,7 +75,7 @@ names(effect) <- c(
 )
 
 # Grab the predictors from the original dataframe
-pred <- soil.pre %>% select(Site, Treatment, Biomass, Fencing)
+pred <- soil.pre %>% dplyr::select(Site, Treatment, Biomass, Fencing)
 
 # Bring everything together
 merged <- cbind(pred, effect)
@@ -140,9 +140,9 @@ for(i in 1:nrow(soil.lg)){
 ## --------------- SELECT AND REORDER ------------------------------------------
 
 soil.lg <- soil.lg %>% 
-	select(Site, Treatment, Biomass, Fencing, Variable, Date, Measurement, Effect.size)
+	dplyr::select(Site, Treatment, Biomass, Fencing, Variable, Date, Measurement, Effect.size)
 
 ## --------------- SAVE DATAFRAME TO CSV ---------------------------------------
 write.csv(soil.lg,
-					"Animals-plants-seeds/Clean-data/Soils/Soil-nutrients-effect-size.csv",
+					"Clean-data/Soils/Soil-nutrients-effect-size.csv",
 					row.names = FALSE)
