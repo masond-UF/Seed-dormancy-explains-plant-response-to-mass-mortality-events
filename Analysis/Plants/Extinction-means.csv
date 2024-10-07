@@ -1,29 +1,7 @@
-Treatment,prob,SE,df,asymp.LCL,asymp.UCL,,
-CH,0.470588235,0.069892768,Inf,0.333600928,0.607575543,,
-CO,0.416666667,0.07115938,Inf,0.277196844,0.556136489,,
-CS,0.477272727,0.075299926,Inf,0.329687584,0.624857871,,64
-MH,0.666666667,0.072739283,Inf,0.524100291,0.809233042,,
-MO,0.586956522,0.072597545,Inf,0.444667948,0.729245095,,
-MS,0.68627451,0.06497385,Inf,0.558928104,0.813620915,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-Greatest difference all mass and control,,,,,,,
-Subtract starting value minus final value,,,,,,-0.269607843,
-Divide that amount by the absolute value of the starting value,,,,,,-0.647058824,
-Multiply by 100 to get percent decrease,,,,,,-64.70588235,
-,,,,,,,
-"If the percentage is negative, it means there was an increase and not an decrease.",,,,,,,
-,,,,,,,
-Smallest difference all mass and control,,,,,,,
-Subtract starting value minus final value,,,,,,-0.109683794,
-Divide that amount by the absolute value of the starting value,,,,,,-0.229813665,
-Multiply by 100 to get percent decrease,,,,,,-22.98136646,
-,,,,,,,
-"If the percentage is negative, it means there was an increase and not an decrease.",,,,,,,
-,,,,,,,
-,,,,,,,
-,23-64.7% increase in extinction probability,,,,,,
-,,,,,,,
-,,,,,,,
+"Treatment","prob","SE","df","asymp.LCL","asymp.UCL"
+"CH",0.470588235294117,0.0698927677395021,Inf,0.339026635687852,0.606367569466383
+"CO",0.416666666666667,0.0711593802193551,Inf,0.28694030674724,0.559059623100113
+"CS",0.477272727272727,0.0752999262154585,Inf,0.335695843543173,0.622598216021899
+"MH",0.666666666666622,0.0727392833895499,Inf,0.512896761233145,0.791616326122414
+"MO",0.58695652173913,0.0725975449320953,Inf,0.441393676039452,0.718756861463518
+"MS",0.686274509803786,0.0649738498735848,Inf,0.547674917845238,0.798063989298609
