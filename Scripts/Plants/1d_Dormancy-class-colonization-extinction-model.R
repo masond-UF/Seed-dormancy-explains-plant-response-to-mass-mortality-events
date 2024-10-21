@@ -4,7 +4,7 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2022-05-01
-## Date Last modified: 2024-10-04
+## Date Last modified: 2024-10-19
 ## Copyright (c) David S. Mason, 2022
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This is a script for analyzing the binary colonization
@@ -99,9 +99,9 @@ write.csv(col.ever.means, "Analysis/Plants/Colonization-means.csv",
   row.names = FALSE
 )
 
-## --------------- EXTINCTION MODEL --------------------------------------------
+## --------------- EXTIRPATION MODEL -------------------------------------------
 
-# Model colonization
+# Model extirpation
 ext.ever.m <- glm(Extirpated.ever ~ Site + Distance + Treatment,
   data = dormancy.ext, family = binomial
 )

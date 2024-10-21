@@ -591,6 +591,20 @@ comb.transect.dormancy <- comb.transect.dormancy %>%
 comb.transect.dormancy.wd <- comb.transect.dormancy |>
 	pivot_wider(names_from = Rounded.date, values_from = Present)
 
+# Check the numbers
+check <- comb.transect.dormancy |>
+	group_by(Rounded.date, Site, Treatment, Transect, Distance) |>
+	summarize(Count = n ()) 
+# All transect points are represented
+# 7 dates
+# 4 sites
+# 6 treatments
+# 4 directions
+# 4 distance
+# 4 dormancy class
+7*4*6*4*4*4 # Nice
+rm(check)
+
 # Create colonization dataframe
 dormancy.col <- comb.transect.dormancy.wd %>% 
 	filter(`2019-03-10` == 0)
