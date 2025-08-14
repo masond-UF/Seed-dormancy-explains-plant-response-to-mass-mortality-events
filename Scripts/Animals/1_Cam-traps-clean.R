@@ -4,8 +4,8 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2021-11-19
-## Date Last Modified: 2024-09-04
-## Copyright (c) David S. Mason, 2022
+## Date Last Modified: 2025-08-13
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script cleans the camera trap data, adds functional
 ## roles to each observation (e.g., herbivore, scavenger) and summarizes by 
@@ -29,13 +29,13 @@ cam <- read.csv("Raw-data/Animals/2023-12-16_Cam-traps.csv")
 ## --------------- MUNGE DATA --------------------------------------------------
 
 # Convert date into a format the tidyverse trucks with and round to nearest week
-cam$Date <- mdy(cam$Date)
+cam$DATE <- mdy(cam$DATE)
 
 # Fix busted date
 cam[8746,10] <- as_date('2019-07-09')
 
 # Make species levels consistent
-cam$Common.name <- dplyr::recode(cam$Common.name,
+cam$COMMON.NAME <- dplyr::recode(cam$COMMON.NAME,
   "wild turkey" = "Wild turkey",
   "Wild Turkey" = "Wild turkey",
   "striped skunk" = "Striped skunk",
@@ -63,7 +63,7 @@ cam$Common.name <- dplyr::recode(cam$Common.name,
 )
 
 # Ensure species levels are consistent
-tmp <- data.frame(unique(cam$Common.name))
+tmp <- data.frame(unique(cam$COMMON.NAME))
 
 ## --------------- ADD FUNCTIONAL ROLE DATA ------------------------------------
 
@@ -94,20 +94,20 @@ rm(tmp)
 
 # Add value for functional column for each observation
 for (i in 1:nrow(cam)) {
-  if (cam$Common.name[i] %in% Herbivore) {
-    cam$Functional[i] <- "Herbivore"
+  if (cam$COMMON.NAME[i] %in% Herbivore) {
+    cam$FUNCTIONAL[i] <- "Herbivore"
   } else {
-    if (cam$Common.name[i] %in% Obligate.scav) {
-      cam$Functional[i] <- "Scavenger"
+    if (cam$COMMON.NAME[i] %in% Obligate.scav) {
+      cam$FUNCTIONAL[i] <- "Scavenger"
     } else {
-      if (cam$Common.name[i] %in% Facult.scav) {
-        cam$Functional[i] <- "Scavenger"
+      if (cam$COMMON.NAME[i] %in% Facult.scav) {
+        cam$FUNCTIONAL[i] <- "Scavenger"
       } else {
-        if (cam$Common.name[i] %in% Other.consum) {
-          cam$Functional[i] <- "Other"
+        if (cam$COMMON.NAME[i] %in% Other.consum) {
+          cam$FUNCTIONAL[i] <- "Other"
         } else {
-          if (cam$Common.name[i] %in% Undetermined) {
-            cam$Functional[i] <- "Other"
+          if (cam$COMMON.NAME[i] %in% Undetermined) {
+            cam$FUNCTIONAL[i] <- "Other"
           }
         }
       }
@@ -118,103 +118,103 @@ for (i in 1:nrow(cam)) {
 
 # For the special issue of food webs
 coyote <- cam |>
-	filter(Common.name == 'Coyote')
+	filter(COMMON.NAME == 'Coyote')
 
 ## --------------- FILTER DATA -------------------------------------------------
 
 # Remove observations where the animals were outside the plot
-cam <- cam %>% filter(Note != "outside of plot" &
-  Note != "not in plot" &
-  Note != "edge of plot" &
-  Note != "edge if plot" &
-  Note != "Not in Plot" &
-  Note != "Not in plot (outside of cage)" &
-  Note != "Not in plot (outside of cage), clip cut short" &
-  Note != "edge of plot, walks out of view" & 
-  Note != "edge of plot, walks out of view, clip cut short" &
-  Note != "edge of plot, clip cut short" &
-  Note != "edge of plot: trying to get in plot" &
-  Note != "edge of plot, climbing fence, clip cut short" &
-  Note != "edge of plot, investigating fence, clip cut short" &
-  Note != "edge of plot, investigating exclusion fence" &
-  Note != "edge of plot, runs out of view" &
-  Note != "edge of plot, hard to see activity" &
-  Note != "edge of plot messing with the camera" &
-  Note != "Edge of plot and video cut short" &
-  Note != "edge of plot and runs away" &
-  Note != "too close to camera; edge of plot" &
-  Note != "flies over edge of plot" &
-  Note != "gripping edge of fence" &
-  Note != "walks by edge of plot" &
-  Note != "walks through edge of plot" &
-  Note != "walks through edge of plot, investigating camera trap" &
-  Note != "outside the plot" &
-  Note != "really far outside the plot" &
-  Note != "runs through plot, maybe outside" &
-	Note != "outside the electric fence" &
-	Note != "outside plot, perched on camera" &
-	Note != "outside plot" &
-	Note != "outside of plot, spreading wings" &
-	Note != "outside of plot, could be eating" &
-	Note != "outside of plot (near)" &
-	Note != "outside of plot" &
-	Note != "outside of lot (near)" &
-	Note != "outside of electric fence" &
-	Note != "outside of block" &
-	Note != "outside  plot" &
-	Note != "Not in plot (outside of cage), clip cut short" &
-	Note != "Not in plot (outside of cage)" &
-	Note != "flys outside of plot" &
-	Note != "flies onto fence post from outside plot" &
-  Note != "perched on fencing of other plot" &
-  Note != "perched on camera trap" &
-  Note != "flys over plot" &
-  Note != "flys over plot" &
-  Note != "flys over plot" &
-  Note != "flies over plot" &
-  Note != "flies onto exclusion fence post out of view"
+cam <- cam %>% filter(NOTE != "outside of plot" &
+  NOTE != "not in plot" &
+  NOTE != "edge of plot" &
+  NOTE != "edge if plot" &
+  NOTE != "Not in Plot" &
+  NOTE != "Not in plot (outside of cage)" &
+  NOTE != "Not in plot (outside of cage), clip cut short" &
+  NOTE != "edge of plot, walks out of view" & 
+  NOTE != "edge of plot, walks out of view, clip cut short" &
+  NOTE != "edge of plot, clip cut short" &
+  NOTE != "edge of plot: trying to get in plot" &
+  NOTE != "edge of plot, climbing fence, clip cut short" &
+  NOTE != "edge of plot, investigating fence, clip cut short" &
+  NOTE != "edge of plot, investigating exclusion fence" &
+  NOTE != "edge of plot, runs out of view" &
+  NOTE != "edge of plot, hard to see activity" &
+  NOTE != "edge of plot messing with the camera" &
+  NOTE != "Edge of plot and video cut short" &
+  NOTE != "edge of plot and runs away" &
+  NOTE != "too close to camera; edge of plot" &
+  NOTE != "flies over edge of plot" &
+  NOTE != "gripping edge of fence" &
+  NOTE != "walks by edge of plot" &
+  NOTE != "walks through edge of plot" &
+  NOTE != "walks through edge of plot, investigating camera trap" &
+  NOTE != "outside the plot" &
+  NOTE != "really far outside the plot" &
+  NOTE != "runs through plot, maybe outside" &
+	NOTE != "outside the electric fence" &
+	NOTE != "outside plot, perched on camera" &
+	NOTE != "outside plot" &
+	NOTE != "outside of plot, spreading wings" &
+	NOTE != "outside of plot, could be eating" &
+	NOTE != "outside of plot (near)" &
+	NOTE != "outside of plot" &
+	NOTE != "outside of lot (near)" &
+	NOTE != "outside of electric fence" &
+	NOTE != "outside of block" &
+	NOTE != "outside  plot" &
+	NOTE != "Not in plot (outside of cage), clip cut short" &
+	NOTE != "Not in plot (outside of cage)" &
+	NOTE != "flys outside of plot" &
+	NOTE != "flies onto fence post from outside plot" &
+  NOTE != "perched on fencing of other plot" &
+  NOTE != "perched on camera trap" &
+  NOTE != "flys over plot" &
+  NOTE != "flys over plot" &
+  NOTE != "flys over plot" &
+  NOTE != "flies over plot" &
+  NOTE != "flies onto exclusion fence post out of view"
 )
 
 # Remove observations without treatment information
 cam <- cam %>%
-  dplyr::select(Date, Time, Site, Treatment,
-  							Group.Size, Individual.Observed, Common.name, Functional, Note) %>% 
-	filter(Treatment %in% c("CO", "MO", "CH", "MH", "CS", "MS"))
+  dplyr::select(DATE, TIME, SITE, TREATMENT,
+  							GROUP.SIZE, INDIVIDUAL, COMMON.NAME, FUNCTIONAL, NOTE) %>% 
+	filter(TREATMENT %in% c("CO", "MO", "CH", "MH", "CS", "MS"))
 
 # Every row is associated with a treatment
 
 # Remove observations without site information
 cam <- cam %>%
-  filter(Site %in% c("WP", "DF", "GG", "OS"))
+  filter(SITE %in% c("WP", "DF", "GG", "OS"))
 
 # One row was missing site
 
 ## --------------- ADD FACTORS -------------------------------------------------
 
 for (i in 1:nrow(cam)) {
-  if (cam$Treatment[i] == "CO") {
-    cam$Carrion[i] <- "Single"
-    cam$Exclusion[i] <- "Open"
+  if (cam$TREATMENT[i] == "CO") {
+    cam$BIOMASS[i] <- "Single"
+    cam$EXCLUSION[i] <- "Open"
   } else {
-    if (cam$Treatment[i] == "CS") {
-      cam$Carrion[i] <- "Single"
-      cam$Exclusion[i] <- "Scavenger"
+    if (cam$TREATMENT[i] == "CS") {
+      cam$BIOMASS[i] <- "Single"
+      cam$EXCLUSION[i] <- "Scavenger"
     } else {
-      if (cam$Treatment[i] == "CH") {
-        cam$Carrion[i] <- "Single"
-        cam$Exclusion[i] <- "Herbivore"
+      if (cam$TREATMENT[i] == "CH") {
+        cam$BIOMASS[i] <- "Single"
+        cam$EXCLUSION[i] <- "Herbivore"
       } else {
-        if (cam$Treatment[i] == "MO") {
-          cam$Carrion[i] <- "Mass"
-          cam$Exclusion[i] <- "Open"
+        if (cam$TREATMENT[i] == "MO") {
+          cam$BIOMASS[i] <- "Mass"
+          cam$EXCLUSION[i] <- "Open"
         } else {
-          if (cam$Treatment[i] == "MS") {
-            cam$Carrion[i] <- "Mass"
-            cam$Exclusion[i] <- "Scavenger"
+          if (cam$TREATMENT[i] == "MS") {
+            cam$BIOMASS[i] <- "Mass"
+            cam$EXCLUSION[i] <- "Scavenger"
           } else {
-            if (cam$Treatment[i] == "MH") {
-              cam$Carrion[i] <- "Mass"
-              cam$Exclusion[i] <- "Herbivore"
+            if (cam$TREATMENT[i] == "MH") {
+              cam$BIOMASS[i] <- "Mass"
+              cam$EXCLUSION[i] <- "Herbivore"
             }
           }
         }
@@ -223,9 +223,9 @@ for (i in 1:nrow(cam)) {
   }
 }
 
-cam <- cam %>% dplyr::select(Date, Time, Site, Treatment, Group.Size, 
-														 Individual.Observed, Carrion, Exclusion, 
-														 Common.name, Functional, Note)
+cam <- cam %>% dplyr::select(DATE, TIME, SITE, TREATMENT, GROUP.SIZE, 
+														 INDIVIDUAL, BIOMASS, EXCLUSION, 
+														 COMMON.NAME, FUNCTIONAL, NOTE)
 
 ## --------------- DROP MISSING DATES ------------------------------------------
 
@@ -243,7 +243,7 @@ cam <- cam |>
 cam <- cam[!duplicated(cam[-11]), ]
 
 # Check for duplicates
-test <- cam |> dplyr::select(-Note)
+test <- cam |> dplyr::select(-NOTE)
 nrow(unique(test))
 
 library(janitor)
@@ -255,9 +255,4 @@ dupes <- test |>
 # Detections by treatment, functional group, and week for MME
 write.csv(cam, "Clean-data/Animals/Camera-traps.csv",
   row.names = FALSE
-)
-
-# For special issue
-write.csv(coyote, "Clean-data/Animals/Coyote.csv",
-					row.names = FALSE
 )

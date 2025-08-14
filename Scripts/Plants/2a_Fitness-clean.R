@@ -1,10 +1,10 @@
 ## --------------- HEADER ------------------------------------------------------
-## Script name: 3a_Plant-fitness-clean.R
+## Script name: 2a_Plant-fitness-clean.R
 ## Author: David S. Mason, UF D.E.E.R. Lab
 ## Department: Wildlife Ecology and Conservation
-## Affiliaton: University of Florida
-## Date Created: 2021-11-22
-## Copyright (c) David S. Mason, 2021
+## Affiliation: University of Florida
+## Date Last modified: 2025-08-14
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script combines and cleans fitness data from two 
 ## different years/species. The output of this script is a spreadsheet with both
@@ -16,48 +16,44 @@ library(tidylog)
 library(lubridate)
 library(styler)
 
-spec1 <- read.csv("Animals-plants-seeds/Raw-data/Plants/AMDR-height.csv")
-spec2 <- read.csv("Animals-plants-seeds/Raw-data/Plants/LASE-height-inflor.csv")
+fit <- read.csv("Animals-plants-seeds/Raw-data/Plants/LASE-height-inflor.csv")
 
 ## --------------- MUNGE SPEC2 DATA --------------------------------------------
 
-# First, I want to get these two dataframes on the same page regarding the names
-# and contents of the columns
-
-# Drop the treatment in spec2 so we can add a new one that matches spec1
-spec2 <- select(spec2, -TREATMENT)
+# Drop the treatment in fit so we can add a new one that matches other
+fit <- select(fit, -TREATMENT)
 
 # Rename the site column because we are going to replace the value
-names(spec2)[names(spec2) == "SITE"] <- "TMP"
+names(fit)[names(fit) == "SITE"] <- "TMP"
 
 # Fill site and treatment columns based on tmp value
-for (i in 1:nrow(spec2)) {
-  if (spec2$TMP[i] == "WP-MH") {
-    spec2$SITE[i] <- "WP"
-    spec2$TREATMENT[i] <- "MH"
+for (i in 1:nrow(fit)) {
+  if (fit$TMP[i] == "WP-MH") {
+    fit$SITE[i] <- "WP"
+    fit$TREATMENT[i] <- "MH"
   } else {
-    if (spec2$TMP[i] == "OS-MH") {
-      spec2$SITE[i] <- "OS"
-      spec2$TREATMENT[i] <- "MH"
+    if (fit$TMP[i] == "OS-MH") {
+      fit$SITE[i] <- "OS"
+      fit$TREATMENT[i] <- "MH"
     } else {
-      if (spec2$TMP[i] == "GG-MH") {
-        spec2$SITE[i] <- "GG"
-        spec2$TREATMENT[i] <- "MH"
+      if (fit$TMP[i] == "GG-MH") {
+        fit$SITE[i] <- "GG"
+        fit$TREATMENT[i] <- "MH"
       } else {
-        if (spec2$TMP[i] == "GG-CS") {
-          spec2$SITE[i] <- "GG"
-          spec2$TREATMENT[i] <- "CS"
+        if (fit$TMP[i] == "GG-CS") {
+          fit$SITE[i] <- "GG"
+          fit$TREATMENT[i] <- "CS"
         } else {
-          if (spec2$TMP[i] == "GG") {
-            spec2$SITE[i] <- "GG"
-            spec2$TREATMENT[i] <- "NONE"
+          if (fit$TMP[i] == "GG") {
+            fit$SITE[i] <- "GG"
+            fit$TREATMENT[i] <- "NONE"
           } else {
-            if (spec2$TMP[i] == "GG-MS") {
-              spec2$SITE[i] <- "GG"
-              spec2$TREATMENT[i] <- "MS"
+            if (fit$TMP[i] == "GG-MS") {
+              fit$SITE[i] <- "GG"
+              fit$TREATMENT[i] <- "MS"
             } else {
-              spec2$SITE[i] <- "GATE"
-              spec2$TREATMENT[i] <- "NONE"
+              fit$SITE[i] <- "GATE"
+              fit$TREATMENT[i] <- "NONE"
             }
           }
         }
@@ -67,52 +63,13 @@ for (i in 1:nrow(spec2)) {
 }
 
 # Add a value for species
-spec2$SPECIES <- "LASE"
+fit$SPECIES <- "LASE"
 
 # Add date information
-spec2$DATE <- mdy("07-22-2021")
-
-# Rearrange the data
-spec2 <- select(spec2, SITE, TREATMENT, DATE, SPECIES, HEIGHT, INFLOR)
-
-## --------------- MUNGE SPEC1 DATA --------------------------------------------
-
-# Add a value for species
-spec1$SPECIES <- "AMDR"
-
-# Add date information
-spec1$DATE <- mdy(spec1$Date)
-
-# Add value for inflorescences
-spec1$INFLOR <- NA
-
-# Rename the columns to match spec2
-names(spec1)[names(spec1) == "Site"] <- "SITE"
-names(spec1)[names(spec1) == "Treatment"] <- "TREATMENT"
-names(spec1)[names(spec1) == "Height..cm."] <- "HEIGHT"
-
-spec1 <- select(spec1, SITE, TREATMENT, DATE, SPECIES, HEIGHT, INFLOR)
-
-## --------------- COLLATE AND WRITE DATA --------------------------------------
-
-# Combine the data
-fit <- rbind(spec1, spec2)
-
-# Although there are combinations of carrion biomass and exclusion in the
-# experimental design, we are mostly interested in whether the plants were in
-# mass mortality herbivore exlucion plots for fitness comparison.
-# We need to add an extra column.
-
-for (i in 1:nrow(fit)) {
-  if (fit$TREATMENT[i] == "MH") {
-    fit$MH[i] <- "Y"
-  } else {
-    fit$MH[i] <- "N"
-  }
-}
+fit$DATE <- mdy("07-22-2021")
 
 fit <- select(fit, SITE, DATE, TREATMENT, MH, SPECIES, HEIGHT, INFLOR)
 
-write.csv(fit, "Animals-plants-seeds/Clean-data/Plants/Plant-fitness.csv",
+write.csv(fit, "Clean-data/Plants/Plant-fitness.csv",
   row.names = FALSE
 )

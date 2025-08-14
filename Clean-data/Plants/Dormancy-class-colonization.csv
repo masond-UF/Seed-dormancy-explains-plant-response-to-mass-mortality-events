@@ -1,871 +1,871 @@
-"Site","Treatment","Carrion","Exclusion","Transect","Distance","DormancyClass","Colonized.ever","Colonized.end","2019-03-10","2019-04-21","2019-05-05","2019-06-02","2019-07-21","2020-07-19","2021-07-18"
-"Dixon","CH","Control","Herbivore","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",1,"PD",1,1,0,1,0,1,0,1,1
-"Dixon","CH","Control","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",2,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","CH","Control","Herbivore","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","East",4,"PY",1,0,0,0,1,0,0,0,0
-"Dixon","CH","Control","Herbivore","North",1,"ND",1,0,0,0,0,1,1,0,0
-"Dixon","CH","Control","Herbivore","North",1,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","CH","Control","Herbivore","North",1,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","North",2,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","CH","Control","Herbivore","North",2,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","North",3,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","North",4,"ND",1,0,0,0,0,1,0,0,0
-"Dixon","CH","Control","Herbivore","North",4,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","South",1,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","CH","Control","Herbivore","South",1,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","South",3,"PD",1,1,0,1,1,0,1,1,1
-"Dixon","CH","Control","Herbivore","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","CH","Control","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",2,"PD",1,1,0,1,0,1,0,1,1
-"Dixon","CH","Control","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CH","Control","Herbivore","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",2,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","CO","Control","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","East",4,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","CO","Control","Open","East",4,"PY",1,0,0,1,0,0,0,0,0
-"Dixon","CO","Control","Open","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",2,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","CO","Control","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","North",4,"PD",1,1,0,1,1,1,1,0,1
-"Dixon","CO","Control","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",3,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","CO","Control","Open","South",3,"PY",1,0,0,0,1,0,0,0,0
-"Dixon","CO","Control","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","South",4,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","CO","Control","Open","South",4,"PY",1,0,0,0,1,0,0,0,0
-"Dixon","CO","Control","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",2,"PD",1,1,0,0,1,1,1,1,1
-"Dixon","CO","Control","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CO","Control","Open","West",4,"PY",1,0,0,0,1,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",1,"PD",1,1,0,1,0,0,0,1,1
-"Dixon","CS","Control","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",2,"PD",1,1,0,0,1,0,1,1,1
-"Dixon","CS","Control","Scavenger","East",2,"PY",1,0,0,1,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",3,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","CS","Control","Scavenger","East",3,"PD",1,1,0,0,1,1,1,1,1
-"Dixon","CS","Control","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","East",4,"PD",1,1,0,1,0,0,1,1,1
-"Dixon","CS","Control","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",1,"PD",1,1,0,1,0,1,1,0,1
-"Dixon","CS","Control","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",2,"ND",1,0,0,0,0,1,0,0,0
-"Dixon","CS","Control","Scavenger","North",2,"PD",1,1,0,1,0,1,0,0,1
-"Dixon","CS","Control","Scavenger","North",2,"PY",1,0,0,0,1,0,1,0,0
-"Dixon","CS","Control","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",3,"PD",1,1,0,1,0,1,1,0,1
-"Dixon","CS","Control","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","North",4,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CS","Control","Scavenger","South",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","CS","Control","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","South",2,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","CS","Control","Scavenger","South",2,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CS","Control","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","South",3,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","CS","Control","Scavenger","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","CS","Control","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","CS","Control","Scavenger","West",4,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","CS","Control","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","East",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","East",1,"PD",1,1,0,0,0,0,0,0,1
-"Dixon","MH","Mass","Herbivore","East",1,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MH","Mass","Herbivore","East",2,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","MH","Mass","Herbivore","East",2,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","MH","Mass","Herbivore","East",3,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","MH","Mass","Herbivore","East",3,"PD",1,1,0,0,1,1,0,1,1
-"Dixon","MH","Mass","Herbivore","East",3,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MH","Mass","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","North",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","North",1,"PD",1,1,0,1,0,1,1,1,1
-"Dixon","MH","Mass","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","North",2,"ND",1,0,0,0,0,0,1,1,0
-"Dixon","MH","Mass","Herbivore","North",2,"PD",1,1,0,1,1,1,0,0,1
-"Dixon","MH","Mass","Herbivore","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","North",3,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MH","Mass","Herbivore","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","North",4,"ND",1,1,0,0,0,0,1,0,1
-"Dixon","MH","Mass","Herbivore","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","South",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","South",2,"PD",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","South",3,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","MH","Mass","Herbivore","South",3,"PY",1,0,0,0,0,0,1,1,0
-"Dixon","MH","Mass","Herbivore","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","South",4,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MH","Mass","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","West",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","West",1,"PD",1,1,0,1,0,0,0,0,1
-"Dixon","MH","Mass","Herbivore","West",1,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","MH","Mass","Herbivore","West",2,"ND",1,1,0,0,0,0,0,1,1
-"Dixon","MH","Mass","Herbivore","West",2,"PD",1,1,0,1,0,0,1,1,1
-"Dixon","MH","Mass","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","West",3,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MH","Mass","Herbivore","West",3,"PD",1,1,0,1,0,0,0,0,1
-"Dixon","MH","Mass","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MH","Mass","Herbivore","West",4,"PD",1,1,0,1,1,0,1,1,1
-"Dixon","MH","Mass","Herbivore","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",1,"PD",1,1,0,0,1,1,1,1,1
-"Dixon","MO","Mass","Open","East",1,"PY",1,0,0,0,1,0,0,0,0
-"Dixon","MO","Mass","Open","East",2,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MO","Mass","Open","East",2,"PD",1,1,0,1,0,0,1,0,1
-"Dixon","MO","Mass","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","East",4,"PD",1,0,0,0,1,0,0,0,0
-"Dixon","MO","Mass","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","North",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MO","Mass","Open","North",1,"PD",1,1,0,0,0,0,0,0,1
-"Dixon","MO","Mass","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","North",2,"ND",1,0,0,1,1,1,0,0,0
-"Dixon","MO","Mass","Open","North",2,"PD",1,1,0,0,0,0,0,0,1
-"Dixon","MO","Mass","Open","North",2,"PY",1,0,0,1,1,0,0,0,0
-"Dixon","MO","Mass","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","North",3,"PD",1,1,0,0,0,1,0,0,1
-"Dixon","MO","Mass","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","North",4,"PD",1,1,0,0,0,0,1,1,1
-"Dixon","MO","Mass","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",1,"ND",1,0,0,0,0,0,0,1,0
-"Dixon","MO","Mass","Open","South",1,"PD",1,1,0,0,0,0,0,0,1
-"Dixon","MO","Mass","Open","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",2,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MO","Mass","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","South",4,"PD",1,1,0,0,1,1,1,1,1
-"Dixon","MO","Mass","Open","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",2,"ND",1,0,0,0,0,0,1,1,0
-"Dixon","MO","Mass","Open","West",2,"PD",1,1,0,1,1,1,1,0,1
-"Dixon","MO","Mass","Open","West",2,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","MO","Mass","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",3,"PD",1,1,0,0,0,0,1,1,1
-"Dixon","MO","Mass","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MO","Mass","Open","West",4,"PD",1,1,0,0,1,1,0,1,1
-"Dixon","MO","Mass","Open","West",4,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",2,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MS","Mass","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",3,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","East",4,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MS","Mass","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",3,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MS","Mass","Scavenger","North",3,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","North",4,"PY",1,0,0,0,0,0,1,0,0
-"Dixon","MS","Mass","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","South",3,"ND",1,0,0,0,0,0,1,0,0
-"Dixon","MS","Mass","Scavenger","South",3,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","South",4,"PD",1,1,0,1,1,1,1,1,1
-"Dixon","MS","Mass","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","West",1,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","West",2,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","West",3,"PY",1,1,0,0,0,0,0,0,1
-"Dixon","MS","Mass","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Dixon","MS","Mass","Scavenger","West",4,"PY",1,0,0,0,1,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",1,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","CH","Control","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",2,"PD",1,0,0,0,0,0,0,1,0
-"Gilgai","CH","Control","Herbivore","East",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",1,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","CH","Control","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",2,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","CH","Control","Herbivore","North",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",3,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","North",4,"PY",1,0,0,0,1,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",3,"ND",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","South",4,"PY",1,0,0,0,1,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",3,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CH","Control","Herbivore","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","East",2,"PY",1,0,0,0,0,0,0,1,0
-"Gilgai","CO","Control","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","East",3,"PY",1,1,0,0,0,0,0,0,1
-"Gilgai","CO","Control","Open","East",4,"ND",1,0,0,0,0,0,1,0,0
-"Gilgai","CO","Control","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",2,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","CO","Control","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",2,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","CO","Control","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",3,"PD",1,1,0,1,1,1,0,1,1
-"Gilgai","CO","Control","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CO","Control","Open","West",4,"PY",1,0,0,1,1,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",1,"PY",1,0,0,0,1,1,0,0,0
-"Gilgai","CS","Control","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","North",4,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",2,"ND",1,0,0,1,1,1,0,0,0
-"Gilgai","CS","Control","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",3,"PY",1,0,0,0,0,0,0,1,0
-"Gilgai","CS","Control","Scavenger","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",3,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","CS","Control","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","East",4,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","North",1,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","North",2,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","North",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","North",3,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","North",3,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","North",4,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","South",1,"PY",1,0,0,0,0,0,1,0,0
-"Gilgai","MH","Mass","Herbivore","South",2,"ND",1,1,0,0,0,0,0,1,1
-"Gilgai","MH","Mass","Herbivore","South",2,"PD",1,1,0,1,1,1,1,0,1
-"Gilgai","MH","Mass","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","South",3,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","South",3,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","MH","Mass","Herbivore","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","South",4,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","South",4,"PD",1,1,0,1,1,1,0,1,1
-"Gilgai","MH","Mass","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","West",1,"PD",1,1,0,0,1,1,1,0,1
-"Gilgai","MH","Mass","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","West",2,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","West",2,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","MH","Mass","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","West",3,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MH","Mass","Herbivore","West",4,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MH","Mass","Herbivore","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","East",4,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","MO","Mass","Open","East",4,"PY",1,0,0,0,1,0,0,0,0
-"Gilgai","MO","Mass","Open","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",3,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",2,"PY",1,0,0,1,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",3,"PY",1,0,0,0,0,0,0,1,0
-"Gilgai","MO","Mass","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","South",4,"PY",1,0,0,0,0,0,1,0,0
-"Gilgai","MO","Mass","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",1,"PD",1,1,0,1,1,1,1,1,1
-"Gilgai","MO","Mass","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",2,"PY",1,0,0,1,0,0,1,0,0
-"Gilgai","MO","Mass","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MO","Mass","Open","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",2,"PD",1,0,0,1,1,0,1,1,0
-"Gilgai","MS","Mass","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",2,"PD",1,1,0,0,1,1,1,1,1
-"Gilgai","MS","Mass","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",2,"PY",1,0,0,0,0,0,0,1,0
-"Gilgai","MS","Mass","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","South",4,"ND",1,1,0,0,0,0,0,0,1
-"Gilgai","MS","Mass","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",1,"PY",1,0,0,0,0,0,0,1,0
-"Gilgai","MS","Mass","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Gilgai","MS","Mass","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",1,"PY",1,0,0,1,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",2,"PD",1,1,0,1,1,1,1,1,1
-"Oswalt","CH","Control","Herbivore","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CH","Control","Herbivore","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",2,"PY",1,0,0,1,1,0,0,0,0
-"Oswalt","CO","Control","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",1,"PY",1,0,0,0,0,1,0,0,0
-"Oswalt","CO","Control","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",3,"PD",1,0,0,1,1,1,1,0,0
-"Oswalt","CO","Control","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CO","Control","Open","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",1,"PD",1,1,0,1,1,1,1,1,1
-"Oswalt","CS","Control","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","South",4,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","CS","Control","Scavenger","South",4,"PY",1,0,0,0,0,1,0,0,0
-"Oswalt","CS","Control","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","CS","Control","Scavenger","West",4,"PY",1,0,0,0,0,1,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",2,"PY",1,0,0,1,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",3,"PD",1,1,0,1,1,1,1,1,1
-"Oswalt","MH","Mass","Herbivore","East",3,"PY",1,0,0,0,1,1,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","East",4,"PD",1,1,0,1,1,1,1,1,1
-"Oswalt","MH","Mass","Herbivore","East",4,"PY",1,0,0,0,1,1,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",2,"ND",1,0,0,0,0,0,0,1,0
-"Oswalt","MH","Mass","Herbivore","North",2,"PY",1,0,0,1,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","South",1,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","MH","Mass","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","South",2,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","MH","Mass","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","South",3,"ND",1,1,0,0,0,0,0,1,1
-"Oswalt","MH","Mass","Herbivore","South",3,"PD",1,0,0,1,0,1,1,1,0
-"Oswalt","MH","Mass","Herbivore","South",3,"PY",1,1,0,0,0,0,0,0,1
-"Oswalt","MH","Mass","Herbivore","South",4,"ND",1,0,0,0,0,0,0,1,0
-"Oswalt","MH","Mass","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",2,"ND",1,1,0,0,0,1,0,1,1
-"Oswalt","MH","Mass","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",3,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","MH","Mass","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MH","Mass","Herbivore","West",4,"PY",1,0,0,1,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",1,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","MO","Mass","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","East",4,"PD",1,1,0,1,1,1,1,1,1
-"Oswalt","MO","Mass","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","North",4,"PY",1,0,0,1,0,0,0,0,0
-"Oswalt","MO","Mass","Open","South",1,"ND",1,0,0,0,0,0,0,1,0
-"Oswalt","MO","Mass","Open","South",1,"PY",1,1,0,0,0,0,0,0,1
-"Oswalt","MO","Mass","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","South",2,"PY",1,1,0,0,0,0,0,0,1
-"Oswalt","MO","Mass","Open","South",3,"ND",1,1,0,0,0,0,0,0,1
-"Oswalt","MO","Mass","Open","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","South",4,"PY",1,1,0,0,0,0,0,0,1
-"Oswalt","MO","Mass","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MO","Mass","Open","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",1,"ND",1,0,0,0,0,0,0,1,0
-"Oswalt","MS","Mass","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",3,"ND",1,0,0,0,0,0,0,1,0
-"Oswalt","MS","Mass","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",4,"ND",1,0,0,0,0,1,0,0,0
-"Oswalt","MS","Mass","Scavenger","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Oswalt","MS","Mass","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",3,"PY",1,0,0,0,0,1,0,0,0
-"Oswalt","MS","Mass","Scavenger","West",4,"ND",1,0,0,0,0,0,1,0,0
-"Oswalt","MS","Mass","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","East",4,"PD",1,1,0,0,1,1,0,1,1
-"Wellpad","CH","Control","Herbivore","East",4,"PY",1,0,0,0,1,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",1,"PD",1,0,0,1,1,1,0,1,0
-"Wellpad","CH","Control","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",3,"PD",1,1,0,1,1,1,0,1,1
-"Wellpad","CH","Control","Herbivore","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",3,"PY",1,1,0,0,0,0,0,0,1
-"Wellpad","CH","Control","Herbivore","South",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",2,"PY",1,1,0,0,0,0,0,0,1
-"Wellpad","CH","Control","Herbivore","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",3,"PY",1,0,0,0,0,0,1,0,0
-"Wellpad","CH","Control","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CH","Control","Herbivore","West",4,"PY",1,0,0,0,0,0,0,1,0
-"Wellpad","CO","Control","Open","East",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CO","Control","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",3,"PD",1,1,0,1,1,0,1,1,1
-"Wellpad","CO","Control","Open","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",1,"ND",1,0,0,0,0,1,0,0,0
-"Wellpad","CO","Control","Open","North",1,"PD",1,1,0,0,0,0,1,1,1
-"Wellpad","CO","Control","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",2,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","CO","Control","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","North",4,"PY",1,1,0,0,1,0,1,0,1
-"Wellpad","CO","Control","Open","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","South",2,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CO","Control","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","South",4,"ND",1,1,0,0,0,0,1,0,1
-"Wellpad","CO","Control","Open","South",4,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","CO","Control","Open","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","West",1,"PD",1,1,0,1,1,1,0,0,1
-"Wellpad","CO","Control","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","West",2,"ND",1,0,0,0,0,0,1,1,0
-"Wellpad","CO","Control","Open","West",2,"PD",1,1,0,0,1,1,1,0,1
-"Wellpad","CO","Control","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","West",3,"ND",1,0,0,0,0,1,1,0,0
-"Wellpad","CO","Control","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CO","Control","Open","West",4,"ND",1,0,0,0,0,1,1,0,0
-"Wellpad","CO","Control","Open","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","East",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","East",1,"PD",1,1,0,1,1,1,1,0,1
-"Wellpad","CS","Control","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","East",3,"PY",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","East",4,"ND",1,0,0,0,1,1,1,0,0
-"Wellpad","CS","Control","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","North",1,"PD",1,1,0,1,1,1,0,1,1
-"Wellpad","CS","Control","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",2,"PD",1,1,0,1,1,1,0,0,1
-"Wellpad","CS","Control","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",3,"PD",1,1,0,1,1,1,1,0,1
-"Wellpad","CS","Control","Scavenger","North",3,"PY",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","North",4,"PD",1,1,0,1,1,0,0,1,1
-"Wellpad","CS","Control","Scavenger","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","South",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","South",1,"PD",1,1,0,1,1,1,0,1,1
-"Wellpad","CS","Control","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","South",2,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","South",2,"PD",1,1,0,1,0,1,1,1,1
-"Wellpad","CS","Control","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","South",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","South",3,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","CS","Control","Scavenger","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",2,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","CS","Control","Scavenger","West",2,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","CS","Control","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",3,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","CS","Control","Scavenger","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","CS","Control","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MH","Mass","Herbivore","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",2,"ND",1,0,0,0,0,1,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","East",4,"PD",1,1,0,0,1,1,1,1,1
-"Wellpad","MH","Mass","Herbivore","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","North",1,"ND",1,1,0,0,0,0,1,0,1
-"Wellpad","MH","Mass","Herbivore","North",1,"PD",1,1,0,1,0,0,0,1,1
-"Wellpad","MH","Mass","Herbivore","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","North",2,"ND",1,1,0,0,0,0,0,1,1
-"Wellpad","MH","Mass","Herbivore","North",2,"PD",1,1,0,1,0,0,0,1,1
-"Wellpad","MH","Mass","Herbivore","North",2,"PY",1,0,0,0,0,0,1,0,0
-"Wellpad","MH","Mass","Herbivore","North",3,"ND",1,0,0,0,0,0,0,1,0
-"Wellpad","MH","Mass","Herbivore","North",3,"PY",1,0,0,0,1,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","North",4,"PY",1,0,0,0,0,1,0,0,0
-"Wellpad","MH","Mass","Herbivore","South",1,"ND",1,0,0,0,0,0,0,1,0
-"Wellpad","MH","Mass","Herbivore","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","South",2,"ND",1,1,0,0,0,0,1,0,1
-"Wellpad","MH","Mass","Herbivore","South",2,"PY",1,0,0,1,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","South",3,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MH","Mass","Herbivore","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MH","Mass","Herbivore","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",2,"ND",1,1,0,0,0,0,0,1,1
-"Wellpad","MH","Mass","Herbivore","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MH","Mass","Herbivore","West",4,"PY",1,1,0,0,0,0,0,0,1
-"Wellpad","MO","Mass","Open","East",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","East",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","East",3,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","East",3,"PY",1,1,0,0,0,0,0,0,1
-"Wellpad","MO","Mass","Open","East",4,"ND",1,0,0,0,0,1,1,0,0
-"Wellpad","MO","Mass","Open","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",1,"ND",1,0,0,0,0,1,0,0,0
-"Wellpad","MO","Mass","Open","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",2,"PD",1,1,0,0,0,0,1,1,1
-"Wellpad","MO","Mass","Open","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",3,"ND",1,1,0,0,0,0,0,0,1
-"Wellpad","MO","Mass","Open","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","South",1,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","South",1,"PY",1,1,0,1,1,0,0,0,1
-"Wellpad","MO","Mass","Open","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","South",3,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","South",3,"PY",1,0,0,1,0,0,0,0,0
-"Wellpad","MO","Mass","Open","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","South",4,"PD",1,1,0,1,0,1,1,1,1
-"Wellpad","MO","Mass","Open","South",4,"PY",1,1,0,0,0,1,0,0,1
-"Wellpad","MO","Mass","Open","West",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MO","Mass","Open","West",4,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MO","Mass","Open","West",4,"PY",1,1,0,0,1,0,0,0,1
-"Wellpad","MS","Mass","Scavenger","East",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","East",1,"PD",1,1,0,0,1,0,0,1,1
-"Wellpad","MS","Mass","Scavenger","East",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","East",2,"ND",1,0,0,0,0,0,0,1,0
-"Wellpad","MS","Mass","Scavenger","East",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","East",3,"ND",1,0,0,0,1,0,0,1,0
-"Wellpad","MS","Mass","Scavenger","East",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","East",4,"ND",1,1,0,0,0,0,0,0,1
-"Wellpad","MS","Mass","Scavenger","East",4,"PD",1,1,0,0,0,1,1,1,1
-"Wellpad","MS","Mass","Scavenger","East",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",1,"ND",1,0,0,0,0,0,0,1,0
-"Wellpad","MS","Mass","Scavenger","North",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",2,"PD",1,1,0,0,0,0,1,0,1
-"Wellpad","MS","Mass","Scavenger","North",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",3,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","North",4,"PD",1,1,0,0,1,0,0,0,1
-"Wellpad","MS","Mass","Scavenger","North",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",1,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",2,"PD",1,1,0,1,1,1,1,1,1
-"Wellpad","MS","Mass","Scavenger","South",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",3,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MS","Mass","Scavenger","South",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","South",4,"ND",1,0,0,0,0,0,1,0,0
-"Wellpad","MS","Mass","Scavenger","South",4,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",1,"ND",1,1,0,0,0,0,0,0,1
-"Wellpad","MS","Mass","Scavenger","West",1,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",2,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",2,"PD",1,1,0,1,0,1,1,1,1
-"Wellpad","MS","Mass","Scavenger","West",2,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",3,"ND",1,0,0,0,0,1,1,1,0
-"Wellpad","MS","Mass","Scavenger","West",3,"PD",1,0,0,1,1,1,0,1,0
-"Wellpad","MS","Mass","Scavenger","West",3,"PY",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",4,"ND",0,0,0,0,0,0,0,0,0
-"Wellpad","MS","Mass","Scavenger","West",4,"PY",0,0,0,0,0,0,0,0,0
+SITE,TREATMENT,BIOMASS,EXCLUSION,TRANSECT,DISTANCE,DORMANCY,COLONIZED.END,3/10/2019,4/21/2019,5/5/2019,6/2/2019,7/21/2019,7/19/2020,7/18/2021
+DF,CH,Single carcass,Herbivore,E,1,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,1,PD,1,0,1,0,1,0,1,1
+DF,CH,Single carcass,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,2,PD,1,0,1,1,1,0,0,1
+DF,CH,Single carcass,Herbivore,E,2,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,E,4,PY,0,0,0,1,0,0,0,0
+DF,CH,Single carcass,Herbivore,N,1,ND,0,0,0,0,1,1,0,0
+DF,CH,Single carcass,Herbivore,N,1,PD,1,0,1,1,1,0,0,1
+DF,CH,Single carcass,Herbivore,N,1,PY,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,N,2,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,N,2,PD,1,0,1,1,1,0,0,1
+DF,CH,Single carcass,Herbivore,N,2,PY,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,N,3,PY,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,N,4,ND,0,0,0,0,1,0,0,0
+DF,CH,Single carcass,Herbivore,N,4,PY,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,S,1,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,S,1,PD,1,0,1,1,1,0,0,1
+DF,CH,Single carcass,Herbivore,S,1,PY,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,S,2,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,S,3,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,S,3,PD,1,0,1,1,0,1,1,1
+DF,CH,Single carcass,Herbivore,S,3,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,S,4,ND,0,0,0,0,0,1,0,0
+DF,CH,Single carcass,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,2,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,2,PD,1,0,1,0,1,0,1,1
+DF,CH,Single carcass,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,3,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+DF,CH,Single carcass,Herbivore,W,4,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,1,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,1,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,2,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,2,PD,1,0,1,1,1,1,1,1
+DF,CO,Single carcass,Open,E,2,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,3,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,3,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,E,4,ND,0,0,0,0,0,1,0,0
+DF,CO,Single carcass,Open,E,4,PY,0,0,1,0,0,0,0,0
+DF,CO,Single carcass,Open,N,1,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,1,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,2,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,2,PD,1,0,1,1,1,1,1,1
+DF,CO,Single carcass,Open,N,2,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,3,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,3,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,4,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,N,4,PD,1,0,1,1,1,1,0,1
+DF,CO,Single carcass,Open,N,4,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,1,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,1,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,2,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,2,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,3,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,3,PD,1,0,1,1,1,1,1,1
+DF,CO,Single carcass,Open,S,3,PY,0,0,0,1,0,0,0,0
+DF,CO,Single carcass,Open,S,4,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,S,4,PD,1,0,1,1,1,1,1,1
+DF,CO,Single carcass,Open,S,4,PY,0,0,0,1,0,0,0,0
+DF,CO,Single carcass,Open,W,1,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,1,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,2,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,2,PD,1,0,0,1,1,1,1,1
+DF,CO,Single carcass,Open,W,2,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,3,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,3,PY,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,4,ND,0,0,0,0,0,0,0,0
+DF,CO,Single carcass,Open,W,4,PY,0,0,0,1,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,1,PD,1,0,1,0,0,0,1,1
+DF,CS,Single carcass,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,2,PD,1,0,0,1,0,1,1,1
+DF,CS,Single carcass,Scavenger,E,2,PY,0,0,1,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,3,ND,0,0,0,0,0,1,0,0
+DF,CS,Single carcass,Scavenger,E,3,PD,1,0,0,1,1,1,1,1
+DF,CS,Single carcass,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,E,4,PD,1,0,1,0,0,1,1,1
+DF,CS,Single carcass,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,1,PD,1,0,1,0,1,1,0,1
+DF,CS,Single carcass,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,2,ND,0,0,0,0,1,0,0,0
+DF,CS,Single carcass,Scavenger,N,2,PD,1,0,1,0,1,0,0,1
+DF,CS,Single carcass,Scavenger,N,2,PY,0,0,0,1,0,1,0,0
+DF,CS,Single carcass,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,3,PD,1,0,1,0,1,1,0,1
+DF,CS,Single carcass,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,N,4,PY,0,0,0,0,0,1,0,0
+DF,CS,Single carcass,Scavenger,S,1,ND,0,0,0,0,0,0,1,0
+DF,CS,Single carcass,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,S,2,PD,1,0,1,1,1,0,0,1
+DF,CS,Single carcass,Scavenger,S,2,PY,0,0,0,0,0,1,0,0
+DF,CS,Single carcass,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,S,3,PY,0,0,0,0,0,1,0,0
+DF,CS,Single carcass,Scavenger,S,4,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,1,ND,0,0,0,0,0,0,1,0
+DF,CS,Single carcass,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,3,PY,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+DF,CS,Single carcass,Scavenger,W,4,PD,1,0,1,1,1,1,1,1
+DF,CS,Single carcass,Scavenger,W,4,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,E,1,ND,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,E,1,PD,1,0,0,0,0,0,0,1
+DF,MH,MME,Herbivore,E,1,PY,1,0,0,0,0,0,0,1
+DF,MH,MME,Herbivore,E,2,ND,0,0,0,0,0,1,0,0
+DF,MH,MME,Herbivore,E,2,PY,0,0,0,0,0,1,0,0
+DF,MH,MME,Herbivore,E,3,ND,0,0,0,0,0,1,0,0
+DF,MH,MME,Herbivore,E,3,PD,1,0,0,1,1,0,1,1
+DF,MH,MME,Herbivore,E,3,PY,1,0,0,0,0,0,0,1
+DF,MH,MME,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,E,4,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,N,1,ND,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,N,1,PD,1,0,1,0,1,1,1,1
+DF,MH,MME,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,N,2,ND,0,0,0,0,0,1,1,0
+DF,MH,MME,Herbivore,N,2,PD,1,0,1,1,1,0,0,1
+DF,MH,MME,Herbivore,N,2,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,N,3,PD,1,0,1,1,1,1,1,1
+DF,MH,MME,Herbivore,N,3,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,N,4,ND,1,0,0,0,0,1,0,1
+DF,MH,MME,Herbivore,N,4,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,S,1,ND,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,S,2,ND,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,S,2,PD,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,S,3,ND,0,0,0,0,0,1,0,0
+DF,MH,MME,Herbivore,S,3,PY,0,0,0,0,0,1,1,0
+DF,MH,MME,Herbivore,S,4,ND,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,S,4,PD,1,0,1,1,1,1,1,1
+DF,MH,MME,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,W,1,ND,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,W,1,PD,1,0,1,0,0,0,0,1
+DF,MH,MME,Herbivore,W,1,PY,0,0,0,0,0,1,0,0
+DF,MH,MME,Herbivore,W,2,ND,1,0,0,0,0,0,1,1
+DF,MH,MME,Herbivore,W,2,PD,1,0,1,0,0,1,1,1
+DF,MH,MME,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,W,3,ND,0,0,0,0,0,0,1,0
+DF,MH,MME,Herbivore,W,3,PD,1,0,1,0,0,0,0,1
+DF,MH,MME,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+DF,MH,MME,Herbivore,W,4,PD,1,0,1,1,0,1,1,1
+DF,MH,MME,Herbivore,W,4,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,1,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,1,PD,1,0,0,1,1,1,1,1
+DF,MO,MME,Open,E,1,PY,0,0,0,1,0,0,0,0
+DF,MO,MME,Open,E,2,ND,0,0,0,0,0,0,1,0
+DF,MO,MME,Open,E,2,PD,1,0,1,0,0,1,0,1
+DF,MO,MME,Open,E,2,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,3,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,3,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,4,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,E,4,PD,0,0,0,1,0,0,0,0
+DF,MO,MME,Open,E,4,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,N,1,ND,0,0,0,0,0,0,1,0
+DF,MO,MME,Open,N,1,PD,1,0,0,0,0,0,0,1
+DF,MO,MME,Open,N,1,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,N,2,ND,0,0,1,1,1,0,0,0
+DF,MO,MME,Open,N,2,PD,1,0,0,0,0,0,0,1
+DF,MO,MME,Open,N,2,PY,0,0,1,1,0,0,0,0
+DF,MO,MME,Open,N,3,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,N,3,PD,1,0,0,0,1,0,0,1
+DF,MO,MME,Open,N,3,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,N,4,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,N,4,PD,1,0,0,0,0,1,1,1
+DF,MO,MME,Open,N,4,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,1,ND,0,0,0,0,0,0,1,0
+DF,MO,MME,Open,S,1,PD,1,0,0,0,0,0,0,1
+DF,MO,MME,Open,S,1,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,2,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,2,PD,1,0,1,1,1,1,1,1
+DF,MO,MME,Open,S,2,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,3,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,3,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,4,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,S,4,PD,1,0,0,1,1,1,1,1
+DF,MO,MME,Open,S,4,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,1,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,1,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,2,ND,0,0,0,0,0,1,1,0
+DF,MO,MME,Open,W,2,PD,1,0,1,1,1,1,0,1
+DF,MO,MME,Open,W,2,PY,0,0,0,0,0,1,0,0
+DF,MO,MME,Open,W,3,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,3,PD,1,0,0,0,0,1,1,1
+DF,MO,MME,Open,W,3,PY,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,4,ND,0,0,0,0,0,0,0,0
+DF,MO,MME,Open,W,4,PD,1,0,0,1,1,0,1,1
+DF,MO,MME,Open,W,4,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,2,PD,1,0,1,1,1,1,1,1
+DF,MS,MME,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,3,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,3,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,E,4,PD,1,0,1,1,1,1,1,1
+DF,MS,MME,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,3,PD,1,0,1,1,1,1,1,1
+DF,MS,MME,Scavenger,N,3,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,N,4,PY,0,0,0,0,0,1,0,0
+DF,MS,MME,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,S,3,ND,0,0,0,0,0,1,0,0
+DF,MS,MME,Scavenger,S,3,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,S,4,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,S,4,PD,1,0,1,1,1,1,1,1
+DF,MS,MME,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,W,1,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,W,2,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,W,3,PY,1,0,0,0,0,0,0,1
+DF,MS,MME,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+DF,MS,MME,Scavenger,W,4,PY,0,0,0,1,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,1,ND,1,0,0,0,0,0,0,1
+GG,CH,Single carcass,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,2,PD,0,0,0,0,0,0,1,0
+GG,CH,Single carcass,Herbivore,E,2,PY,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,E,4,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,1,ND,1,0,0,0,0,0,0,1
+GG,CH,Single carcass,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,2,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,2,PD,1,0,1,1,1,1,1,1
+GG,CH,Single carcass,Herbivore,N,2,PY,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,3,PY,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,4,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,N,4,PY,0,0,0,1,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,1,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,2,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,2,PY,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,3,ND,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,3,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,4,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,S,4,PY,0,0,0,1,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,2,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,3,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,3,PY,0,0,1,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+GG,CH,Single carcass,Herbivore,W,4,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,E,1,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,E,1,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,E,2,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,E,2,PY,0,0,0,0,0,0,1,0
+GG,CO,Single carcass,Open,E,3,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,E,3,PY,1,0,0,0,0,0,0,1
+GG,CO,Single carcass,Open,E,4,ND,0,0,0,0,0,1,0,0
+GG,CO,Single carcass,Open,E,4,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,1,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,1,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,2,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,2,PD,1,0,1,1,1,1,1,1
+GG,CO,Single carcass,Open,N,2,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,3,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,3,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,4,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,N,4,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,1,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,1,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,2,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,2,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,3,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,3,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,4,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,S,4,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,1,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,1,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,2,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,2,PD,1,0,1,1,1,1,1,1
+GG,CO,Single carcass,Open,W,2,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,3,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,3,PD,1,0,1,1,1,0,1,1
+GG,CO,Single carcass,Open,W,3,PY,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,4,ND,0,0,0,0,0,0,0,0
+GG,CO,Single carcass,Open,W,4,PY,0,0,1,1,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,1,PY,0,0,0,1,1,0,0,0
+GG,CS,Single carcass,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,2,PY,0,0,1,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,3,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,N,4,PY,0,0,1,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,2,ND,0,0,1,1,1,0,0,0
+GG,CS,Single carcass,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,3,PY,0,0,0,0,0,0,1,0
+GG,CS,Single carcass,Scavenger,S,4,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,3,PY,0,0,1,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+GG,CS,Single carcass,Scavenger,W,4,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,1,ND,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,2,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,E,4,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,E,4,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,N,1,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,N,2,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,N,2,PY,0,0,1,0,0,0,0,0
+GG,MH,MME,Herbivore,N,3,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,N,3,PY,0,0,1,0,0,0,0,0
+GG,MH,MME,Herbivore,N,4,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,N,4,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,S,1,ND,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,S,1,PY,0,0,0,0,0,1,0,0
+GG,MH,MME,Herbivore,S,2,ND,1,0,0,0,0,0,1,1
+GG,MH,MME,Herbivore,S,2,PD,1,0,1,1,1,1,0,1
+GG,MH,MME,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,S,3,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,S,3,PD,1,0,1,1,1,1,1,1
+GG,MH,MME,Herbivore,S,3,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,S,4,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,S,4,PD,1,0,1,1,1,0,1,1
+GG,MH,MME,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,W,1,PD,1,0,0,1,1,1,0,1
+GG,MH,MME,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,W,2,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,W,2,PD,1,0,1,1,1,1,1,1
+GG,MH,MME,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,W,3,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+GG,MH,MME,Herbivore,W,4,ND,1,0,0,0,0,0,0,1
+GG,MH,MME,Herbivore,W,4,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,1,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,1,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,2,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,2,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,3,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,3,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,4,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,E,4,PD,1,0,1,1,1,1,1,1
+GG,MO,MME,Open,E,4,PY,0,0,0,1,0,0,0,0
+GG,MO,MME,Open,N,1,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,1,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,2,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,2,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,3,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,3,PY,0,0,1,0,0,0,0,0
+GG,MO,MME,Open,N,4,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,N,4,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,1,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,1,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,2,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,2,PY,0,0,1,0,0,0,0,0
+GG,MO,MME,Open,S,3,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,3,PY,0,0,0,0,0,0,1,0
+GG,MO,MME,Open,S,4,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,S,4,PY,0,0,0,0,0,1,0,0
+GG,MO,MME,Open,W,1,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,1,PD,1,0,1,1,1,1,1,1
+GG,MO,MME,Open,W,1,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,2,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,2,PY,0,0,1,0,0,1,0,0
+GG,MO,MME,Open,W,3,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,3,PY,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,4,ND,0,0,0,0,0,0,0,0
+GG,MO,MME,Open,W,4,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,2,PD,0,0,1,1,0,1,1,0
+GG,MS,MME,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,3,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,2,PD,1,0,0,1,1,1,1,1
+GG,MS,MME,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,N,4,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,2,PY,0,0,0,0,0,0,1,0
+GG,MS,MME,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,3,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,S,4,ND,1,0,0,0,0,0,0,1
+GG,MS,MME,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,1,PY,0,0,0,0,0,0,1,0
+GG,MS,MME,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,3,PY,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+GG,MS,MME,Scavenger,W,4,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,1,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,1,PY,0,0,1,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,2,PD,1,0,1,1,1,1,1,1
+OS,CH,Single carcass,Herbivore,E,2,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,E,4,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,1,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,2,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,2,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,3,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,4,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,N,4,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,1,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,2,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,3,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,3,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,4,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,2,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,3,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+OS,CH,Single carcass,Herbivore,W,4,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,1,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,1,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,2,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,2,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,3,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,3,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,4,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,E,4,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,1,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,1,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,2,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,2,PY,0,0,1,1,0,0,0,0
+OS,CO,Single carcass,Open,N,3,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,3,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,4,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,N,4,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,1,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,1,PY,0,0,0,0,1,0,0,0
+OS,CO,Single carcass,Open,S,2,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,2,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,3,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,3,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,4,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,S,4,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,1,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,1,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,2,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,2,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,3,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,3,PD,0,0,1,1,1,1,0,0
+OS,CO,Single carcass,Open,W,3,PY,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,4,ND,0,0,0,0,0,0,0,0
+OS,CO,Single carcass,Open,W,4,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,3,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,1,PD,1,0,1,1,1,1,1,1
+OS,CS,Single carcass,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,N,4,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,3,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,S,4,ND,1,0,0,0,0,0,0,1
+OS,CS,Single carcass,Scavenger,S,4,PY,0,0,0,0,1,0,0,0
+OS,CS,Single carcass,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,3,PY,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+OS,CS,Single carcass,Scavenger,W,4,PY,0,0,0,0,1,0,0,0
+OS,MH,MME,Herbivore,E,1,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,E,2,PY,0,0,1,0,0,0,0,0
+OS,MH,MME,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,E,3,PD,1,0,1,1,1,1,1,1
+OS,MH,MME,Herbivore,E,3,PY,0,0,0,1,1,0,0,0
+OS,MH,MME,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,E,4,PD,1,0,1,1,1,1,1,1
+OS,MH,MME,Herbivore,E,4,PY,0,0,0,1,1,0,0,0
+OS,MH,MME,Herbivore,N,1,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,N,2,ND,0,0,0,0,0,0,1,0
+OS,MH,MME,Herbivore,N,2,PY,0,0,1,0,0,0,0,0
+OS,MH,MME,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,N,3,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,N,4,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,N,4,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,S,1,ND,1,0,0,0,0,0,0,1
+OS,MH,MME,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,S,2,ND,1,0,0,0,0,0,0,1
+OS,MH,MME,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,S,3,ND,1,0,0,0,0,0,1,1
+OS,MH,MME,Herbivore,S,3,PD,0,0,1,0,1,1,1,0
+OS,MH,MME,Herbivore,S,3,PY,1,0,0,0,0,0,0,1
+OS,MH,MME,Herbivore,S,4,ND,0,0,0,0,0,0,1,0
+OS,MH,MME,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,2,ND,1,0,0,0,1,0,1,1
+OS,MH,MME,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,3,ND,1,0,0,0,0,0,0,1
+OS,MH,MME,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+OS,MH,MME,Herbivore,W,4,PY,0,0,1,0,0,0,0,0
+OS,MO,MME,Open,E,1,ND,1,0,0,0,0,0,0,1
+OS,MO,MME,Open,E,1,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,2,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,2,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,3,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,3,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,4,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,E,4,PD,1,0,1,1,1,1,1,1
+OS,MO,MME,Open,E,4,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,1,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,1,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,2,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,2,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,3,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,3,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,4,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,N,4,PY,0,0,1,0,0,0,0,0
+OS,MO,MME,Open,S,1,ND,0,0,0,0,0,0,1,0
+OS,MO,MME,Open,S,1,PY,1,0,0,0,0,0,0,1
+OS,MO,MME,Open,S,2,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,S,2,PY,1,0,0,0,0,0,0,1
+OS,MO,MME,Open,S,3,ND,1,0,0,0,0,0,0,1
+OS,MO,MME,Open,S,3,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,S,4,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,S,4,PY,1,0,0,0,0,0,0,1
+OS,MO,MME,Open,W,1,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,1,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,2,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,2,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,3,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,3,PY,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,4,ND,0,0,0,0,0,0,0,0
+OS,MO,MME,Open,W,4,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,1,ND,0,0,0,0,0,0,1,0
+OS,MS,MME,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,3,ND,0,0,0,0,0,0,1,0
+OS,MS,MME,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,4,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,1,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,N,4,ND,0,0,0,0,1,0,0,0
+OS,MS,MME,Scavenger,N,4,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,3,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,S,4,ND,0,0,0,0,0,1,0,0
+OS,MS,MME,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+OS,MS,MME,Scavenger,W,3,PY,0,0,0,0,1,0,0,0
+OS,MS,MME,Scavenger,W,4,ND,0,0,0,0,0,1,0,0
+OS,MS,MME,Scavenger,W,4,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,1,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,2,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,2,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,E,4,PD,1,0,0,1,1,0,1,1
+WP,CH,Single carcass,Herbivore,E,4,PY,0,0,0,1,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,1,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,1,PD,0,0,1,1,1,0,1,0
+WP,CH,Single carcass,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,2,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,2,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,3,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,3,PD,1,0,1,1,1,0,1,1
+WP,CH,Single carcass,Herbivore,N,3,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,4,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,N,4,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,1,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,2,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,2,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,3,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,3,PY,1,0,0,0,0,0,0,1
+WP,CH,Single carcass,Herbivore,S,4,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,2,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,2,PY,1,0,0,0,0,0,0,1
+WP,CH,Single carcass,Herbivore,W,3,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,3,PY,0,0,0,0,0,1,0,0
+WP,CH,Single carcass,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+WP,CH,Single carcass,Herbivore,W,4,PY,0,0,0,0,0,0,1,0
+WP,CO,Single carcass,Open,E,1,ND,0,0,0,0,0,1,0,0
+WP,CO,Single carcass,Open,E,1,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,2,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,2,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,3,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,3,PD,1,0,1,1,0,1,1,1
+WP,CO,Single carcass,Open,E,3,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,4,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,E,4,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,1,ND,0,0,0,0,1,0,0,0
+WP,CO,Single carcass,Open,N,1,PD,1,0,0,0,0,1,1,1
+WP,CO,Single carcass,Open,N,1,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,2,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,2,PD,1,0,1,1,1,1,1,1
+WP,CO,Single carcass,Open,N,2,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,3,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,3,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,4,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,N,4,PY,1,0,0,1,0,1,0,1
+WP,CO,Single carcass,Open,S,1,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,S,1,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,S,2,ND,0,0,0,0,0,1,0,0
+WP,CO,Single carcass,Open,S,2,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,S,3,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,S,3,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,S,4,ND,1,0,0,0,0,1,0,1
+WP,CO,Single carcass,Open,S,4,PD,1,0,1,1,1,1,1,1
+WP,CO,Single carcass,Open,S,4,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,W,1,ND,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,W,1,PD,1,0,1,1,1,0,0,1
+WP,CO,Single carcass,Open,W,1,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,W,2,ND,0,0,0,0,0,1,1,0
+WP,CO,Single carcass,Open,W,2,PD,1,0,0,1,1,1,0,1
+WP,CO,Single carcass,Open,W,2,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,W,3,ND,0,0,0,0,1,1,0,0
+WP,CO,Single carcass,Open,W,3,PY,0,0,0,0,0,0,0,0
+WP,CO,Single carcass,Open,W,4,ND,0,0,0,0,1,1,0,0
+WP,CO,Single carcass,Open,W,4,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,E,1,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,E,1,PD,1,0,1,1,1,1,0,1
+WP,CS,Single carcass,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,E,2,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,E,3,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,E,3,PY,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,E,4,ND,0,0,0,1,1,1,0,0
+WP,CS,Single carcass,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,1,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,N,1,PD,1,0,1,1,1,0,1,1
+WP,CS,Single carcass,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,2,PD,1,0,1,1,1,0,0,1
+WP,CS,Single carcass,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,3,PD,1,0,1,1,1,1,0,1
+WP,CS,Single carcass,Scavenger,N,3,PY,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,N,4,PD,1,0,1,1,0,0,1,1
+WP,CS,Single carcass,Scavenger,N,4,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,S,1,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,S,1,PD,1,0,1,1,1,0,1,1
+WP,CS,Single carcass,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,S,2,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,S,2,PD,1,0,1,0,1,1,1,1
+WP,CS,Single carcass,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,S,3,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,S,3,PD,1,0,1,1,1,1,1,1
+WP,CS,Single carcass,Scavenger,S,3,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,S,4,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,1,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,2,ND,0,0,0,0,0,1,0,0
+WP,CS,Single carcass,Scavenger,W,2,PD,1,0,1,1,1,1,1,1
+WP,CS,Single carcass,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,3,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,3,PD,1,0,1,1,1,1,1,1
+WP,CS,Single carcass,Scavenger,W,3,PY,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+WP,CS,Single carcass,Scavenger,W,4,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,1,ND,0,0,0,0,0,1,0,0
+WP,MH,MME,Herbivore,E,1,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,2,ND,0,0,0,0,1,0,0,0
+WP,MH,MME,Herbivore,E,2,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,3,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,3,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,4,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,E,4,PD,1,0,0,1,1,1,1,1
+WP,MH,MME,Herbivore,E,4,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,N,1,ND,1,0,0,0,0,1,0,1
+WP,MH,MME,Herbivore,N,1,PD,1,0,1,0,0,0,1,1
+WP,MH,MME,Herbivore,N,1,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,N,2,ND,1,0,0,0,0,0,1,1
+WP,MH,MME,Herbivore,N,2,PD,1,0,1,0,0,0,1,1
+WP,MH,MME,Herbivore,N,2,PY,0,0,0,0,0,1,0,0
+WP,MH,MME,Herbivore,N,3,ND,0,0,0,0,0,0,1,0
+WP,MH,MME,Herbivore,N,3,PY,0,0,0,1,0,0,0,0
+WP,MH,MME,Herbivore,N,4,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,N,4,PY,0,0,0,0,1,0,0,0
+WP,MH,MME,Herbivore,S,1,ND,0,0,0,0,0,0,1,0
+WP,MH,MME,Herbivore,S,1,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,S,2,ND,1,0,0,0,0,1,0,1
+WP,MH,MME,Herbivore,S,2,PY,0,0,1,0,0,0,0,0
+WP,MH,MME,Herbivore,S,3,ND,0,0,0,0,0,1,0,0
+WP,MH,MME,Herbivore,S,3,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,S,4,ND,0,0,0,0,0,1,0,0
+WP,MH,MME,Herbivore,S,4,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,1,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,1,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,2,ND,1,0,0,0,0,0,1,1
+WP,MH,MME,Herbivore,W,2,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,3,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,3,PY,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,4,ND,0,0,0,0,0,0,0,0
+WP,MH,MME,Herbivore,W,4,PY,1,0,0,0,0,0,0,1
+WP,MO,MME,Open,E,1,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,E,1,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,E,2,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,E,2,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,E,3,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,E,3,PY,1,0,0,0,0,0,0,1
+WP,MO,MME,Open,E,4,ND,0,0,0,0,1,1,0,0
+WP,MO,MME,Open,E,4,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,1,ND,0,0,0,0,1,0,0,0
+WP,MO,MME,Open,N,1,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,2,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,2,PD,1,0,0,0,0,1,1,1
+WP,MO,MME,Open,N,2,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,3,ND,1,0,0,0,0,0,0,1
+WP,MO,MME,Open,N,3,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,4,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,N,4,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,S,1,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,S,1,PY,1,0,1,1,0,0,0,1
+WP,MO,MME,Open,S,2,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,S,2,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,S,3,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,S,3,PY,0,0,1,0,0,0,0,0
+WP,MO,MME,Open,S,4,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,S,4,PD,1,0,1,0,1,1,1,1
+WP,MO,MME,Open,S,4,PY,1,0,0,0,1,0,0,1
+WP,MO,MME,Open,W,1,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,1,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,2,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,2,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,3,ND,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,3,PY,0,0,0,0,0,0,0,0
+WP,MO,MME,Open,W,4,ND,0,0,0,0,0,1,0,0
+WP,MO,MME,Open,W,4,PY,1,0,0,1,0,0,0,1
+WP,MS,MME,Scavenger,E,1,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,E,1,PD,1,0,0,1,0,0,1,1
+WP,MS,MME,Scavenger,E,1,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,E,2,ND,0,0,0,0,0,0,1,0
+WP,MS,MME,Scavenger,E,2,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,E,3,ND,0,0,0,1,0,0,1,0
+WP,MS,MME,Scavenger,E,3,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,E,4,ND,1,0,0,0,0,0,0,1
+WP,MS,MME,Scavenger,E,4,PD,1,0,0,0,1,1,1,1
+WP,MS,MME,Scavenger,E,4,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,1,ND,0,0,0,0,0,0,1,0
+WP,MS,MME,Scavenger,N,1,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,2,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,2,PD,1,0,0,0,0,1,0,1
+WP,MS,MME,Scavenger,N,2,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,3,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,3,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,4,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,N,4,PD,1,0,0,1,0,0,0,1
+WP,MS,MME,Scavenger,N,4,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,1,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,1,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,2,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,2,PD,1,0,1,1,1,1,1,1
+WP,MS,MME,Scavenger,S,2,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,3,ND,0,0,0,0,0,1,0,0
+WP,MS,MME,Scavenger,S,3,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,S,4,ND,0,0,0,0,0,1,0,0
+WP,MS,MME,Scavenger,S,4,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,1,ND,1,0,0,0,0,0,0,1
+WP,MS,MME,Scavenger,W,1,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,2,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,2,PD,1,0,1,0,1,1,1,1
+WP,MS,MME,Scavenger,W,2,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,3,ND,0,0,0,0,1,1,1,0
+WP,MS,MME,Scavenger,W,3,PD,0,0,1,1,1,0,1,0
+WP,MS,MME,Scavenger,W,3,PY,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,4,ND,0,0,0,0,0,0,0,0
+WP,MS,MME,Scavenger,W,4,PY,0,0,0,0,0,0,0,0

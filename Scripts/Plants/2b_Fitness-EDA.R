@@ -1,10 +1,10 @@
 ## --------------- HEADER ------------------------------------------------------
-## Script name: 3b_Plant-fitness-EDA.R
+## Script name: 2b_Plant-fitness-EDA.R
 ## Author: David S. Mason, UF D.E.E.R. Lab
 ## Department: Wildlife Ecology and Conservation
-## Affiliaton: University of Florida
-## Date Created: 2021-11-22
-## Copyright (c) David S. Mason, 2021
+## Affiliation: University of Florida
+## Date Last modified: 2025-08-14
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script performs data exploratory analysis on the 
 ## plant fitness data.
@@ -15,7 +15,7 @@ library(tidylog)
 library(lubridate)
 library(styler)
 
-d <- read.csv("Animals-plants-seeds/Clean-data/Plants/Plant-fitness.csv")
+d <- read.csv("Clean-data/Plants/Plant-fitness.csv")
 
 ## --------------- HEIGHT BOXPLOT ----------------------------------------------
 d %>% ggplot(aes(x = MH, y = HEIGHT, col = SPECIES)) +
@@ -52,6 +52,4 @@ library(fitdistrplus)
 
 descdist(d$HEIGHT, discrete = FALSE) # Beta
 descdist(log(d$HEIGHT), discrete = FALSE) # Normal 
-
-lase <- d %>% filter(SPECIES == "LASE")
-descdist(lase$INFLOR, discrete = TRUE) # Poisson?
+descdist(d$INFLOR, discrete = TRUE) # Poisson?

@@ -4,8 +4,8 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2021-11-22
-## Date Last modified: 2022-05-02
-## Copyright (c) David S. Mason, 2021
+## Date Last modified: 2025-08-14
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script conducts simple linear models on the plant
 ## fitness data. The output of this script is a spreadsheet containing a summary
@@ -19,14 +19,12 @@ library(styler)
 library(broom)
 
 rm(list = ls())
-ht <- read.csv("Animals-plants-seeds/Clean-data/Plants/Plant-fitness.csv") |>
-	filter(SPECIES == "LASE")
-inflor <- ht %>% filter(SPECIES == "LASE")
+d <- read.csv("Clean-data/Plants/Plant-fitness.csv")
 
 ################## HEIGHT MODEL ------------------------------------------------
 
 # Write model
-ht.mod <- lm(HEIGHT ~ MH, d = ht)
+ht.mod <- lm(HEIGHT ~ MH, d = d)
 
 # Check assumptions
 summary(ht.mod)
@@ -37,14 +35,14 @@ anova(ht.mod)
 
 # Write output
 ht.mod.tib <- tidy(ht.mod, conf.int = TRUE)
-write.csv(ht.mod.tib, "Animals-plants-seeds/Analysis/Plants/Fitness-ht-coef.csv")
+write.csv(ht.mod.tib, "Analysis/Plants/Fitness-ht-coef.csv")
 
 ht.mod.glance <- glance(ht.mod)
-write.csv(ht.mod.glance, "Animals-plants-seeds/Analysis/Plants/Fitness-ht-summ.csv")
+write.csv(ht.mod.glance, "Analysis/Plants/Fitness-ht-summ.csv")
 
 # Grab means
 ht %>%
-  group_by(MH, SPECIES) %>%
+  group_by(MH) %>%
   summarize(
     mean = mean(HEIGHT),
     n = n(),
@@ -59,7 +57,7 @@ t.test(MH$HEIGHT, Control$HEIGHT)
 
 ################## INFLOR MODEL ------------------------------------------------
 
-inflor.mod <- lm(INFLOR ~ MH, d = inflor)
+inflor.mod <- lm(INFLOR ~ MH, d = d)
 
 # Check assumptions
 summary(inflor.mod)
@@ -81,13 +79,13 @@ inflor %>%
 inflor.mod.tib <- tidy(inflor.mod, conf.int = TRUE)
 write.csv(
   inflor.mod.tib,
-  "Animals-plants-seeds/Analysis/Plants/Fitness-inflor-coef.csv"
+  "Analysis/Plants/Fitness-inflor-coef.csv"
 )
 
 inflor.mod.glance <- glance(inflor.mod)
 write.csv(
   inflor.mod.glance,
-  "Animals-plants-seeds/Analysis/Plants/Fitness-inflor-summ.csv"
+  "Analysis/Plants/Fitness-inflor-summ.csv"
 )
 
 # New t-test 

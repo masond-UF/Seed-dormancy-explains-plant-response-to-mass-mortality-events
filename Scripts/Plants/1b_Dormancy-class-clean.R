@@ -3,9 +3,9 @@
 ## Author: David S. Mason, UF D.E.E.R. Lab
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
-## Date Created: 2022-04-28
-## Date Last modified: 2024-10-04
-## Copyright (c) David S. Mason, 2022
+## DATE Created: 2022-04-28
+## Date Last modified: 2025-08-13
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This is a script for munging the unsummarized transect
  
@@ -26,8 +26,8 @@ comb.transect <- read.csv("Raw-data/Plants/Combined-transect-lg.csv")
 ## --------------- FIX HERBIVORE LABEL -----------------------------------------
 
 for(i in 1:nrow(comb.transect)){
-	if(comb.transect$Exclusion[i] == "Herbivroe"){
-		comb.transect$Exclusion[i] <- "Herbivore"
+	if(comb.transect$EXCLUSION[i] == "Herbivroe"){
+		comb.transect$EXCLUSION[i] <- "Herbivore"
 	}
 }
 
@@ -38,7 +38,7 @@ for(i in 1:nrow(comb.transect)){
 # pivot wider introduces NA for those values.
 
 comb.transect <- comb.transect %>%
-  pivot_wider(names_from = Species, values_from = Present)
+  pivot_wider(names_from = SPECIES, values_from = PRESENT)
 
 # Convert NAs to 0
 comb.transect[is.na(comb.transect)] <- 0
@@ -48,7 +48,7 @@ comb.transect[is.na(comb.transect)] <- 0
 
 # Get a list of the species names
 list <- as.data.frame(colnames(comb.transect[1, 8:168]))
-names(list)[1] <- "Species"
+names(list)[1] <- "SPECIES"
 
 # Combine like columns and drop the extra column
 
@@ -88,7 +88,7 @@ comb.transect <- comb.transect %>%
 
 # Pivot the data longer
 comb.transect <- comb.transect %>%
-  pivot_longer(8:131, names_to = "Species", values_to = "Present")
+  pivot_longer(8:131, names_to = "SPECIES", values_to = "PRESENT")
 
 # Create a vector of the unknown species
 unknowns <- c(
@@ -101,20 +101,20 @@ unknowns <- c(
 )
 
 # Change the name of all species in the unknowns vector
-comb.transect$Species[comb.transect$Species %in% unknowns] <- "Unknown_plant"
+comb.transect$SPECIES[comb.transect$SPECIES %in% unknowns] <- "Unknown_plant"
 
 # Summarize the unknowns data
 comb.transect <- comb.transect %>%
   group_by(
-    Date, Site, Treatment, Carrion, Exclusion, Transect, Distance,
-    Species
+    DATE, SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT, DISTANCE,
+    SPECIES
   ) %>%
-  summarize(Present = sum(Present))
+  summarize(PRESENT = sum(PRESENT))
 
 # Summarizing unknowns caused some double values to pop up (multiple unknowns
 # at the same point). However, there were already some double values for PANIC.
 # I don't know where they came from (yet).
-comb.transect$Present[comb.transect$Present > 0] <- 1
+comb.transect$PRESENT[comb.transect$PRESENT > 0] <- 1
 
 ## --------------- DROP NONPLANTS  ---------------------------------------------
 
@@ -125,105 +125,105 @@ non.plants <- c(
 )
 
 # Change the name of all species in the non.plants vector
-comb.transect$Species[comb.transect$Species %in% non.plants] <- "Non_plant"
+comb.transect$SPECIES[comb.transect$SPECIES %in% non.plants] <- "Non_plant"
 
 # Remove the non-plants from the plant survey data
 comb.transect <- comb.transect %>%
-  filter(!Species == "Non_plant")
+  filter(!SPECIES == "Non_plant")
 
 ## --------------- ADD GENUS SPECIES  ------------------------------------------
 
 # Create a list of species to reference
-list <- as.data.frame(unique(comb.transect$Species))
-names(list)[1] <- "Species"
+list <- as.data.frame(unique(comb.transect$SPECIES))
+names(list)[1] <- "SPECIES"
 
 # Create a dataframe matching the symbols/labels in the plant survey data
 # with full genus.species names.
 spec.func.list <- rbind(
-  data.frame(Species = c("BRJA"), Genus.species = c("Bromus japonicus")),
-  data.frame(Species = c("BOCU"), Genus.species = c("Bouteloua curtipendula")),
-  data.frame(Species = c("AECY"), Genus.species = c("Aegilops cylindrica")),
-  data.frame(Species = c("AMPS"), Genus.species = c("Ambrosia psilostachya")),
-  data.frame(Species = c("ARPU"), Genus.species = c("Aristida purpurea_Aristida purpurascens")),
-  data.frame(Species = c("OPUNT"), Genus.species = c("Opuntia sp")),
-  data.frame(Species = c("TRRA5"), Genus.species = c("Tragia ramosa")),
-  data.frame(Species = c("APIAC"), Genus.species = c("Apiaceae sp")),
-  data.frame(Species = c("BOHI2"), Genus.species = c("Bouteloua hirsuta")),
-  data.frame(Species = c("GAPU"), Genus.species = c("Gaillardia pulchella")),
-  data.frame(Species = c("VARA"), Genus.species = c("Valerianella radiata")),
-  data.frame(Species = c("NALE3"), Genus.species = c("Nassella leucotricha")),
-  data.frame(Species = c("AMDR"), Genus.species = c("Amphiachyris dracunculoides")),
-  data.frame(Species = c("LOPE"), Genus.species = c("Lolium perenne")),
-  data.frame(Species = c("CASTI2"), Genus.species = c("Castilleja sp")),
-  data.frame(Species = c("ERLO5"), Genus.species = c("Eriogonum longifolium")),
-  data.frame(Species = c("PYCA2"), Genus.species = c("Pyrrhopappus carolinianus")),
-  data.frame(Species = c("ASAS"), Genus.species = c("Asclepias asperula")),
-  data.frame(Species = c("SIDA"), Genus.species = c("Sida sp")),
-  data.frame(Species = c("CROTON"), Genus.species = c("Croton sp")),
-  data.frame(Species = c("PAJA"), Genus.species = c("Paronychia jamesii")),
-  data.frame(Species = c("HEHI2"), Genus.species = c("Helianthus hirsutus")),
-  data.frame(Species = c("ENPE4"), Genus.species = c("Engelmannia peristenia")),
-  data.frame(Species = c("EVVE"), Genus.species = c("Evax verna")),
-  data.frame(Species = c("CLOVER"), Genus.species = c("Trifolium sp")),
-  data.frame(Species = c("ALLIUM"), Genus.species = c("Allium sp")),
-  data.frame(Species = c("VICIA"), Genus.species = c("Vicia sp")),
-  data.frame(Species = c("MOSS"), Genus.species = c("Bryophyta sp")),
-  data.frame(Species = c("SPCOC2"), Genus.species = c("Sporobolus compositus")),
-  data.frame(Species = c("NOBI2"), Genus.species = c("Nothoscordum bivalve")),
-  data.frame(Species = c("SOLID"), Genus.species = c("Solidago sp")),
-  data.frame(Species = c("LASE"), Genus.species = c("Lactuca serriola")),
-  data.frame(Species = c("SCOV"), Genus.species = c("Scutellaria ovata")),
-  data.frame(Species = c("BUTTON"), Genus.species = c("Diodea teres")),
-  data.frame(Species = c("COEQ"), Genus.species = c("Convolvulus equitans")),
-  data.frame(Species = c("PLVI"), Genus.species = c("Plantago virginica")),
-  data.frame(Species = c("HECR9"), Genus.species = c("Houstonia pusilla")),
-  data.frame(Species = c("LITE3"), Genus.species = c("Lindheimera texana")),
-  data.frame(Species = c("ASVE"), Genus.species = c("Asclepias verticillata")),
-  data.frame(Species = c("PHPO3"), Genus.species = c("Phyllanthus polygonoides")),
-  data.frame(Species = c("PLAR"), Genus.species = c("Plantago aristata")),
-  data.frame(Species = c("HEDR"), Genus.species = c("Hedeoma drummondii")),
-  data.frame(Species = c("CITE2"), Genus.species = c("Cirsium texanum")),
-  data.frame(Species = c("DICI"), Genus.species = c("Digitaria ciliaris")),
-  data.frame(Species = c("SISYR"), Genus.species = c("Sisyrinchium sp")),
-  data.frame(Species = c("DAPU"), Genus.species = c("Dalea purpurea")),
-  data.frame(Species = c("KRLA"), Genus.species = c("Krameria lanceolata")),
-  data.frame(Species = c("TROH"), Genus.species = c("Tradescantia ohiensis")),
-  data.frame(Species = c("AGHE4"), Genus.species = c("Agalinis heterophylla")),
-  data.frame(Species = c("ANDRO2"), Genus.species = c("Andropogon sp")),
-  data.frame(Species = c("LEVI"), Genus.species = c("Lepidium virginicum")),
-  data.frame(Species = c("LOBEL"), Genus.species = c("Lobelia sp")),
-  data.frame(Species = c("NIP"), Genus.species = c("Lapsana communis")),
-  data.frame(Species = c("OENOT"), Genus.species = c("Oenothera biennis")),
-  data.frame(Species = c("SACA"), Genus.species = c("Sabatia campestris")),
-  data.frame(Species = c("SETAR"), Genus.species = c("Setaria sp")),
-  data.frame(Species = c("TRIOD"), Genus.species = c("Triodanis perfoliata")),
-  data.frame(Species = c("HYTE2"), Genus.species = c("Hymenopappus tenuifolius")),
-  data.frame(Species = c("VEHA"), Genus.species = c("Verbena halei")),
-  data.frame(Species = c("ERCU"), Genus.species = c("Eragrostis curtipedicellata")),
-  data.frame(Species = c("ERLE11"), Genus.species = c("Eryngium leavenworthii")),
-  data.frame(Species = c("LESQU"), Genus.species = c("Lesquerella sp")),
-  data.frame(Species = c("ERPI5"), Genus.species = c("Erioneuron pilosum")),
-  data.frame(Species = c("VEPE2"), Genus.species = c("Veronica peregrina")),
-  data.frame(Species = c("BOIS"), Genus.species = c("Bothriochloa ischaemum")),
-  data.frame(Species = c("BOLA"), Genus.species = c("Bothriochloa laguroides")),
-  data.frame(Species = c("GLBI"), Genus.species = c("Glandularia bipinnatifida")),
-  data.frame(Species = c("PANIC"), Genus.species = c("Panicum sp")),
-  data.frame(Species = c("STYLO5"), Genus.species = c("Stylosanthes biflora")),
-  data.frame(Species = c("EUPE"), Genus.species = c("Chamaesyce sp")),
-  data.frame(Species = c("WOODSORREL"), Genus.species = c("Oxalis sp")),
-  data.frame(Species = c("SERO"), Genus.species = c("Packera obovata")),
-  data.frame(Species = c("BOSA"), Genus.species = c("Bothriochloa saccharoides")),
-  data.frame(Species = c("ERLO"), Genus.species = c("Erigeron sp")),
-  data.frame(Species = c("DYLI"), Genus.species = c("Dyschoriste linearis")),
-  data.frame(Species = c("SENO"), Genus.species = c("Cassia marilandica")),
-  data.frame(Species = c("MINT"), Genus.species = c("Lamiaceae sp")),
-  data.frame(Species = c("THFI"), Genus.species = c("Thelesperma filifolium")),
-  data.frame(Species = c("CUD"), Genus.species = c("Gnaphalium obtusifolium")),
-  data.frame(Species = c("MELU"), Genus.species = c("Medicago lupulina")),
-  data.frame(Species = c("RUHI2"), Genus.species = c("Rudbeckia hirta")),
-  data.frame(Species = c("LINUM"), Genus.species = c("Linum sp")),
-  data.frame(Species = c("GAURA"), Genus.species = c("Gaura sp")),
-  data.frame(Species = c("Unknown_plant"), Genus.species = c("Unknown plant"))
+  data.frame(SPECIES = c("BRJA"), GENUS.SPECIES = c("Bromus japonicus")),
+  data.frame(SPECIES = c("BOCU"), GENUS.SPECIES = c("Bouteloua curtipendula")),
+  data.frame(SPECIES = c("AECY"), GENUS.SPECIES = c("Aegilops cylindrica")),
+  data.frame(SPECIES = c("AMPS"), GENUS.SPECIES = c("Ambrosia psilostachya")),
+  data.frame(SPECIES = c("ARPU"), GENUS.SPECIES = c("Aristida purpurea_Aristida purpurascens")),
+  data.frame(SPECIES = c("OPUNT"), GENUS.SPECIES = c("Opuntia sp")),
+  data.frame(SPECIES = c("TRRA5"), GENUS.SPECIES = c("Tragia ramosa")),
+  data.frame(SPECIES = c("APIAC"), GENUS.SPECIES = c("Apiaceae sp")),
+  data.frame(SPECIES = c("BOHI2"), GENUS.SPECIES = c("Bouteloua hirsuta")),
+  data.frame(SPECIES = c("GAPU"), GENUS.SPECIES = c("Gaillardia pulchella")),
+  data.frame(SPECIES = c("VARA"), GENUS.SPECIES = c("Valerianella radiata")),
+  data.frame(SPECIES = c("NALE3"), GENUS.SPECIES = c("Nassella leucotricha")),
+  data.frame(SPECIES = c("AMDR"), GENUS.SPECIES = c("Amphiachyris dracunculoides")),
+  data.frame(SPECIES = c("LOPE"), GENUS.SPECIES = c("Lolium perenne")),
+  data.frame(SPECIES = c("CASTI2"), GENUS.SPECIES = c("Castilleja sp")),
+  data.frame(SPECIES = c("ERLO5"), GENUS.SPECIES = c("Eriogonum longifolium")),
+  data.frame(SPECIES = c("PYCA2"), GENUS.SPECIES = c("Pyrrhopappus carolinianus")),
+  data.frame(SPECIES = c("ASAS"), GENUS.SPECIES = c("Asclepias asperula")),
+  data.frame(SPECIES = c("SIDA"), GENUS.SPECIES = c("Sida sp")),
+  data.frame(SPECIES = c("CROTON"), GENUS.SPECIES = c("Croton sp")),
+  data.frame(SPECIES = c("PAJA"), GENUS.SPECIES = c("Paronychia jamesii")),
+  data.frame(SPECIES = c("HEHI2"), GENUS.SPECIES = c("Helianthus hirsutus")),
+  data.frame(SPECIES = c("ENPE4"), GENUS.SPECIES = c("Engelmannia peristenia")),
+  data.frame(SPECIES = c("EVVE"), GENUS.SPECIES = c("Evax verna")),
+  data.frame(SPECIES = c("CLOVER"), GENUS.SPECIES = c("Trifolium sp")),
+  data.frame(SPECIES = c("ALLIUM"), GENUS.SPECIES = c("Allium sp")),
+  data.frame(SPECIES = c("VICIA"), GENUS.SPECIES = c("Vicia sp")),
+  data.frame(SPECIES = c("MOSS"), GENUS.SPECIES = c("Bryophyta sp")),
+  data.frame(SPECIES = c("SPCOC2"), GENUS.SPECIES = c("Sporobolus compositus")),
+  data.frame(SPECIES = c("NOBI2"), GENUS.SPECIES = c("Nothoscordum bivalve")),
+  data.frame(SPECIES = c("SOLID"), GENUS.SPECIES = c("Solidago sp")),
+  data.frame(SPECIES = c("LASE"), GENUS.SPECIES = c("Lactuca serriola")),
+  data.frame(SPECIES = c("SCOV"), GENUS.SPECIES = c("Scutellaria ovata")),
+  data.frame(SPECIES = c("BUTTON"), GENUS.SPECIES = c("Diodea teres")),
+  data.frame(SPECIES = c("COEQ"), GENUS.SPECIES = c("Convolvulus equitans")),
+  data.frame(SPECIES = c("PLVI"), GENUS.SPECIES = c("Plantago virginica")),
+  data.frame(SPECIES = c("HECR9"), GENUS.SPECIES = c("Houstonia pusilla")),
+  data.frame(SPECIES = c("LITE3"), GENUS.SPECIES = c("Lindheimera texana")),
+  data.frame(SPECIES = c("ASVE"), GENUS.SPECIES = c("Asclepias verticillata")),
+  data.frame(SPECIES = c("PHPO3"), GENUS.SPECIES = c("Phyllanthus polygonoides")),
+  data.frame(SPECIES = c("PLAR"), GENUS.SPECIES = c("Plantago aristata")),
+  data.frame(SPECIES = c("HEDR"), GENUS.SPECIES = c("Hedeoma drummondii")),
+  data.frame(SPECIES = c("CITE2"), GENUS.SPECIES = c("Cirsium texanum")),
+  data.frame(SPECIES = c("DICI"), GENUS.SPECIES = c("Digitaria ciliaris")),
+  data.frame(SPECIES = c("SISYR"), GENUS.SPECIES = c("Sisyrinchium sp")),
+  data.frame(SPECIES = c("DAPU"), GENUS.SPECIES = c("Dalea purpurea")),
+  data.frame(SPECIES = c("KRLA"), GENUS.SPECIES = c("Krameria lanceolata")),
+  data.frame(SPECIES = c("TROH"), GENUS.SPECIES = c("Tradescantia ohiensis")),
+  data.frame(SPECIES = c("AGHE4"), GENUS.SPECIES = c("Agalinis heterophylla")),
+  data.frame(SPECIES = c("ANDRO2"), GENUS.SPECIES = c("Andropogon sp")),
+  data.frame(SPECIES = c("LEVI"), GENUS.SPECIES = c("Lepidium virginicum")),
+  data.frame(SPECIES = c("LOBEL"), GENUS.SPECIES = c("Lobelia sp")),
+  data.frame(SPECIES = c("NIP"), GENUS.SPECIES = c("Lapsana communis")),
+  data.frame(SPECIES = c("OENOT"), GENUS.SPECIES = c("Oenothera biennis")),
+  data.frame(SPECIES = c("SACA"), GENUS.SPECIES = c("Sabatia campestris")),
+  data.frame(SPECIES = c("SETAR"), GENUS.SPECIES = c("Setaria sp")),
+  data.frame(SPECIES = c("TRIOD"), GENUS.SPECIES = c("Triodanis perfoliata")),
+  data.frame(SPECIES = c("HYTE2"), GENUS.SPECIES = c("Hymenopappus tenuifolius")),
+  data.frame(SPECIES = c("VEHA"), GENUS.SPECIES = c("Verbena halei")),
+  data.frame(SPECIES = c("ERCU"), GENUS.SPECIES = c("Eragrostis curtipedicellata")),
+  data.frame(SPECIES = c("ERLE11"), GENUS.SPECIES = c("Eryngium leavenworthii")),
+  data.frame(SPECIES = c("LESQU"), GENUS.SPECIES = c("Lesquerella sp")),
+  data.frame(SPECIES = c("ERPI5"), GENUS.SPECIES = c("Erioneuron pilosum")),
+  data.frame(SPECIES = c("VEPE2"), GENUS.SPECIES = c("Veronica peregrina")),
+  data.frame(SPECIES = c("BOIS"), GENUS.SPECIES = c("Bothriochloa ischaemum")),
+  data.frame(SPECIES = c("BOLA"), GENUS.SPECIES = c("Bothriochloa laguroides")),
+  data.frame(SPECIES = c("GLBI"), GENUS.SPECIES = c("Glandularia bipinnatifida")),
+  data.frame(SPECIES = c("PANIC"), GENUS.SPECIES = c("Panicum sp")),
+  data.frame(SPECIES = c("STYLO5"), GENUS.SPECIES = c("Stylosanthes biflora")),
+  data.frame(SPECIES = c("EUPE"), GENUS.SPECIES = c("Chamaesyce sp")),
+  data.frame(SPECIES = c("WOODSORREL"), GENUS.SPECIES = c("Oxalis sp")),
+  data.frame(SPECIES = c("SERO"), GENUS.SPECIES = c("Packera obovata")),
+  data.frame(SPECIES = c("BOSA"), GENUS.SPECIES = c("Bothriochloa saccharoides")),
+  data.frame(SPECIES = c("ERLO"), GENUS.SPECIES = c("Erigeron sp")),
+  data.frame(SPECIES = c("DYLI"), GENUS.SPECIES = c("Dyschoriste linearis")),
+  data.frame(SPECIES = c("SENO"), GENUS.SPECIES = c("Cassia marilandica")),
+  data.frame(SPECIES = c("MINT"), GENUS.SPECIES = c("Lamiaceae sp")),
+  data.frame(SPECIES = c("THFI"), GENUS.SPECIES = c("Thelesperma filifolium")),
+  data.frame(SPECIES = c("CUD"), GENUS.SPECIES = c("Gnaphalium obtusifolium")),
+  data.frame(SPECIES = c("MELU"), GENUS.SPECIES = c("Medicago lupulina")),
+  data.frame(SPECIES = c("RUHI2"), GENUS.SPECIES = c("Rudbeckia hirta")),
+  data.frame(SPECIES = c("LINUM"), GENUS.SPECIES = c("Linum sp")),
+  data.frame(SPECIES = c("GAURA"), GENUS.SPECIES = c("Gaura sp")),
+  data.frame(SPECIES = c("Unknown_plant"), GENUS.SPECIES = c("Unknown plant"))
 )
 
 # Join the genus species dataframe to the plant survey dataframe
@@ -233,7 +233,7 @@ comb.transect <- full_join(comb.transect, spec.func.list,
 
 # Rearrange the columns
 comb.transect <- comb.transect %>%
-  dplyr::select(Date, Site, Treatment, Carrion, Exclusion, Transect, Distance, Genus.species, Present)
+  dplyr::select(DATE, SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT, DISTANCE, GENUS.SPECIES, PRESENT)
 
 ## --------------- MERGE WITH DORMANCY CLASS DATABASE --------------------------
 
@@ -242,18 +242,18 @@ seed.dorm.db <- read.csv("Clean-data/Seeds/Seed-dormancy-db.csv")
 
 # Drop everything that isn't dormany class and species
 seed.dorm.db <- seed.dorm.db %>% 
-	dplyr::select(DormancyClass, Genus.species) %>% 
+	dplyr::select(DORMANCY.CLASS, GENUS.SPECIES) %>% 
 	distinct()
 
 # Filter for species with more than 1 entry in the database
 entry.num <- seed.dorm.db %>%
-	group_by(Genus.species) %>% 
+	group_by(GENUS.SPECIES) %>% 
 	summarise(Observations = n()) %>% 
 	filter(Observations > 1)
 
 test <- comb.transect |>
 	ungroup() |>
-	dplyr::select(Genus.species) |>
+	dplyr::select(GENUS.SPECIES) |>
 	unique()
 
 # Initiate a column
@@ -263,7 +263,7 @@ test['Entries'] <- NA
 # entries in the seed dormancy database
 
 for (i in 1:nrow(test)) {
-  if (test$Genus.species[i] %in% entry.num$Genus.species) {
+  if (test$GENUS.SPECIES[i] %in% entry.num$GENUS.SPECIES) {
   	 test$Entries[i] <- "Multiple"
    } else {
   	 test$Entries[i] <- "Single"
@@ -280,265 +280,265 @@ comb.transect <- merge(comb.transect, seed.dorm.db,
 
 # Reorder the columns
 comb.transect <- comb.transect %>% 
-	dplyr::select(Date, Site, Treatment, Carrion, Exclusion, Transect, Distance,
-				 DormancyClass, Genus.species, Present
+	dplyr::select(DATE, SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT, DISTANCE,
+				 DORMANCY.CLASS, GENUS.SPECIES, PRESENT
 )
 
 ## --------------- ADD SEED DORMANCY FUNCTIONAL GROUP FOR NAs ------------------
 
 # Filter for species without a seed dormancy class listed
 comb.transect.unk <- comb.transect %>% 
-	filter(is.na(DormancyClass) == TRUE
+	filter(is.na(DORMANCY.CLASS) == TRUE
 )
 
 # Create a vector of the plant names that do not have a seed dormancy class
-unk.species <- as.data.frame(unique(comb.transect.unk$Genus.species))
-colnames(unk.species)[1] <- "Genus.species"
+unk.species <- as.data.frame(unique(comb.transect.unk$GENUS.SPECIES))
+colnames(unk.species)[1] <- "GENUS.SPECIES"
 
 # For loop to add dormancy class to unlisted species from the dormany database
 for (i in 1:nrow(comb.transect)) {
-	if (comb.transect$Genus.species[i] == "Aristida purpurea_Aristida purpurascens") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Aristida purpurea_Aristida purpurascens") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Opuntia sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Opuntia sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Tragia ramosa") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Tragia ramosa") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Ambrosia psilostachya") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Ambrosia psilostachya") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Apiaceae sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Apiaceae sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Nassella leucotricha") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Nassella leucotricha") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Eriogonum longifolium") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Eriogonum longifolium") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Lolium perenne") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Lolium perenne") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Castilleja sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Castilleja sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Pyrrhopappus carolinianus") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Pyrrhopappus carolinianus") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Asclepias asperula") {
-		comb.transect$DormancyClass[i] <- "ND"
+	if (comb.transect$GENUS.SPECIES[i] == "Asclepias asperula") {
+		comb.transect$DORMANCY.CLASS[i] <- "ND"
 	}
-	if (comb.transect$Genus.species[i] == "Sida sp") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Sida sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Croton sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Croton sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Paronychia jamesii") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Paronychia jamesii") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Helianthus hirsutus") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Helianthus hirsutus") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Engelmannia peristenia") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Engelmannia peristenia") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Evax verna") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Evax verna") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Trifolium sp") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Trifolium sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Allium sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Allium sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Vicia sp") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Vicia sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Bryophyta sp") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Bryophyta sp") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Sporobolus compositus") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Sporobolus compositus") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Scutellaria ovata") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Scutellaria ovata") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Solidago sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Solidago sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Convolvulus equitans") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Convolvulus equitans") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Linum sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Linum sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Diodea teres") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Diodea teres") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Phyllanthus polygonoides") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Phyllanthus polygonoides") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Houstonia pusilla") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Houstonia pusilla") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Hedeoma drummondii") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Hedeoma drummondii") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Asclepias verticillata") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Asclepias verticillata") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Sisyrinchium sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Sisyrinchium sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Cirsium texanum") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Cirsium texanum") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Lobelia sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Lobelia sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Dalea purpurea") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Dalea purpurea") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Krameria lanceolata") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Krameria lanceolata") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Agalinis heterophylla") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Agalinis heterophylla") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Andropogon sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Andropogon sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Sabatia campestris") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Sabatia campestris") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Eryngium leavenworthii") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Eryngium leavenworthii") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Hymenopappus tenuifolius") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Hymenopappus tenuifolius") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Setaria sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Setaria sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Verbena halei") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Verbena halei") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Eragrostis curtipedicellata") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Eragrostis curtipedicellata") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Lesquerella sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Lesquerella sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Erioneuron pilosum") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Erioneuron pilosum") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Panicum sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Panicum sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Bothriochloa ischaemum") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Bothriochloa ischaemum") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Bothriochloa laguroides") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Bothriochloa laguroides") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Glandularia bipinnatifida") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Glandularia bipinnatifida") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Stylosanthes biflora") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Stylosanthes biflora") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Chamaesyce sp") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Chamaesyce sp") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Oxalis sp") {
-		comb.transect$DormancyClass[i] <- "ND"
+	if (comb.transect$GENUS.SPECIES[i] == "Oxalis sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "ND"
 	}
-	if (comb.transect$Genus.species[i] == "Packera obovata") {
-		comb.transect$DormancyClass[i] <- "ND"
+	if (comb.transect$GENUS.SPECIES[i] == "Packera obovata") {
+		comb.transect$DORMANCY.CLASS[i] <- "ND"
 	}
-	if (comb.transect$Genus.species[i] == "Bothriochloa saccharoides") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Bothriochloa saccharoides") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Erigeron sp") {
-		comb.transect$DormancyClass[i] <- "ND"
+	if (comb.transect$GENUS.SPECIES[i] == "Erigeron sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "ND"
 	}
-	if (comb.transect$Genus.species[i] == "Dyschoriste linearis") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Dyschoriste linearis") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Cassia marilandica") {
-		comb.transect$DormancyClass[i] <- "PY"
+	if (comb.transect$GENUS.SPECIES[i] == "Cassia marilandica") {
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if (comb.transect$Genus.species[i] == "Lamiaceae sp") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Lamiaceae sp") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Gaura sp") {
-		comb.transect$DormancyClass[i] <- "PD"
+	if (comb.transect$GENUS.SPECIES[i] == "Gaura sp") {
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$Genus.species[i] == "Thelesperma filifolium") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Thelesperma filifolium") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
-	if (comb.transect$Genus.species[i] == "Unknown plant") {
-		comb.transect$DormancyClass[i] <- NA
+	if (comb.transect$GENUS.SPECIES[i] == "Unknown plant") {
+		comb.transect$DORMANCY.CLASS[i] <- NA
 	}
 }
 
 # Calculate how many unknown seed dormancy class observations remain
-(sum(is.na(comb.transect$DormancyClass)))/(nrow(comb.transect))
+(sum(is.na(comb.transect$DORMANCY.CLASS)))/(nrow(comb.transect))
 # 15% of rows are NAs
 
 # Check to the levels of the seed dormancy classes
-unique(comb.transect$DormancyClass)
+unique(comb.transect$DORMANCY.CLASS)
 
 # Fix seed dormancy classes
 for (i in 1:nrow(comb.transect)){
-	if(isTRUE(comb.transect$DormancyClass[i] == "nd")){
-		comb.transect$DormancyClass[i] <- "ND"
+	if(isTRUE(comb.transect$DORMANCY.CLASS[i] == "nd")){
+		comb.transect$DORMANCY.CLASS[i] <- "ND"
 	}
-	if(isTRUE(comb.transect$DormancyClass[i] == "pd")){
-		comb.transect$DormancyClass[i] <- "PD"
+	if(isTRUE(comb.transect$DORMANCY.CLASS[i] == "pd")){
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if(isTRUE(comb.transect$DormancyClass[i] == "PYPD")){
-		comb.transect$DormancyClass[i] <- "PY"
+	if(isTRUE(comb.transect$DORMANCY.CLASS[i] == "PYPD")){
+		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
-	if(isTRUE(comb.transect$DormancyClass[i] == "MPD")){
-		comb.transect$DormancyClass[i] <- "PD"
+	if(isTRUE(comb.transect$DORMANCY.CLASS[i] == "MPD")){
+		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
 }
 
 ## --------------- SUMMARIZE BY DORMANCY CLASS ---------------------------------
 
 # Save as date
-comb.transect$Date <- as.Date(comb.transect$Date)
+comb.transect$DATE <- as.DATE(comb.transect$DATE)
 
 # Round the date
 comb.transect <- comb.transect %>% 
-	mutate(Rounded.date = round_date(Date, unit = "week"))
+	mutate(ROUNDED.DATE = round_date(DATE, unit = "week"))
 
 # The pre-data got summarized to different weeks. Put them on the same level
 for(i in 1:nrow(comb.transect)){
-	if(comb.transect$Rounded.date[i] == "2019-03-17"){
-		comb.transect$Rounded.date[i] <- "2019-03-10"
+	if(comb.transect$ROUNDED.DATE[i] == "2019-03-17"){
+		comb.transect$ROUNDED.DATE[i] <- "2019-03-10"
 	}
 }
 
 # Rearrange
 comb.transect <- comb.transect %>% 
-	dplyr::select(Rounded.date, Site, Treatment, Carrion, Exclusion,
-				 Transect, Distance, DormancyClass, Genus.species, Present)
+	dplyr::select(Rounded.date, SITE, TREATMENT, BIOMASS, EXCLUSION,
+				 TRANSECT, DISTANCE, DORMANCY.CLASS, GENUS.SPECIES, PRESENT)
 
 # Summarize the data by dormancy class
 comb.transect.dormancy <- comb.transect %>% 
-	group_by(Rounded.date, Site, Treatment, Carrion, Exclusion, Transect,
-					 Distance, DormancyClass) %>% 
-	summarise(Present = sum(Present))
+	group_by(ROUNDED.DATE, SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT,
+					 DISTANCE, DORMANCY.CLASS) %>% 
+	summarise(PRESENT = sum(PRESENT))
 
 # There are too many rows because there are observations from the dropped
 # site (pipeline).
 comb.transect.dormancy <- comb.transect.dormancy %>% 
-	filter(Site != "Pipeline")
+	filter(SITE != "Pipeline")
  
 # 3 dormancy classes + NA = 4 rows per transect point per sampling event
 # 4 * 16 transect points per plot = 64 rows per plot
@@ -554,46 +554,18 @@ print(nrow(comb.transect.dormancy)) # 10,752
 # than one observation of a dormancy class, there will be a value greater
 # than one. We need to convert those values.
 
-comb.transect.dormancy$Present[comb.transect.dormancy$Present > 0] <- 1
-
-# Fix disagreement in cardinal directions
-comb.transect.dormancy <- comb.transect.dormancy %>%
-  mutate(Transect = case_when(
-    Transect == "E" ~ "East",
-    Transect == "W" ~ "West",
-    Transect == "N" ~ "North",
-    Transect == "S" ~ "South",
-    Transect == "East" ~ "East",
-    Transect == "West" ~ "West",
-    Transect == "North" ~ "North",
-    Transect == "South" ~ "South",
-    TRUE ~ Transect  # To keep any other values unchanged
-  ))
-
-# Fix disagreement in cardinal directions
-comb.transect.dormancy <- comb.transect.dormancy %>%
-  mutate(Site = case_when(
-    Site == "DF" ~ "Dixon",
-    Site == "GG" ~ "Gilgai",
-    Site == "WP" ~ "Wellpad",
-    Site == "OS" ~ "Oswalt",
-    Site == "Dixon" ~ "Dixon",
-    Site == "Gilgai" ~ "Gilgai",
-    Site == "Wellpad" ~ "Wellpad",
-    Site == "Oswalt" ~ "Oswalt",
-    TRUE ~ Site  # To keep any other values unchanged
-  ))
+comb.transect.dormancy$PRESENT[comb.transect.dormancy$PRESENT > 0] <- 1
 
 
 ## --------------- CREATE COLONIZATION DATAFAME --------------------------------
 
 # Pivot wide
 comb.transect.dormancy.wd <- comb.transect.dormancy |>
-	pivot_wider(names_from = Rounded.date, values_from = Present)
+	pivot_wider(names_from = ROUNDED.DATE, values_from = PRESENT)
 
 # Check the numbers
 check <- comb.transect.dormancy |>
-	group_by(Rounded.date, Site, Treatment, Transect, Distance) |>
+	group_by(ROUNDED.DATE, SITE, TREATMENT, TRANSECT, DISTANCE) |>
 	summarize(Count = n ()) 
 # All transect points are represented
 # 7 dates
@@ -610,37 +582,27 @@ dormancy.col <- comb.transect.dormancy.wd %>%
 	filter(`2019-03-10` == 0)
 
 # Initialize column for colonization
-dormancy.col["Colonized.ever"] <- NA
-dormancy.col["Colonized.end"] <- NA
-
-# Determine if dormancy class ever colonized the point
-for(i in 1:nrow(dormancy.col)){
-	if (isTRUE(sum(dormancy.col[i, 8:14]) >= 1)){
-		dormancy.col$Colonized.ever[i] <- 1
-	} else {
-		dormancy.col$Colonized.ever[i] <- 0
-	}
-}
+dormancy.col["COLONIZED.END"] <- NA
 
 # Determine if dormancy class colonized the point by the
 # last sampling date
 
 for(i in 1:nrow(dormancy.col)){
 	if (isTRUE(dormancy.col[i, 14] == 1)) {
-		dormancy.col$Colonized.end[i] <- 1
+		dormancy.col$COLONIZED.END[i] <- 1
 	} else {
-		dormancy.col$Colonized.end[i] <- 0
+		dormancy.col$COLONIZED.END[i] <- 0
 	}
 }
 
 # Drop the NA values
 dormancy.col <- dormancy.col %>% 
-	filter(DormancyClass != "NA")
+	filter(DORMANCY.CLASS != "NA")
 
 # Rearrange the columns
 dormancy.col <- dormancy.col %>% 
-	dplyr::select(Site, Treatment, Carrion, Exclusion, Transect, Distance, DormancyClass,
-				 Colonized.ever, Colonized.end, everything())
+	dplyr::select(SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT, DISTANCE, DORMANCY.CLASS,
+				 COLONIZED.END, everything())
 
 ## --------------- CREATE EXTIRPATION DATAFAME ----------------------------------
 
@@ -649,8 +611,7 @@ dormancy.ext <- comb.transect.dormancy.wd %>%
 	filter(`2019-03-10` == 1)
 
 # Initialize columns for extirpation
-dormancy.ext["Extirpated.ever"] <- NA
-dormancy.ext["Extirpated.end"] <- NA
+dormancy.ext["EXTIRPATED.EVER"] <- NA
 
 # Determine if dormancy class was ever extirpated from the point
 zeroes <- rowSums(dormancy.ext[9:14] == 0)
@@ -658,9 +619,9 @@ dormancy.ext$zeroes <- zeroes
 
 for (i in 1:nrow(dormancy.ext)){
 	if (isTRUE(dormancy.ext$zeroes[i] >= 1)){
-		dormancy.ext$Extirpated.ever[i] <- 1
+		dormancy.ext$EXTIRPATED.EVER[i] <- 1
 	} else {
-		dormancy.ext$Extirpated.ever[i] <- 0
+		dormancy.ext$EXTIRPATED.EVER[i] <- 0
 	}
 }
 
@@ -677,17 +638,19 @@ for (i in 1:nrow(dormancy.ext)){
 
 # Drop the NA values
 dormancy.ext <- dormancy.ext %>% 
-	filter(DormancyClass != "NA")
+	filter(DORMANCY.CLASS != "NA")
 
 # Rearrange the columns
 dormancy.ext <- dormancy.ext %>% 
-	dplyr::select(Site, Treatment, Carrion, Exclusion, Transect, Distance, DormancyClass,
-				 Extirpated.ever, Extirpated.end, everything(), -zeroes)
+	dplyr::select(SITE, TREATMENT, BIOMASS, EXCLUSION, TRANSECT, DISTANCE, DORMANCY.CLASS,
+				 EXTIRPATED.EVER, everything(), -zeroes)
 
 ## --------------- SAVE CLEAN DATA ---------------------------------------------
+
+
 
 write.csv(dormancy.col, "Clean-data/Plants/Dormancy-class-colonization.csv",
 					row.names=FALSE)
 
-write.csv(dormancy.ext, "Clean-data/Plants/Dormancy-class-extinction.csv",
+write.csv(dormancy.ext, "Clean-data/Plants/Dormancy-class-extirpation.csv",
 					row.names=FALSE)

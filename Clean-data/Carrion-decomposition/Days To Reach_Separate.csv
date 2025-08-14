@@ -1,0 +1,66 @@
+Day Stage Reached,Site,Treatment,Fence,Average TBS,Decay Stage
+1,GG,MME,Herbivore Exclusion,4,Early
+1,DF,MME,Herbivore Exclusion,4.333333333,Early
+1,OS,MME,Herbivore Exclusion,4.333333333,Early
+1,WP,MME,Herbivore Exclusion,4.666666667,Early
+1,DF,Single Carcass,Herbivore Exclusion,4,Early
+1,WP,Single Carcass,Herbivore Exclusion,4,Early
+1,GG,Single Carcass,Herbivore Exclusion,4,Early
+1,OS,Single Carcass,Herbivore Exclusion,5,Early
+1,DF,MME,Open,4,Early
+1,WP,MME,Open,4.333333333,Early
+1,GG,MME,Open,4.333333333,Early
+1,OS,MME,Open,4.333333333,Early
+1,DF,Single Carcass,Open,4,Early
+1,WP,Single Carcass,Open,4,Early
+1,OS,Single Carcass,Open,4,Early
+1,GG,Single Carcass,Open,5,Early
+1,DF,MME,Scavenger Exclusion,4,Early
+1,WP,MME,Scavenger Exclusion,4,Early
+1,GG,MME,Scavenger Exclusion,4.333333333,Early
+1,OS,MME,Scavenger Exclusion,4.333333333,Early
+1,DF,Single Carcass,Scavenger Exclusion,4,Early
+1,WP,Single Carcass,Scavenger Exclusion,4,Early
+1,GG,Single Carcass,Scavenger Exclusion,4,Early
+1,OS,Single Carcass,Scavenger Exclusion,5,Early
+7,WP,MME,Herbivore Exclusion,18,Advanced
+7,OS,MME,Herbivore Exclusion,18.33333333,Advanced
+7,GG,MME,Herbivore Exclusion,19.66666667,Advanced
+7,DF,MME,Herbivore Exclusion,20,Advanced
+6,WP,Single Carcass,Herbivore Exclusion,17,Advanced
+7,GG,Single Carcass,Herbivore Exclusion,19,Advanced
+19,DF,Single Carcass,Herbivore Exclusion,24,Advanced
+7,OS,MME,Open,17,Advanced
+7,WP,MME,Open,18.66666667,Advanced
+7,GG,MME,Open,20.66666667,Advanced
+6,WP,Single Carcass,Open,21,Advanced
+7,OS,Single Carcass,Open,20,Advanced
+7,GG,MME,Scavenger Exclusion,20.33333333,Advanced
+7,DF,MME,Scavenger Exclusion,21,Advanced
+19,WP,MME,Scavenger Exclusion,24,Advanced
+19,OS,MME,Scavenger Exclusion,24.33333333,Advanced
+7,OS,Single Carcass,Scavenger Exclusion,17,Advanced
+7,DF,Single Carcass,Scavenger Exclusion,21,Advanced
+7,GG,Single Carcass,Scavenger Exclusion,22,Advanced
+19,GG,MME,Herbivore Exclusion,25,Skeletal/Missing
+19,WP,MME,Herbivore Exclusion,29,Skeletal/Missing
+47,OS,MME,Herbivore Exclusion,27,Skeletal/Missing
+47,DF,MME,Herbivore Exclusion,28.33333333,Skeletal/Missing
+19,OS,Single Carcass,Herbivore Exclusion,26,Skeletal/Missing
+47,WP,Single Carcass,Herbivore Exclusion,32,Skeletal/Missing
+47,GG,Single Carcass,Herbivore Exclusion,33,Skeletal/Missing
+19,WP,MME,Open,25,Skeletal/Missing
+19,DF,MME,Open,25.66666667,Skeletal/Missing
+19,GG,MME,Open,34.66666667,Skeletal/Missing
+47,OS,MME,Open,35,Skeletal/Missing
+3,DF,Single Carcass,Open,35,Skeletal/Missing
+4,GG,Single Carcass,Open,35,Skeletal/Missing
+7,WP,Single Carcass,Open,29,Skeletal/Missing
+19,OS,Single Carcass,Open,25,Skeletal/Missing
+20,DF,MME,Scavenger Exclusion,25,Skeletal/Missing
+20,WP,MME,Scavenger Exclusion,25.33333333,Skeletal/Missing
+47,GG,MME,Scavenger Exclusion,34.5,Skeletal/Missing
+47,OS,MME,Scavenger Exclusion,35,Skeletal/Missing
+19,WP,Single Carcass,Scavenger Exclusion,26,Skeletal/Missing
+19,GG,Single Carcass,Scavenger Exclusion,26,Skeletal/Missing
+47,DF,Single Carcass,Scavenger Exclusion,34,Skeletal/Missing

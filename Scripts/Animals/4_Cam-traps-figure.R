@@ -1,11 +1,11 @@
 ## --------------- HEADER ------------------------------------------------------
-## Script name: 3_Cam-traps-analysis.R
+## Script name: 4_Cam-traps-figure.R
 ## Author: David S. Mason, UF D.E.E.R. Lab
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2021-11-23
-## Date Last Modified: 2024-09-11
-## Copyright (c) David S. Mason, 2022
+## Date Last Modified: 2025-08-13
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script will produce a figure for the camera trap data
 
@@ -19,55 +19,55 @@ herb.means <- read.csv("Analysis/Animals/Herb-means.csv")
 
 ## --------------- MANIPULATE THE DATA -----------------------------------------
 
-decomp.means$Functional <- "Scavengers"
-herb.means$Functional <- "Herbivores"
+decomp.means$FUNCTIONAL <- "Scavengers"
+herb.means$FUNCTIONAL <- "Herbivores"
 
 means <- rbind(decomp.means, herb.means)
 rm(decomp.means, herb.means)
 
-means$Carrion <- NA
+means$Biomass <- NA
 
 for (i in 1:nrow(means)) {
   if (means$Treatment[i] %in% c("CO", "CS", "CH")) {
-    means$Carrion[i] <- "Single"
+    means$Biomass[i] <- "Single carcass"
   } else {
-    means$Carrion[i] <- "Mass"
+    means$Biomass[i] <- "MMME"
   }
 }
 
-means$Exclusion <- NA
+means$EXCLUSION <- NA
 
 for (i in 1:nrow(means)) {
   if (means$Treatment[i] %in% c("CO", "MO")) {
-    means$Exclusion[i] <- "No exclusion"
+    means$EXCLUSION[i] <- "Open"
   }
   if (means$Treatment[i] %in% c("CS", "MS")) {
-    means$Exclusion[i] <- "Scavenger exclusion"
+    means$EXCLUSION[i] <- "Scavenger"
   }
   if (means$Treatment[i] %in% c("CH", "MH")) {
-    means$Exclusion[i] <- "Herbivore exclusion"
+    means$EXCLUSION[i] <- "Herbivore"
   }
 }
 
 means$Nudge <- NA
 
 for (i in 1:nrow(means)) {
-  if (means$Carrion[i] == "Mass") {
+  if (means$Biomass[i] == "MME") {
     means$Nudge[i] <- 0.2
   } else {
     means$Nudge[i] <- -0.2
   }
 }
 
-means$Exclusion <- factor(means$Exclusion,
-  levels = c("Herbivore exclusion", "Scavenger exclusion", "No exclusion")
+means$EXCLUSION <- factor(means$EXCLUSION,
+  levels = c("Herbivore", "Scavenger", "Open")
 )
 
-means$Carrion <- factor(means$Carrion,
-  levels = c("Mass", "Single")
+means$Biomass <- factor(means$Biomass,
+  levels = c("MME", "Single carcass")
 )
 
-means$Functional <- factor(means$Functional,
+means$FUNCTIONAL <- factor(means$FUNCTIONAL,
   levels = c(
     "Scavengers",
     "Herbivores"
@@ -76,11 +76,11 @@ means$Functional <- factor(means$Functional,
 
 ## --------------- CREATE A FIGURE ---------------------------------------------
 
-p <- ggplot(means, aes(x = Mean, y = Exclusion)) +
+p <- ggplot(means, aes(x = Mean, y = EXCLUSION)) +
   geom_errorbar(aes(xmin = Mean - se, xmax = Mean + se),
     size = 0.5, width = 0.05, position = position_nudge(0, means$Nudge)
   ) +
-  geom_point(aes(fill = Carrion),
+  geom_point(aes(fill = Biomass),
     color = "black",
     pch = 21, size = 6, position = position_nudge(0, means$Nudge)
   ) +
@@ -102,8 +102,8 @@ p <- ggplot(means, aes(x = Mean, y = Exclusion)) +
   ) +
   theme(axis.ticks.y = element_blank()) +
   xlab("Detections") +
-  ylab("Exclusion") +
-  facet_wrap(~Functional, scales = "free_x")
+  ylab("EXCLUSION") +
+  facet_wrap(~FUNCTIONAL, scales = "free_x")
 
 
 p <- p + theme(
@@ -124,7 +124,7 @@ p <- p + theme(
 
 ggsave(
   plot = p,
-  filename = "Figures/Animals/Functional-detections.png",
+  filename = "Figures/Animals/FUNCTIONAL-detections.png",
   bg = "transparent",
   width = 8,
   height = 13,

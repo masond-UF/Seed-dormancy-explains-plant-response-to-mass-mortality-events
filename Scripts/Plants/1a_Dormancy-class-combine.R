@@ -4,8 +4,8 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2022-04-28
-## Date Last modified: 2024-10-04
-## Copyright (c) David S. Mason, 2022
+## Date Last modified: 2025-08-13
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This is a pre data munging script for the unsummarized
 ## transect data that combines surveys from 2019-2020 with 2021.
@@ -716,6 +716,26 @@ comb.transect.lg <- rbind(march2019, april2019, may2019, june2019, july2019, jul
 
 # Drop reference
 comb.transect.lg <- comb.transect.lg %>% filter(Treatment != "REF")
+
+## --------------- STANDARDIZE COLUMNS -----------------------------------------
+
+names(comb.transect.lg)[names(comb.transect.lg) == "Carrion"] <- "BIOMASS"
+names(comb.transect.lg) <- toupper(names(comb.transect.lg))
+
+comb.transect.lg$BIOMASS <- gsub("^Control$", "Single carcass", comb.transect.lg$BIOMASS)
+comb.transect.lg$BIOMASS <- gsub("^Mass$", "MME", comb.transect.lg$BIOMASS)
+
+comb.transect.lg$SITE <- recode(comb.transect.lg$SITE,
+                                "Oswalt" = "OS",
+                                "Gilgai" = "GG",
+                                "Dixon"  = "DF",
+                                "Wellpad" = "WP")
+
+comb.transect.lg$TRANSECT <- recode(comb.transect.lg$TRANSECT,
+                                    "North" = "N",
+                                    "East"  = "E",
+                                    "South" = "S",
+                                    "West"  = "W")
 
 ## --------------- SAVE DATA  --------------------------------------------------
 

@@ -2,10 +2,10 @@
 ## Script name: 3_Cam-traps-analysis.R
 ## Author: David S. Mason, UF D.E.E.R. Lab
 ## Department: Wildlife Ecology and Conservation
-## Affiliaton: University of Florida
+## Affiliation: University of Florida
 ## Date Created: 2021-11-23
-## Date Last Modified: 2024-09-11
-## Copyright (c) David S. Mason, 2022
+## Date Last Modified: 2025-08-13
+## Copyright (c) David S. Mason, 2025
 ## Contact: masond@ufl.edu, @EcoGraffito
 ## Purpose of script: This script conducts a basic general linear model on the
 ## camera trap data. The output of this script (should be) should be the model
@@ -25,57 +25,57 @@ rm(list = ls())
 # Bring in the data
 cam <- read.csv("Clean-data/Animals/Camera-traps.csv")
 
-cam$Date <- as_date(cam$Date)
+cam$DATE <- as_date(cam$DATE)
 
 ## --------------- SUBSET THE DATA ---------------------------------------------
 
 # Filter the scavenger exclusion period 21 days
 decomp <- cam %>%
-  filter(Date >= "2019-04-15" & Date <= "2019-05-05")
+  filter(DATE >= "2019-04-15" & DATE <= "2019-05-05")
 
 # Filter the herbivory period
 herbivory <- cam %>%
-  filter(Date > "2019-05-05")
+  filter(DATE > "2019-05-05")
 
 ## --------------- SUMMARIZE DECOMP DATA ---------------------------------------
 
 decomp.sum <- decomp %>%
-  group_by(Site, Treatment, Carrion, Exclusion, Functional) %>%
+  group_by(SITE, TREATMENT, BIOMASS, EXCLUSION, FUNCTIONAL) %>%
   summarize(Total.detections = n())
 
 decomp.sum.wd <- decomp.sum %>%
-  pivot_wider(names_from = Functional, values_from = Total.detections)
+  pivot_wider(names_from = FUNCTIONAL, values_from = Total.detections)
 
 decomp.sum.wd[is.na(decomp.sum.wd)] <- 0
 
 decomp.sum <- decomp.sum.wd %>%
-  pivot_longer(5:7, names_to = "Functional", values_to = "Total.detections")
+  pivot_longer(5:7, names_to = "FUNCTIONAL", values_to = "Total.detections")
 
 decomp.sum <- decomp.sum %>%
-  filter(Functional == "Scavenger")
+  filter(FUNCTIONAL == "Scavenger")
 
 # Clear the decks
 rm(decomp, decomp.sum.wd)
 
 ## --------------- SUMMARIZE HERBIVORY DATA ------------------------------------
 
-herbivory$Date <- as_date(herbivory$Date)
-herbivory$Week <- round_date(herbivory$Date, "week")
+herbivory$DATE <- as_date(herbivory$DATE)
+herbivory$Week <- round_date(herbivory$DATE, "week")
 
 herbivory.sum <- herbivory %>%
-  group_by(Site, Treatment, Carrion, Exclusion, Functional) %>%
+  group_by(SITE, TREATMENT, BIOMASS, EXCLUSION, FUNCTIONAL) %>%
   summarize(Total.detections = n())
 
 herbivory.sum.wd <- herbivory.sum %>%
-  pivot_wider(names_from = Functional, values_from = Total.detections)
+  pivot_wider(names_from = FUNCTIONAL, values_from = Total.detections)
 
 herbivory.sum.wd[is.na(herbivory.sum.wd)] <- 0
 
 herbivory.sum <- herbivory.sum.wd %>%
-  pivot_longer(5:7, names_to = "Functional", values_to = "Total.detections")
+  pivot_longer(5:7, names_to = "FUNCTIONAL", values_to = "Total.detections")
 
 herbivory.sum <- herbivory.sum %>%
-  filter(Functional == "Herbivore")
+  filter(FUNCTIONAL == "Herbivore")
 herbivory.sum <- as.data.frame(herbivory.sum)
 
 # Clear the decks
@@ -95,7 +95,7 @@ descdist(herbivory.sum$Total.detections, discrete = TRUE) # Poisson?
 ## --------------- MODEL DECOMP DATA -------------------------------------------
 
 library(MASS)
-m1 <- glm.nb(Total.detections ~ Treatment + Site,
+m1 <- glm.nb(Total.detections ~ TREATMENT + SITE,
   control = glm.control(maxit = 1000),
   data = decomp.sum
 )
@@ -124,10 +124,10 @@ Anova(m1)
 
 # Means
 library(emmeans)
-emmeans(m1, pairwise ~ Treatment, type = "response")
+emmeans(m1, pairwise ~ TREATMENT, type = "response")
 
 decomp.means <- data.frame(
-  Treatment = c("CH", "CO", "CS", "MH", "MO", "MS"),
+  TREATMENT = c("CH", "CO", "CS", "MH", "MO", "MS"),
   Mean = c(5.32, 151.42, 1.07, 180.52, 174.51, 2.37),
   se = c(4.05, 108.00, 0.96, 128.70, 124.42, 1.92),
   LCL = c(1.20, 37.42, 0.19, 44.64, 43.14, 0.48),
@@ -143,11 +143,11 @@ write.csv(decomp.means, "Analysis/Animals/Decomp-means.csv",
 )
 
 options(scipen = 0)
-emmeans <- emmeans(m1, pairwise ~ Treatment, type = "response")
+emmeans <- emmeans(m1, pairwise ~ TREATMENT, type = "response")
 
 # P values
 
-decomp.p <- emmeans(m1, pairwise ~ Treatment,
+decomp.p <- emmeans(m1, pairwise ~ TREATMENT,
   type = "response",
   adjust = "none"
 )
@@ -191,7 +191,7 @@ with(summary(m1), 1 - deviance / null.deviance)
 
 ## --------------- MODEL HERB DATA ---------------------------------------------
 
-m2 <- glm(Total.detections ~ Treatment + Site,
+m2 <- glm(Total.detections ~ TREATMENT + SITE,
   family = "poisson",
   data = herbivory.sum
 )
@@ -215,7 +215,7 @@ Anova(m2)
 
 # Means
 options(scipen = 999)
-herb.means <- emmeans(m2, pairwise ~ Treatment, type = "response")
+herb.means <- emmeans(m2, pairwise ~ TREATMENT, type = "response")
 herb.means <- as.data.frame(herb.means)
 herb.means <- herb.means[1:6, c(-2, -5)]
 
@@ -237,7 +237,7 @@ write.csv(herb.means, "Analysis/Animals/Herb-means.csv",
 
 # P values
 
-herb.p <- emmeans(m2, pairwise ~ Treatment, type = "response", adjust = "none")
+herb.p <- emmeans(m2, pairwise ~ TREATMENT, type = "response", adjust = "none")
 herb.p <- as.data.frame(herb.p)
 herb.p <- herb.p[7:21, c(-1, -5)]
 

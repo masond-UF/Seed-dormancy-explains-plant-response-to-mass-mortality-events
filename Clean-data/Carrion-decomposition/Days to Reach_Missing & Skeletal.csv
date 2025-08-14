@@ -1,0 +1,66 @@
+Day Stage Reached,Site,Treatment,Average TBS,Decay Stage
+1,GG,Herbivore MME,4,Early
+1,DF,Herbivore MME,4.333333333,Early
+1,OS,Herbivore MME,4.333333333,Early
+1,WP,Herbivore MME,4.666666667,Early
+1,DF,Herbivore Single Carcass,4,Early
+1,WP,Herbivore Single Carcass,4,Early
+1,GG,Herbivore Single Carcass,4,Early
+1,OS,Herbivore Single Carcass,5,Early
+1,DF,Open MME,4,Early
+1,WP,Open MME,4.333333333,Early
+1,GG,Open MME,4.333333333,Early
+1,OS,Open MME,4.333333333,Early
+1,DF,Open Single Carcass,4,Early
+1,WP,Open Single Carcass,4,Early
+1,OS,Open Single Carcass,4,Early
+1,GG,Open Single Carcass,5,Early
+1,DF,Scavenger MME,4,Early
+1,WP,Scavenger MME,4,Early
+1,GG,Scavenger MME,4.333333333,Early
+1,OS,Scavenger MME,4.333333333,Early
+1,DF,Scavenger Single Carcass,4,Early
+1,WP,Scavenger Single Carcass,4,Early
+1,GG,Scavenger Single Carcass,4,Early
+1,OS,Scavenger Single Carcass,5,Early
+6,WP,Herbivore Single Carcass,17,Advanced
+6,WP,Open Single Carcass,21,Advanced
+7,WP,Herbivore MME,18,Advanced
+7,OS,Herbivore MME,18.33333333,Advanced
+7,GG,Herbivore MME,19.66666667,Advanced
+7,DF,Herbivore MME,20,Advanced
+7,GG,Herbivore Single Carcass,19,Advanced
+7,OS,Open MME,17,Advanced
+7,WP,Open MME,18.66666667,Advanced
+7,GG,Open MME,20.66666667,Advanced
+7,OS,Open Single Carcass,20,Advanced
+7,GG,Scavenger MME,20.33333333,Advanced
+7,DF,Scavenger MME,21,Advanced
+7,OS,Scavenger Single Carcass,17,Advanced
+7,DF,Scavenger Single Carcass,21,Advanced
+7,GG,Scavenger Single Carcass,22,Advanced
+19,DF,Herbivore Single Carcass,24,Advanced
+19,WP,Scavenger MME,24,Advanced
+19,OS,Scavenger MME,24.33333333,Advanced
+3,DF,Open Single Carcass,35,Missing
+4,GG,Open Single Carcass,35,Missing
+7,WP,Open Single Carcass,29,Skeletal
+19,GG,Herbivore MME,25,Skeletal
+19,WP,Herbivore MME,29,Skeletal
+19,OS,Herbivore Single Carcass,26,Skeletal
+19,WP,Open MME,25,Skeletal
+19,DF,Open MME,25.66666667,Skeletal
+19,GG,Open MME,34.66666667,Skeletal
+19,OS,Open Single Carcass,25,Skeletal
+19,WP,Scavenger Single Carcass,26,Skeletal
+19,GG,Scavenger Single Carcass,26,Skeletal
+20,DF,Scavenger MME,25,Skeletal
+20,WP,Scavenger MME,25.33333333,Skeletal
+47,OS,Herbivore MME,27,Skeletal
+47,DF,Herbivore MME,28.33333333,Skeletal
+47,WP,Herbivore Single Carcass,32,Skeletal
+47,GG,Herbivore Single Carcass,33,Skeletal
+47,OS,Open MME,35,Skeletal
+47,GG,Scavenger MME,34.5,Skeletal
+47,OS,Scavenger MME,35,Skeletal
+47,DF,Scavenger Single Carcass,34,Skeletal
