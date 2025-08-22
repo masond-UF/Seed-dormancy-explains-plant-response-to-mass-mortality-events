@@ -6,7 +6,7 @@
 ## Date Created: 2021-11-19
 ## Date Last Modified: 2025-08-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script cleans the camera trap data, adds functional
 ## roles to each observation (e.g., herbivore, scavenger) and summarizes by 
 ## treatment and time intervals. The output of this script is a summarized 

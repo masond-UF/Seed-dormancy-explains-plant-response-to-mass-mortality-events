@@ -5,7 +5,7 @@
 ## Affiliation: University of Florida
 ## Date Last modified: 2025-08-14
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script combines and cleans fitness data from two 
 ## different years/species. The output of this script is a spreadsheet with both
 ## species and two different metrics (e.g., height and infloresences)

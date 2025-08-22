@@ -6,6 +6,7 @@
 ## Date Created: 2021-11-30
 ## Date Last modified: 2025-08-14
 ## Copyright (c) David S. Mason, 2025
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script generates boxplots and sina graphs to compare
 ## the moments and distributions of the fitness metrics for plants in simulated
 ## herbivore mass mortality events and other plants.

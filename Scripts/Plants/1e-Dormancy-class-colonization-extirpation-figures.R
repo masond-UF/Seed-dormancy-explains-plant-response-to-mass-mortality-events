@@ -6,7 +6,7 @@
 ## Date Created: 2021-05-02
 ## Date Last modified: 2025-08-14
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script will generate a scatter and line plot showing
 ## changes in the relative abundance (compared to the reference) in plants
 ## grouped by seed dormancy functional group in each treatment as a time series

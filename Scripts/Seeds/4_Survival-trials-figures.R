@@ -6,7 +6,7 @@
 ## Date Created: 2022-06-01
 ## Date Last Modified: 2025-8-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This will be a script for visualizing the seed survival data
 
 ## --------------- SET—UP WORKSPACE --------------------------------------------

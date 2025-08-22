@@ -5,7 +5,7 @@
 ## Affiliation: University of Florida
 ## Date Last modified: 2025-08-14
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script performs data exploratory analysis on the 
 ## plant fitness data.
 

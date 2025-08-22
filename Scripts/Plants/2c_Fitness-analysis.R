@@ -6,7 +6,7 @@
 ## Date Created: 2021-11-22
 ## Date Last modified: 2025-08-14
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script conducts simple linear models on the plant
 ## fitness data. The output of this script is a spreadsheet containing a summary
 ## of the model and the model coefficients.

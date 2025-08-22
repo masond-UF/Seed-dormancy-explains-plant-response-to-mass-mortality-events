@@ -6,7 +6,7 @@
 ## Date Created: 2021-11-22
 ## Date Last Modified: 2025-8-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This will be a script for cleaning the seed survival data.
 ## This script permutates missing data, and calculates the effect size (survival
 ## compared to the reference). The output of this script is a cleaned, complete

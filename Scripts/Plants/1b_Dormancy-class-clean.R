@@ -6,7 +6,7 @@
 ## DATE Created: 2022-04-28
 ## Date Last modified: 2025-08-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This is a script for munging the unsummarized transect
  
 ## --------------- SET—UP WORKSPACE --------------------------------------------

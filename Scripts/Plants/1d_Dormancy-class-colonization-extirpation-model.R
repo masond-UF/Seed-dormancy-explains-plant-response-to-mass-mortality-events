@@ -6,7 +6,7 @@
 ## Date Created: 2022-05-01
 ## Date Last modified: 2025-08-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This is a script for analyzing the binary colonization
 ## extinction data for plants belonging to seed dormancy classes.
 

@@ -6,7 +6,7 @@
 ## Date Created: 2021-11-23
 ## Date Last Modified: 2025-08-13
 ## Copyright (c) David S. Mason, 2025
-## Contact: masond@ufl.edu, @EcoGraffito
+## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script will produce a figure for the camera trap data
 
 ## --------------- SET—UP WORKSPACE --------------------------------------------

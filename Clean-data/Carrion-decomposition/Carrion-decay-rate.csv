@@ -1,0 +1,66 @@
+"SITE","TREATMENT","BIOMASS","EXCLUSION","DECAY.STAGE","MEAN.TBS","DAY.REACHED"
+"GG","MH","MME","Herbivore","Early",4,1
+"DF","MH","MME","Herbivore","Early",4.333333333,1
+"OS","MH","MME","Herbivore","Early",4.333333333,1
+"WP","MH","MME","Herbivore","Early",4.666666667,1
+"DF","CH","Single Carcass","Herbivore","Early",4,1
+"WP","CH","Single Carcass","Herbivore","Early",4,1
+"GG","CH","Single Carcass","Herbivore","Early",4,1
+"OS","CH","Single Carcass","Herbivore","Early",5,1
+"DF","MO","MME","Open","Early",4,1
+"WP","MO","MME","Open","Early",4.333333333,1
+"GG","MO","MME","Open","Early",4.333333333,1
+"OS","MO","MME","Open","Early",4.333333333,1
+"DF","CO","Single Carcass","Open","Early",4,1
+"WP","CO","Single Carcass","Open","Early",4,1
+"OS","CO","Single Carcass","Open","Early",4,1
+"GG","CO","Single Carcass","Open","Early",5,1
+"DF","MS","MME","Scavenger","Early",4,1
+"WP","MS","MME","Scavenger","Early",4,1
+"GG","MS","MME","Scavenger","Early",4.333333333,1
+"OS","MS","MME","Scavenger","Early",4.333333333,1
+"DF","CS","Single Carcass","Scavenger","Early",4,1
+"WP","CS","Single Carcass","Scavenger","Early",4,1
+"GG","CS","Single Carcass","Scavenger","Early",4,1
+"OS","CS","Single Carcass","Scavenger","Early",5,1
+"WP","CH","Single Carcass","Herbivore","Advanced",17,6
+"WP","CO","Single Carcass","Open","Advanced",21,6
+"WP","MH","MME","Herbivore","Advanced",18,7
+"OS","MH","MME","Herbivore","Advanced",18.33333333,7
+"GG","MH","MME","Herbivore","Advanced",19.66666667,7
+"DF","MH","MME","Herbivore","Advanced",20,7
+"GG","CH","Single Carcass","Herbivore","Advanced",19,7
+"OS","MO","MME","Open","Advanced",17,7
+"WP","MO","MME","Open","Advanced",18.66666667,7
+"GG","MO","MME","Open","Advanced",20.66666667,7
+"OS","CO","Single Carcass","Open","Advanced",20,7
+"GG","MS","MME","Scavenger","Advanced",20.33333333,7
+"DF","MS","MME","Scavenger","Advanced",21,7
+"OS","CS","Single Carcass","Scavenger","Advanced",17,7
+"DF","CS","Single Carcass","Scavenger","Advanced",21,7
+"GG","CS","Single Carcass","Scavenger","Advanced",22,7
+"DF","CH","Single Carcass","Herbivore","Advanced",24,19
+"WP","MS","MME","Scavenger","Advanced",24,19
+"OS","MS","MME","Scavenger","Advanced",24.33333333,19
+"DF","CO","Single Carcass","Open","Missing",35,3
+"GG","CO","Single Carcass","Open","Missing",35,4
+"WP","CO","Single Carcass","Open","Skeletal",29,7
+"GG","MH","MME","Herbivore","Skeletal",25,19
+"WP","MH","MME","Herbivore","Skeletal",29,19
+"OS","CH","Single Carcass","Herbivore","Skeletal",26,19
+"WP","MO","MME","Open","Skeletal",25,19
+"DF","MO","MME","Open","Skeletal",25.66666667,19
+"GG","MO","MME","Open","Skeletal",34.66666667,19
+"OS","CO","Single Carcass","Open","Skeletal",25,19
+"WP","CS","Single Carcass","Scavenger","Skeletal",26,19
+"GG","CS","Single Carcass","Scavenger","Skeletal",26,19
+"DF","MS","MME","Scavenger","Skeletal",25,20
+"WP","MS","MME","Scavenger","Skeletal",25.33333333,20
+"OS","MH","MME","Herbivore","Skeletal",27,47
+"DF","MH","MME","Herbivore","Skeletal",28.33333333,47
+"WP","CH","Single Carcass","Herbivore","Skeletal",32,47
+"GG","CH","Single Carcass","Herbivore","Skeletal",33,47
+"OS","MO","MME","Open","Skeletal",35,47
+"GG","MS","MME","Scavenger","Skeletal",34.5,47
+"OS","MS","MME","Scavenger","Skeletal",35,47
+"DF","CS","Single Carcass","Scavenger","Skeletal",34,47
