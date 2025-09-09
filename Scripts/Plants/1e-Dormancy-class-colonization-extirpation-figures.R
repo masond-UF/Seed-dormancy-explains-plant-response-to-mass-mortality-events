@@ -4,7 +4,7 @@
 ## Department: Wildlife Ecology and Conservation
 ## Affiliation: University of Florida
 ## Date Created: 2021-05-02
-## Date Last modified: 2025-08-14
+## Date Last modified: 2025-09-04
 ## Copyright (c) David S. Mason, 2025
 ## Contact: david.mason@jonesctr.org
 ## Purpose of script: This script will generate a scatter and line plot showing
@@ -40,13 +40,13 @@ col.means["FUNCTIONAL"] <- NA
 
 for (i in 1:nrow(col.means)) {
   if (col.means$TREATMENT[i] == "CH" | col.means$TREATMENT[i] == "MH") {
-    col.means$EXCLUSION[i] <- "Herbivore"
+    col.means$EXCLUSION[i] <- "Herbivore exclusion"
   }
   if (col.means$TREATMENT[i] == "CO" | col.means$TREATMENT[i] == "MO") {
     col.means$EXCLUSION[i] <- "Open"
   }
   if (col.means$TREATMENT[i] == "CS" | col.means$TREATMENT[i] == "MS") {
-    col.means$EXCLUSION[i] <- "Scavenger"
+    col.means$EXCLUSION[i] <- "Scavenger exclusion"
   }
 }
 
@@ -87,8 +87,8 @@ for (i in 1:nrow(ND)) {
 # Reorder factors
 ND$EXCLUSION <- factor(ND$EXCLUSION,
   levels = c(
-    "Herbivore",
-    "Scavenger",
+    "Herbivore exclusion",
+    "Scavenger exclusion",
     "Open"
   )
 )
@@ -138,8 +138,8 @@ for (i in 1:nrow(PD)) {
 # Reorder factors
 PD$EXCLUSION <- factor(PD$EXCLUSION,
   levels = c(
-    "Herbivore",
-    "Scavenger",
+    "Herbivore exclusion",
+    "Scavenger exclusion",
     "Open"
   )
 )
@@ -190,8 +190,8 @@ for (i in 1:nrow(PY)) {
 # Reorder factors
 PY$EXCLUSION <- factor(PY$EXCLUSION,
   levels = c(
-    "Herbivore",
-    "Scavenger",
+    "Herbivore exclusion",
+    "Scavenger exclusion",
     "Open"
   )
 )
@@ -226,14 +226,14 @@ PY.p <- ggplot(PY, aes(x = prob, y = EXCLUSION)) +
 ## --------------- EXTIRPATION -------------------------------------------------
 
 # Initialize column for MME identity / functional role loss
-ext.means["FUNCTIONAL"] <- NA
+ext.means["EXCLUSION"] <- NA
 
 for (i in 1:nrow(ext.means)) {
   if (ext.means$TREATMENT[i] == "CH" | ext.means$TREATMENT[i] == "MH") {
     ext.means$EXCLUSION[i] <- "Herbivore exclusion"
   }
   if (ext.means$TREATMENT[i] == "CO" | ext.means$TREATMENT[i] == "MO") {
-    ext.means$EXCLUSION[i] <- "No exclusion"
+    ext.means$EXCLUSION[i] <- "Open"
   }
   if (ext.means$TREATMENT[i] == "CS" | ext.means$TREATMENT[i] == "MS") {
     ext.means$EXCLUSION[i] <- "Scavenger exclusion"
@@ -264,6 +264,14 @@ for (i in 1:nrow(ext.means)) {
 }
 
 ext.means$prob <- as.numeric(ext.means$prob)
+
+ext.means$EXCLUSION <- factor(ext.means$EXCLUSION,
+  levels = c(
+    "Herbivore exclusion",
+    "Scavenger exclusion",
+    "Open"
+  )
+)
 
 ext.p <- ggplot(ext.means, aes(x = prob, y = EXCLUSION)) +
   geom_errorbar(aes(xmin = prob - SE, xmax = prob + SE),

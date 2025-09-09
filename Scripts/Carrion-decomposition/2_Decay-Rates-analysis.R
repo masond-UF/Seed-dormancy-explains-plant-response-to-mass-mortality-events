@@ -21,9 +21,13 @@ library(plyr)
 library(lme4)
 library(car)
 library(emmeans)
+library(performance)
 
 # Bring in the data
 decay <- read.csv("Clean-data/Carrion-decomposition/Carrion-decay-rate.csv")
+
+# Set contrasts for type III anova
+options(contrasts = c("contr.sum", "contr.poly"))
 
 ## --------------- Model 1: Early Decomposition --------------------------------
 
@@ -35,12 +39,12 @@ hist(early$DAY.REACHED) # All the same?
 shapiro.test(early$DAY.REACHED)
 # Non-normal
 
-decay.model <- glmer(DAY.REACHED~BIOMASS*EXCLUSION+(1|SITE),data=early,family=poisson)
-anova(decay.model)
-summary(decay.model)
+early.model <- glmer(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=early,family=poisson)
+Anova(early.model, type =)
+summary(early.model)
 #No significance, all one day so wouldn't run
 
-rm(early)
+rm(early, early.model)
 
 ## --------------- Model 2: Advanced Decomposition -----------------------------
 
@@ -53,14 +57,14 @@ hist(advanced$DAY.REACHED)
 shapiro.test(advanced$DAY.REACHED)
 # Non-normal
 
-decay.model <- glmer(DAY.REACHED~BIOMASS*EXCLUSION+(1|SITE),data=advanced,family=poisson)
-Anova(decay.model, type = 3)
-summary(decay.model)
+advanced.model <- glm(DAY.REACHED~BIOMASS*EXCLUSION+ SITE,data=advanced,family=poisson)
+Anova(advanced.model, type = 3)
+summary(advanced.model)
 
-emmeans(decay.model,list (pairwise ~ BIOMASS*EXCLUSION),adjust="tukey")
+emmeans(advanced.model,list (pairwise ~ BIOMASS*EXCLUSION),adjust="tukey", 
+				type = 'response')
 
-emmeans(decay.model,list (pairwise ~ BIOMASS),adjust="tukey")
-emmeans(decay.model,list (pairwise ~ EXCLUSION),adjust="tukey")
+rm(advanced, advanced.model)
 
 ## --------------- Model 3: Skeletal Decomposition -----------------------------
 
@@ -73,11 +77,18 @@ hist(skeletal$DAY.REACHED)
 shapiro.test(skeletal$DAY.REACHED)
 # Non-normal
 
-decay.model <- glmer(DAY.REACHED~BIOMASS*EXCLUSION+(1|SITE),data=skeletal,family=poisson)
-anova(decay.model)
-summary(decay.model)
+skeletal.model <- glm(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=skeletal,family=poisson)
+Anova(skeletal.model, type = 3)
+summary(skeletal.model)
 
-emmeans(decay.model,list (pairwise ~ BIOMASS*EXCLUSION),adjust="tukey")
+check_model(skeletal.model)
 
-emmeans(decay.model,list (pairwise ~ BIOMASS),adjust="tukey")
-emmeans(decay.model,list (pairwise ~ EXCLUSION),adjust="tukey")
+emmeans(skeletal.model,list (pairwise ~ BIOMASS*EXCLUSION),adjust="tukey",
+				type = 'response')
+emmeans(skeletal.model,list (pairwise ~ BIOMASS),adjust="tukey",
+				type = 'response')
+emmeans(skeletal.model,list (pairwise ~ EXCLUSION),adjust="tukey",
+				type = 'response')
+
+
+

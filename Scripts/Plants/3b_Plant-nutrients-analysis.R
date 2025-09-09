@@ -73,7 +73,7 @@ treat.vs.ref.date <- plant.lg |>
 
 biomass <- plant.lg |>
 	group_by(BIOMASS, METRIC) |>
-	filter(Metric %in% c("N", "K", "P")) |>
+	filter(METRIC %in% c("N", "K", "P")) |>
 	summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
@@ -93,7 +93,7 @@ sum(62.0667, 35.18549, 59.13129) # 156.3835
 
 biomass.fencing <- plant.lg |>
 	group_by(BIOMASS, EXCLUSION, METRIC) |>
-	filter(Metric %in% c("N", "K", "P")) |>
+	filter(METRIC %in% c("N", "K", "P")) |>
 	summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
@@ -101,7 +101,7 @@ biomass.fencing <- plant.lg |>
 
 biomass.fencing.date <- plant.lg |>
 	group_by(DATE, BIOMASS, EXCLUSION, METRIC) |>
-	filter(Metric %in% c("N", "K", "P")) |>
+	filter(METRIC %in% c("N", "K", "P")) |>
 	summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
@@ -118,20 +118,20 @@ plant.lg$TREATMENT <- paste(plant.lg$BIOMASS, plant.lg$EXCLUSION)
 
 Treatment.date <- plant.lg |>
 	group_by(DATE, TREATMENT, METRIC) |>
-	filter(Metric %in% c("N", "K", "P")) |>
+	filter(METRIC %in% c("N", "K", "P")) |>
 	summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
 
-treat <- ggplot(Treatment.date |> filter(DATE != "Reference Reference"), 
+treat <- ggplot(Treatment.date |> filter(TREATMENT != "Reference Reference"), 
 			 aes(x = METRIC, y = Mean, color = DATE))+
 	geom_point(position=position_dodge(width=0.5), size = 1)+
 	geom_linerange(aes(ymin = Mean-se, ymax = Mean+se),
 								 position=position_dodge(width=0.5))+
 	facet_wrap(~TREATMENT)
 
-ref <- ggplot(Treatment.date |> filter(DATE == "Reference Reference"), 
+ref <- ggplot(Treatment.date |> filter(TREATMENT == "Reference Reference"), 
 			 aes(x = METRIC, y = Mean, color = DATE))+
 		geom_point(position=position_dodge(width=0.5), size = 1)+
 		geom_linerange(aes(ymin = Mean-se, ymax = Mean+se),
