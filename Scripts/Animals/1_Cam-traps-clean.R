@@ -78,7 +78,7 @@ Facult.scav <- c(
 )
 Other.consum <- c(
   "Wild turkey", "Greater roadrunner", "Scissor-tailed flycatcher",
-  "Unknown songbird", "Unknown sparrow", "Unknown hummingbird"
+  "Unknown songbird", "Unknown sparrow", "Unknown hummingbird", "Belted Kingfisher"
 )
 Undetermined <- c(
   "Unknown mammal", "Unknown bird", "Researcher", "Unknown animal",

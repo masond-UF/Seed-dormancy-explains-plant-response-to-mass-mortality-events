@@ -22,7 +22,7 @@ rm(list=ls())
 # Bring in the data
 cam <- read.csv('Clean-data/Animals/Camera-traps.csv')
 
-cam$DATE <- as_date(cam$DATE)
+cam$DATE <- mdy(cam$DATE)
 
 ## --------------- BASIC EDA ---------------------------------------------------
 library(DataExplorer)
@@ -107,8 +107,6 @@ ggplot(func, aes(x = as_factor(Month), y = Total, fill = SITE))+
 	geom_bar(position = 'dodge', stat = 'identity')+
 	facet_wrap(~FUNCTIONAL, scales = "free_y")
 
-rm(func)
-
 ## --------------- CHECK SPECIES ----------------------------------------------
 
 # Totals by species
@@ -165,8 +163,6 @@ ggplot(TIME, aes(x = Hour, y = Total))+
 	scale_x_continuous(breaks = seq(0,24,1))+
 	geom_line()+
 	theme_classic()
-
-
 
 
 

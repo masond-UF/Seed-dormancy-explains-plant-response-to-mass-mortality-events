@@ -30,12 +30,14 @@ resp <- plant[,c(5,7,9)]
 resp.hell <- decostand(resp, method = "hell")
 
 pred$TREATMENT <- paste(pred$BIOMASS, pred$EXCLUSION)
+
 ## --------------- ADONIS ------------------------------------------------------
 
 # Set the permutation to account for blocking design
 perm <- how(nperm = 199)
 setBlocks(perm) <- with(pred, SITE)
 
+set.seed(3)
 # Run the model
 adonis2(resp.hell ~ TREATMENT*DATE,
 				data = pred,
@@ -44,7 +46,7 @@ adonis2(resp.hell ~ TREATMENT*DATE,
 
 ## --------------- MEANS -------------------------------------------------------
 
-plant$Reference <- NA
+plant$REFERENCE <- NA
 
 for(i in 1:nrow(plant)){
 	if(plant$BIOMASS[i] == 'Reference'){
@@ -57,16 +59,34 @@ for(i in 1:nrow(plant)){
 plant.lg <- plant |>
 	pivot_longer(cols = 5:15, names_to = "METRIC", values_to = "VALUE")
 
+# Assess which nutrients drive the differences
+anova.results <- plant.lg |>
+  group_by(METRIC) |>
+  do(tidy(aov(VALUE ~ BIOMASS * EXCLUSION * DATE, data = .))) |>
+  ungroup() # Ungroup for easier filtering
+
+anova.results |>
+  filter(term == "BIOMASS") |>
+  arrange(p.value)
+
+anova.results |>
+  filter(term == "EXCLUSION") |>
+  arrange(p.value)
+
+anova.results |>
+  filter(term == "BIOMASS:EXCLUSION") |>
+  arrange(p.value)
+
 treat.vs.ref <- plant.lg |>
 	group_by(REFERENCE, METRIC) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
 
 treat.vs.ref.date <- plant.lg |>
 	group_by(REFERENCE, DATE, METRIC) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
@@ -74,12 +94,13 @@ treat.vs.ref.date <- plant.lg |>
 biomass <- plant.lg |>
 	group_by(BIOMASS, METRIC) |>
 	filter(METRIC %in% c("N", "K", "P")) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
+
 # Nitrogen MME = 1.620667, single = 1.292500
-(1.6206670-1.292500/1.292500)*100 # 62.0667% increase
+((1.6206670-1.292500)/1.292500)*100 # 25.3901% increase
 
 # Potassium (K) MME = 1.549000, single = 1.145833
 ((1.549000-1.1458330)/1.145833)*100 # 35.18549% increase
@@ -94,7 +115,7 @@ sum(62.0667, 35.18549, 59.13129) # 156.3835
 biomass.fencing <- plant.lg |>
 	group_by(BIOMASS, EXCLUSION, METRIC) |>
 	filter(METRIC %in% c("N", "K", "P")) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
@@ -102,7 +123,7 @@ biomass.fencing <- plant.lg |>
 biomass.fencing.date <- plant.lg |>
 	group_by(DATE, BIOMASS, EXCLUSION, METRIC) |>
 	filter(METRIC %in% c("N", "K", "P")) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))
@@ -119,7 +140,7 @@ plant.lg$TREATMENT <- paste(plant.lg$BIOMASS, plant.lg$EXCLUSION)
 Treatment.date <- plant.lg |>
 	group_by(DATE, TREATMENT, METRIC) |>
 	filter(METRIC %in% c("N", "K", "P")) |>
-	summarize(Mean = mean(VALUE),
+	dplyr::summarize(Mean = mean(VALUE),
 						sd = sd(VALUE),
 						n = n(),
 						se = sd/sqrt(n))

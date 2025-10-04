@@ -28,13 +28,13 @@ library(MuMIn)
 options(scipen = 999)
 
 # Bring in the data
-seed.surv <- read.csv("Animals-plants-seeds/Clean-data/Seeds/Seed-survival.csv")
+seed.surv <- read.csv("Clean-data/Seeds/Seed-survival.csv")
 
 ## --------------- PREPARE THE DATA --------------------------------------------
 
 seed.surv <- seed.surv %>%
-  group_by(SITE, PLOT, BIOMASS, EXCLUSION, PACKET, DORMANCY.CLASS, SPECIES) %>%
-  summarize(
+  group_by(SITE, BIOMASS, EXCLUSION, PACKET, DORMANCY.CLASS, SPECIES) %>%
+  dplyr::summarize(
     SURV = sum(FINAL.STATUS),
     TRIALS = n()
   )
@@ -45,11 +45,17 @@ seed.surv <- seed.surv %>%
 
 # Set aside the reference plots
 seed.surv.ref <- seed.surv %>%
-  filter(PLOT == "REF")
+  filter(BIOMASS == "Reference")
 
 # Filter out the reference
 seed.surv <- seed.surv %>%
-  filter(PLOT != "REF")
+  filter(BIOMASS != "Reference")
+
+seed.surv$PACKET <- dplyr::recode(seed.surv$PACKET,
+                    "BA" = "Bank\nadjacent",
+                    "BU" = "Bank\nproximal",
+                    "AA" = "Rain\nadjacent",
+                    "AT" = "Rain\nproximal")
 
 # Separate packet
 seed.surv <- seed.surv %>% separate(PACKET, c("TIMING", "LOCATION"))
@@ -61,11 +67,11 @@ m1 <- glmer(cbind(SURV, DEAD) ~ BIOMASS * EXCLUSION * DORMANCY.CLASS + DORMANCY.
 
 ncol(model.matrix(m1))
 
-r.squaredGLMM(m1) # Fixed effects 48-58, Random = 13-15%
-# Answers are different than they were before??
+r.squaredGLMM(m1) # Fixed effects 46, Random = 10%
 
 options(contrasts = c("contr.sum", "contr.poly"))
 anova.df <- as.data.frame(Anova(m1, type = 3))
+summary(m1)
 m1.sum <- broom::tidy(m1, conf.int = TRUE)
 
 ref.mod <- glmer(cbind(SURV, DEAD) ~ DORMANCY.CLASS + DORMANCY.CLASS * PACKET + (1 | SITE),
@@ -83,6 +89,15 @@ sim <- simulateResiduals(fittedModel = m1, plot = TRUE)
 plot(sim)
 
 ## --------------- SUMMARY COMPARISONS -----------------------------------------
+
+# Value range
+full <- emmeans(
+  m1,
+  ~ BIOMASS * EXCLUSION * DORMANCY.CLASS * TIMING * LOCATION,
+  type = "response"
+)
+summary(full, type = "response")
+
 
 # Dormancy class means
 surv.trials.comp <- emmeans(m1, pairwise ~ DORMANCY.CLASS, type = "response")
@@ -109,7 +124,7 @@ surv.trials.comp <- emmeans(m1, pairwise ~ DORMANCY.CLASS * TIMING, type = "resp
 surv.trials.comp <- as.data.frame(surv.trials.comp[["contrasts"]])
 
 # Dormancy class and exclusion means
-surv.trials.comp <- emmeans(m1, pairwise ~ DORMANCY.CLASS * TREATMENT, type = "response")
+surv.trials.comp <- emmeans(m1, pairwise ~ DORMANCY.CLASS * EXCLUSION, type = "response")
 surv.trials.comp <- as.data.frame(surv.trials.comp[["emmeans"]])
 
 # ND interaction term comparison

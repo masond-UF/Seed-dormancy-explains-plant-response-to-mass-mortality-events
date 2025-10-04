@@ -35,10 +35,25 @@ options(scipen = 999)
 dormancy.col <- read.csv("Clean-data/Plants/Dormancy-class-colonization.csv")
 dormancy.ext <- read.csv("Clean-data/Plants/Dormancy-class-extirpation.csv")
 
+# Change column name to DORMANCY.CLASS
+colnames(dormancy.col)[7] <- "DORMANCY.CLASS"
+
 ## --------------- COLONIZATION MODEL ------------------------------------------
 
-# Model colonization
-col.ever.m <- glm(COLONIZED.END ~ DORMANCYCLASS * TREATMENT,
+dormancy.col$TRANSECT <- as_factor(dormancy.col$TRANSECT)
+dormancy.col$DISTANCE <- as_factor(dormancy.col$DISTANCE)
+dormancy.col$TRANSECT.ID <- factor(paste(dormancy.col$SITE, dormancy.col$TRANSECT, sep = "_"))
+
+dormancy.col$PlotID      <- paste(dormancy.col$SITE, dormancy.col$TREATMENT, sep = "_")
+dormancy.col$TransectID  <- paste(dormancy.col$PlotID, dormancy.col$TRANSECT, sep = "_")
+dormancy.col$PointID     <- paste(dormancy.col$TransectID, dormancy.col$DISTANCE, sep = "_")
+
+# Random effects provide no value
+# mod <- glmer(COLONIZED.END ~ DORMANCY * TREATMENT +
+#               (1 | SITE/PlotID/TransectID/PointID),
+#               data = df, family = binomial)
+
+col.ever.m <- glm(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT,
   data = dormancy.col, family = binomial
 )
 
@@ -50,9 +65,11 @@ summary(col.ever.m)
 ## Check residuals
 plot(col.ever.m)
 
-
 library(performance)
+dev.new()
 check_model(col.ever.m)
+
+performance::r2(col.ever.m)
 
 check_singularity(col.ever.m) # False
 
@@ -73,12 +90,21 @@ plotResiduals(col.ever.sim, col.ever.sim$TREATMENT, quantreg = T) # ok
 testDispersion(col.ever.sim) # ok
 
 # Calculate emmeans
-col.ever.means <- emmeans(col.ever.m, ~ TREATMENT | DORMANCYCLASS,
+emmeans(col.ever.m, ~ TREATMENT,
   type = "response"
 )
 
-# Test signifigance
-pairs(col.ever.means, adjust = "none")
+emmeans(col.ever.m, ~ DORMANCY.CLASS,
+  type = "response"
+)
+
+col.ever.means <- emmeans(col.ever.m, ~ TREATMENT | DORMANCY.CLASS,
+  type = "response"
+)
+
+pairs(emmeans(col.ever.m, ~ TREATMENT, type = "response"))
+pairs(emmeans(col.ever.m, ~ DORMANCY.CLASS, type = "response"))
+
 
 # Save as dataframe
 col.ever.means <- as.data.frame(col.ever.means)
@@ -87,29 +113,15 @@ col.ever.means <- as.data.frame(col.ever.means)
 ggplot(d = col.ever.means, aes(x = TREATMENT, y = prob)) +
   geom_errorbar(aes(ymin = prob - SE, ymax = prob + SE)) +
   geom_point() +
-  facet_wrap(~DORMANCYCLASS, scales = "free_y")
-
-# Save model outputs
-col.model.coef <- tidy(col.ever.m)
-write.csv(col.model.coef, "Analysis/Plants/Colonization-coef.csv",
-  row.names = FALSE
-)
-
-col.model.summ <- glance(col.ever.m)
-write.csv(col.model.summ, "Analysis/Plants/Colonization-summ.csv",
-  row.names = FALSE
-)
+  facet_wrap(~DORMANCY.CLASS, scales = "free_y")
 
 write.csv(col.ever.means, "Analysis/Plants/Colonization-means.csv",
   row.names = FALSE
 )
 
-col.ever.means |>
-	group_by()
+## --------------- EXTIRPATION MODEL --------------------------------------------
 
-## --------------- EXTINCTION MODEL --------------------------------------------
-
-# Model colonization
+# Model loss using the same format for consistency
 ext.ever.m <- glm(EXTIRPATED.EVER ~ TREATMENT,
   data = dormancy.ext, family = binomial
 )
@@ -141,6 +153,9 @@ check_model(ext.ever.m)
 
 check_singularity(ext.ever.m) # False
 
+# Check explanatory power of model.
+performance::r2(ext.ever.m)
+
 # Good model fit (95% of values within confidence bands)
 library(arm)
 binnedplot(predict(ext.ever.m, type="response", re.form=NA), 
@@ -157,16 +172,6 @@ plotResiduals(ext.ever.sim, ext.ever.sim$TREATMENT, quantreg = T) # ok
 testDispersion(ext.ever.sim) # ok
 
 # Save model outputs
-ext.ever.model.coef <- tidy(ext.ever.m)
-write.csv(ext.ever.model.coef, "Analysis/Plants/Extirpation-coef.csv",
-  row.names = FALSE
-)
-
-ext.ever.model.summ <- glance(ext.ever.m)
-write.csv(ext.ever.model.summ, "Analysis/Plants/Extirpation-summ.csv",
-  row.names = FALSE
-)
-
 write.csv(ext.ever.means, "Analysis/Plants/Extirpation-means.csv",
   row.names = FALSE
 )

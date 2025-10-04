@@ -11,7 +11,7 @@
 ## fitness data. The output of this script is a spreadsheet containing a summary
 ## of the model and the model coefficients.
 
-################## SET—UP WORKSPACE --------------------------------------------
+# ---------------- SET—UP WORKSPACE --------------------------------------------
 library(tidyverse)
 library(tidylog)
 library(lubridate)
@@ -21,7 +21,9 @@ library(broom)
 rm(list = ls())
 d <- read.csv("Clean-data/Plants/Plant-fitness.csv")
 
-################## HEIGHT MODEL ------------------------------------------------
+# ---------------- HEIGHT MODEL ------------------------------------------------
+
+hist(d$HEIGHT)
 
 # Write model
 ht.mod <- lm(HEIGHT ~ MH, d = d)
@@ -41,21 +43,21 @@ ht.mod.glance <- glance(ht.mod)
 write.csv(ht.mod.glance, "Analysis/Plants/Fitness-ht-summ.csv")
 
 # Grab means
-ht %>%
-  group_by(MH) %>%
+d |>
+  group_by(MH) |>
   summarize(
     mean = mean(HEIGHT),
     n = n(),
     se = sd(HEIGHT) / sqrt(n)
-  )1
+  )
 
 # New t-test 
-MH <- ht |> filter(MH == "Y")
-Control <- ht |> filter(MH == "N")
+MH <- d |> filter(MH == "Y")
+Control <- d |> filter(MH == "N")
 
 t.test(MH$HEIGHT, Control$HEIGHT)
 
-################## INFLOR MODEL ------------------------------------------------
+# ---------------- INFLOR MODEL ------------------------------------------------
 
 inflor.mod <- lm(INFLOR ~ MH, d = d)
 
@@ -67,9 +69,9 @@ shapiro.test(inflor.mod$residuals)
 
 anova(inflor.mod)
 
-inflor %>%
-  group_by(MH) %>%
-  summarize(
+d |>
+  group_by(MH) |>
+  dplyr::summarize(
     mean = mean(INFLOR),
     n = n(),
     se = sd(INFLOR) / sqrt(n)
@@ -89,7 +91,7 @@ write.csv(
 )
 
 # New t-test 
-MH <- inflor |> filter(MH == "Y")
-Control <- inflor |> filter(MH == "N")
+MH <- d |> filter(MH == "Y")
+Control <- d |> filter(MH == "N")
 
-t.test(MH$INFLOR, Control$INFLOR)
+poisson.test(c(sum(MH$INFLOR), sum(Control$INFLOR)))

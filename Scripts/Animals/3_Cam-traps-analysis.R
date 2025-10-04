@@ -25,7 +25,7 @@ rm(list = ls())
 # Bring in the data
 cam <- read.csv("Clean-data/Animals/Camera-traps.csv")
 
-cam$DATE <- as_date(cam$DATE)
+cam$DATE <- mdy(cam$DATE)
 
 ## --------------- SUBSET THE DATA ---------------------------------------------
 
@@ -41,7 +41,7 @@ herbivory <- cam %>%
 
 decomp.sum <- decomp %>%
   group_by(SITE, TREATMENT, BIOMASS, EXCLUSION, FUNCTIONAL) %>%
-  summarize(Total.detections = n())
+  dplyr::summarize(Total.detections = n())
 
 decomp.sum.wd <- decomp.sum %>%
   pivot_wider(names_from = FUNCTIONAL, values_from = Total.detections)
@@ -54,6 +54,9 @@ decomp.sum <- decomp.sum.wd %>%
 decomp.sum <- decomp.sum %>%
   filter(FUNCTIONAL == "Scavenger")
 
+ggplot(decomp.sum, aes(x = TREATMENT, y = Total.detections, color = SITE))+
+	geom_jitter()
+
 # Clear the decks
 rm(decomp, decomp.sum.wd)
 
@@ -64,7 +67,7 @@ herbivory$Week <- round_date(herbivory$DATE, "week")
 
 herbivory.sum <- herbivory %>%
   group_by(SITE, TREATMENT, BIOMASS, EXCLUSION, FUNCTIONAL) %>%
-  summarize(Total.detections = n())
+  dplyr::summarize(Total.detections = n())
 
 herbivory.sum.wd <- herbivory.sum %>%
   pivot_wider(names_from = FUNCTIONAL, values_from = Total.detections)
@@ -85,8 +88,8 @@ rm(herbivory, herbivory.sum.wd)
 
 library(DataExplorer)
 
-create_report(decomp.sum)
-create_report(herbivory.sum)
+# create_report(decomp.sum)
+# create_report(herbivory.sum)
 
 library(fitdistrplus)
 descdist(decomp.sum$Total.detections, discrete = TRUE) # Negative binomial
@@ -176,7 +179,6 @@ decomp.p$p.value <- pvals
 write.csv(decomp.p, "Analysis/Animals/Decomp-contrasts.csv",
   row.names = FALSE
 )
-
 
 # Anova
 decomp.aov <- as.data.frame(Anova(m1))

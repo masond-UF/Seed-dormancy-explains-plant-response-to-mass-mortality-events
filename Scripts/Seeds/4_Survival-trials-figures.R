@@ -32,21 +32,27 @@ surv.means <- read.csv("Analysis/Seeds/Seed-survival-means.csv")
 # Bring in the reference data
 seed.surv <- read.csv("Clean-data/Seeds/Seed-survival.csv")
 
+# Final status is 0 if not 1
+seed.surv$FINAL.STATUS[is.na(seed.surv$FINAL.STATUS)] <- 0
+
+
 ## --------------- GET ESTIMATED MARGINAL MEANS FOR REF ------------------------
 
 ref <- seed.surv %>% 
 	filter(EXCLUSION == "Reference")
 
 ref <- ref %>% 
-	group_by(SITE, PLOT, BIOMASS, EXCLUSION, PACKET, DORMANCY.CLASS, SPECIES) %>% 
-	summarize(SURV = sum(FINAL.STATUS),
+	group_by(SITE, BIOMASS, EXCLUSION, PACKET, DORMANCY.CLASS, SPECIES) %>% 
+	dplyr::summarize(SURV = sum(FINAL.STATUS),
 						TRIALS = n()) 
 
 ref <- ref %>% 
 	mutate(DEAD = TRIALS-SURV)
 
 ref.m <- glmer(cbind(SURV,DEAD) ~ DORMANCY.CLASS * PACKET + (1|SPECIES),
-						data = ref, family = binomial
+						data = ref, family = binomial,
+						       control = glmerControl(optimizer = "bobyqa",
+                                      optCtrl = list(maxfun = 2e5))
 )
 
 r.squaredGLMM(ref.m) # Fixed effects 28-29% Random effects 56-59%
@@ -55,278 +61,494 @@ ref.anova.df <-as.data.frame(Anova(ref.m))
 ref.m.sum <- broom::tidy(ref.m, conf.int=TRUE)
 ref.means <- tidy(emmeans(ref.m, ~ DORMANCY.CLASS * PACKET, type = "response"))
 
-## --------------- CALCULATE THE EFFECT SIZE -----------------------------------
+## --------------- CALCULATE THE ODDS RATIO ------------------------------------
 
-surv.means$odds.ratio <- NA
+colnames(surv.means)[4] <- "DORMANCY.CLASS"
 
-for (i in 1:nrow(surv.means)){
-	if(surv.means$DORMANCY.CLASS[i] == "No dormancy" & surv.means$PACKET[i] == "Bank\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-																			 (ref.means[1,3]/(1-ref.means[1,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "No dormancy" & surv.means$PACKET[i] == "Bank\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[1,3]/(1-ref.means[1,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "No dormancy" & surv.means$PACKET[i] == "Rain\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[4,3]/(1-ref.means[4,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "No dormancy" & surv.means$PACKET[i] == "Rain\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[4,3]/(1-ref.means[4,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physiological dormancy" & surv.means$PACKET[i] == "Bank\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[3,3]/(1-ref.means[3,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physiological dormancy" & surv.means$PACKET[i] == "Bank\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[3,3]/(1-ref.means[3,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physiological dormancy" & surv.means$PACKET[i] == "Rain\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[6,3]/(1-ref.means[6,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physiological dormancy" & surv.means$PACKET[i] == "Rain\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[6,3]/(1-ref.means[6,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physical dormancy" & surv.means$PACKET[i] == "Bank\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[2,3]/(1-ref.means[2,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physical dormancy" & surv.means$PACKET[i] == "Bank\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[2,3]/(1-ref.means[2,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physical dormancy" & surv.means$PACKET[i] == "Rain\nadjacent"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[5,3]/(1-ref.means[5,3]))
-	}
-	if(surv.means$DORMANCY.CLASS[i] == "Physical dormancy" & surv.means$PACKET[i] == "Rain\nproximal"){
-		surv.means$odds.ratio[i] <- (surv.means$prob[i]/(1-surv.means$prob[i]))/
-			(ref.means[5,3]/(1-ref.means[5,3]))
-	}
-}
+ref.means <- ref.means %>%
+  mutate(DORMANCY.CLASS = fct_recode(DORMANCY.CLASS,
+    "No dormancy"          = "ND",
+    "Physiological dormancy" = "PD",
+    "Physical dormancy"      = "PY"
+  ))
+
+ref.means <- ref.means |>
+	dplyr::select(DORMANCY.CLASS, PACKET, prob)
+
+
+# Make a helper column for merging
+surv.means <- surv.means %>%
+  mutate(TMP.PACKET = case_when(
+    grepl("Bank", PACKET, ignore.case = TRUE) ~ "B",
+    grepl("Rain", PACKET, ignore.case = TRUE) ~ "A",
+    TRUE ~ NA_character_
+  ))
+
+# Rename columns before merge
+colnames(ref.means)[2] <- 'TMP.PACKET'
+colnames(ref.means)[3] <- 'ref.prob'
+
+surv.means <- merge(surv.means, ref.means)
+
+# Calculate odds ratio
+surv.means <- surv.means |>
+  mutate(odds.ratio = (prob / (1 - prob)) / (ref.prob / (1 - ref.prob)))
 
 # I created a list accidentally?
 surv.means <- as.data.frame(lapply(surv.means, unlist))
 
-# Calculate means
-
-# No dormancy adjacent seed rain
-no.adj.sr <- c(25.02352446, 11.55928621, 24.65441111, 30.96714611, 10.22572651, 14.65900771)
-no.adj.sr <- c(7.200174, 3.326025, 7.093967, 8.910369, 2.942312, 4.217927)
-mean(no.adj.sr) # 5.615129
-sd(no.adj.sr) # 2.445161
-rm(no.adj.sr)
-
-# Physical dormancy adjacent seed rain
-physical.adj.sr <- c(9.08933025888222, 15.54913252011193, 1.46905391214297,
-										 7.79667766888951, 3.48874983345884, 6.84072017107113)
-physical.adj.sr <- c(7.205503, 12.326466, 1.164582, 6.180761, 2.765682, 5.422933)
-mean(physical.adj.sr) # 5.844321
-sd(physical.adj.sr) # 3.886895
-rm(physical.adj.sr)
-
-# Physiological dormancy adjacent seed rain
-physio.adj.sr <- c(0.00000004957374, 1.01785862634997, 1.43272224293065,
-									 3.66333215010267, 1.49825467015096, 3.12432952020917)
-physio.adj.sr <- c(0.00000004100855, 0.84199641818905, 1.18518128704508,
-									 3.03039387707926, 1.23939124073247, 2.58451831831697)
-mean(physio.adj.sr) # 1.480247
-sd(physio.adj.sr) # 1.128356
-rm(physio.adj.sr)
-
-# Physical dormancy proximal seed rain
-physical.prox.sr <- c(2.68154321275626, 0.66075096144833, 0.00000009499801,
-											2.22983793321620, 2.58442033329212, 2.46808951940911)
-physical.prox.sr <- c(2.12577455715587, 0.52380568613675, 0.00000007530901,
-											1.76768836782600, 2.04878107627499, 1.95656064022558)
-mean(physical.prox.sr) # 1.403768
-sd(physical.prox.sr) # 0.9077721
-rm(physical.prox.sr)
-
-# No dormancy proximal seed rain
-no.prox.sr <- c(0.443977901195735, 0.089941209157076, 0.114193970009462,
-								19.634372952718888, 2.516258567472764, 0.475802799098533)
-no.prox.sr <- c(0.12774852, 0.02587934, 0.03285774,
-								5.64952014, 0.72401871, 0.13690570)
-mean(no.prox.sr) # 1.116155
-sd(no.prox.sr) # 2.236215
-rm(no.prox.sr)
-
-# Physiological dormancy proximal seed rain
-physio.prox.sr <- c(0.00000004322688, 0.42989882424764, 0.00000005552670,
-										1.28346106965481, 0.11240600295322, 0.00000006451293)
-physio.prox.sr <- c(0.00000003575828, 0.00000004593298, 0.09298486982319,
-										0.35562234364337, 1.06170895992669, 0.00000005336660)
-mean(physio.prox.sr) # 0.2517194
-sd(physio.prox.sr) # 0.4200389
-rm(physio.prox.sr)
-
-surv.means |>
-  filter((PACKET == "Bank\nadjacent" | PACKET == "Bank\nproximal")
-  			 & DORMANCY.CLASS == "Physical dormancy") |>
-  summarise(mean_odds_ratio = mean(odds.ratio),
-  					std.dev = sd(odds.ratio))
-
+## --------------- MEDIAN VALUES -----------------------------------------------
 
 surv.means$BIOMASS <- as_factor(surv.means$BIOMASS)
 levels(surv.means$BIOMASS)
 surv.means$PACKET <- as_factor(surv.means$PACKET)
 levels(surv.means$PACKET)
-tmp <- surv.means |>
-  filter(BIOMASS == "Low biomass" & PACKET == "Rain\nadjacent") |>
-	group_by(DORMANCY.CLASS)
-  summarise(mean_odds_ratio = mean(odds.ratio),
-  					std.dev = sd(odds.ratio))
 
-  
-  
-tmp.means <- surv.means |>
-	filter(PACKET == "Bank\nproximal" | PACKET == "Bank\nadjacent") |>
-	group_by(DORMANCY.CLASS) |>
-	summarize(Mean = mean(odds.ratio),
-						std.dev = sd(odds.ratio))
-rm(tmp.means)	
+# Reorder factor levels
+colnames(surv.means)[4] <- 'EXCLUSION'
+surv.means$EXCLUSION <- factor(surv.means$EXCLUSION, 
+														 levels = c("Open", "Scavenger exclusion",
+														 					 "Herbivore exclusion"))
 
-for(i in 1:nrow(surv.means)){
- 	if(surv.means$odds.ratio[i] >= 10){
- 		surv.means$odds.ratio[i] <- 10
- 	}
+geometric_mean <- function(x) {
+  # Add a small constant to avoid log(0)
+  x[x == 0] <- 1e-9 
+  exp(mean(log(x)))
 }
+
+geometric_mean_alt <- function(x) {
+  # Handle zero values to avoid product becoming zero
+  x[x == 0] <- 1e-9 
+  # Calculate the product of all numbers
+  product_of_x <- prod(x)
+  # Count the number of values
+  n <- length(x)
+  # Take the nth root of the product
+  product_of_x^(1/n)
+}
+
+# Physical dormancy
+surv.means |>
+  filter(DORMANCY.CLASS == "Physical dormancy", EXCLUSION == "Scavenger exclusion") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+  
+# No dormancy with scavenger exclusion
+surv.means |>
+  filter(DORMANCY.CLASS == "No dormancy", EXCLUSION == "Scavenger exclusion") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+# Physiological dormancy scavenger
+surv.means |>
+  filter(DORMANCY.CLASS == "Physiological dormancy", EXCLUSION == "Scavenger exclusion") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+# Overall seed rain and seed bank
+surv.means |>
+  filter(TMP.PACKET == "A") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(TMP.PACKET == "B") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+# Seed rain adjacent
+surv.means |>
+  filter(TMP.PACKET == "A", PACKET == "Rain\nadjacent") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(TMP.PACKET == "A", PACKET == "Rain\nadjacent", EXCLUSION %in% c("Open", "Herbivore exclusion")) |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+# Seed rain contact
+surv.means |>
+  filter(TMP.PACKET == "A", PACKET == "Rain\nproximal") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(TMP.PACKET == "A", PACKET == "Rain\nproximal", EXCLUSION %in% c("Open", "Herbivore exclusion")) |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+# Scavenger access seed rain adjacent compared to bank
+surv.means |>
+  filter(TMP.PACKET == "A", DORMANCY.CLASS == "No dormancy", PACKET == "Rain\nadjacent", EXCLUSION %in% c("Open", "Herbivore exclusion")) |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "No dormancy", TMP.PACKET == "A") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "No dormancy", TMP.PACKET == "B") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+surv.means |>
+  filter(TMP.PACKET == "A", DORMANCY.CLASS == "Physical dormancy", PACKET == "Rain\nadjacent", EXCLUSION %in% c("Open", "Herbivore exclusion")) |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "Physical dormancy", TMP.PACKET == "A") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "Physical dormancy", TMP.PACKET == "B") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+
+surv.means |>
+  filter(TMP.PACKET == "A", DORMANCY.CLASS == "Physiological dormancy", PACKET == "Rain\nadjacent", EXCLUSION %in% c("Open", "Herbivore exclusion")) |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "Physiological dormancy", TMP.PACKET == "A") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
+surv.means |>
+  filter(DORMANCY.CLASS == "Physiological dormancy", TMP.PACKET == "B") |>
+  summarise(median_or = median(odds.ratio),
+  					gm = geometric_mean(odds.ratio),
+  					min = min(odds.ratio),
+  					max = max(odds.ratio))
 
 ## --------------- FILTER DATA AND CREATE HEAT MAPS ----------------------------
 library(forcats)
+library(dplyr)
 
-# Reorder factor levels
-surv.means$BIOMASS <- factor(surv.means$BIOMASS, 
-														 levels = c("Single carcass", "MMME"))
+# Define the absolute min and max
+cap_limits <- c(0.1, 10)
 
-# Reorder factor levels
-surv.means$EXCLUSION <- factor(surv.means$EXCLUSION, 
-														 levels = c("Open", "Scavenger",
-														 					 "Herbivore"))
-# ND
-surv.mean.nd.rain <- surv.means %>% 
-	filter((DORMANCY.CLASS == "No dormancy" & PACKET == "Rain\nadjacent") |
-				 	(DORMANCY.CLASS == "No dormancy" & PACKET == "Rain\nproximal"))
+# No Dormancy seed rain
+surv.mean.nd.rain <- surv.means %>%
+  filter((DORMANCY.CLASS == "No dormancy" & PACKET == "Rain\nadjacent") |
+           (DORMANCY.CLASS == "No dormancy" & PACKET == "Rain\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-surv.mean.nd.rain <- as.data.frame(lapply(surv.mean.nd.rain, unlist))
+p1 <- ggplot(surv.mean.nd.rain, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-library(grid)
-p1 <- ggplot(surv.mean.nd.rain, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("No dormancy seed rain")
+# No dormancy seed bank
+surv.mean.nd.bank <- surv.means %>%
+  filter((DORMANCY.CLASS == "No dormancy" & PACKET == "Bank\nadjacent") |
+           (DORMANCY.CLASS == "No dormancy" & PACKET == "Bank\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-surv.mean.nd.bank <- surv.means %>% 
-	filter((DORMANCY.CLASS == "No dormancy" & PACKET == "Bank\nadjacent") |
-				 	(DORMANCY.CLASS == "No dormancy" & PACKET == "Bank\nproximal"))
+p2 <- ggplot(surv.mean.nd.bank, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-surv.mean.nd.bank <- as.data.frame(lapply(surv.mean.nd.bank, unlist))
+# Physiological dormancy seed rain
+surv.mean.pd.rain <- surv.means %>%
+  filter((DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Rain\nadjacent") |
+           (DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Rain\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-p2 <- ggplot(surv.mean.nd.bank, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("No dormancy seed bank")
+p3 <- ggplot(surv.mean.pd.rain, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-# PD
+# Physiological dormancy seed bank
+surv.mean.pd.bank <- surv.means %>%
+  filter((DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Bank\nadjacent") |
+           (DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Bank\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-surv.mean.pd.rain <- surv.means %>% 
-	filter((DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Rain\nadjacent") |
-				 	(DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Rain\nproximal"))
+p4 <- ggplot(surv.mean.pd.bank, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-surv.mean.pd.rain <- as.data.frame(lapply(surv.mean.pd.rain, unlist))
+# Physical dormancy seed rain
+surv.mean.py.rain <- surv.means %>%
+  filter((DORMANCY.CLASS == "Physical dormancy" & PACKET == "Rain\nadjacent") |
+           (DORMANCY.CLASS == "Physical dormancy" & PACKET == "Rain\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-p3 <- ggplot(surv.mean.pd.rain, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("Physiological dormancy seed rain")
+p5 <- ggplot(surv.mean.py.rain, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-surv.mean.pd.bank <- surv.means %>% 
-	filter((DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Bank\nadjacent") |
-				 	(DORMANCY.CLASS == "Physiological dormancy" & PACKET == "Bank\nproximal"))
+# Physical dormancy seed bank
+surv.mean.py.bank <- surv.means %>%
+  filter((DORMANCY.CLASS == "Physical dormancy" & PACKET == "Bank\nadjacent") |
+           (DORMANCY.CLASS == "Physical dormancy" & PACKET == "Bank\nproximal")) %>%
+  as.data.frame() %>%
+  lapply(unlist) %>%
+  as.data.frame() %>%
+  mutate(
+    or_label = if_else(
+      odds.ratio < cap_limits[1] | odds.ratio > cap_limits[2],
+      sprintf("%.2e", odds.ratio),
+      NA_character_
+    ),
+    text_color = if_else(odds.ratio < 1, "white", "black")
+  )
 
-surv.mean.pd.bank <- as.data.frame(lapply(surv.mean.pd.bank, unlist))
+p6 <- ggplot(surv.mean.py.bank, aes(x = EXCLUSION, y = BIOMASS)) +
+  geom_tile(mapping = aes(fill = odds.ratio), color = "white", size = 0.5) +
+  geom_text(aes(label = or_label, color = text_color), size = 3.5, fontface = "bold") +
+  scale_color_identity() +
+  scale_fill_gradientn(
+    colors = c("#440154", "#3B528B", "#21908C", "#5DC863", "#FDE725"),
+    values = scales::rescale(c(0.1, sqrt(0.1*1), 1.0, sqrt(1*10), 10)),
+    trans = "log10",
+    limits = cap_limits,
+    oob = scales::squish
+  ) +
+  theme_classic() +
+  facet_grid(PACKET ~ ., space = "free_x", scales = "free_y") +
+  theme(
+    strip.text = element_blank(),
+    panel.spacing = unit(0, "cm"),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line = element_blank(),
+    legend.position = "none",
+    plot.margin = margin(1, 1, 1, 1, "pt")
+  )
 
-p4 <- ggplot(surv.mean.pd.bank, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("Physiological dormancy seed bank")
-
-# PY
-
-surv.mean.py.rain <- surv.means %>% 
-	filter((DORMANCY.CLASS == "Physical dormancy" & PACKET == "Rain\nadjacent") |
-				 	(DORMANCY.CLASS == "Physical dormancy" & PACKET == "Rain\nproximal"))
-
-surv.mean.py.rain <- as.data.frame(lapply(surv.mean.py.rain, unlist))
-
-p5 <- ggplot(surv.mean.py.rain, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("Physical dormancy seed rain")
-
-surv.mean.py.bank <- surv.means %>% 
-	filter((DORMANCY.CLASS == "Physical dormancy" & PACKET == "Bank\nadjacent") |
-				 	(DORMANCY.CLASS == "Physical dormancy" & PACKET == "Bank\nproximal"))
-
-surv.mean.py.bank <- as.data.frame(lapply(surv.mean.py.bank, unlist))
-
-p6 <- ggplot(surv.mean.py.bank, aes(x = EXCLUSION, y = BIOMASS))+
-	geom_tile(mapping = aes(fill = odds.ratio, width = 0.9, height = 0.9))+
-	scale_fill_viridis_c(limits = c(0, 10))+
-	theme_classic() + 
-	facet_grid(PACKET ~., space = "free_x", scales = "free_y", switch = "y")+
-	theme(strip.placement = "outside",
-				strip.background = element_rect(fill=NA,colour=NA),
-				panel.spacing=unit(0,"cm"), axis.title.y = element_blank()) +
-	annotation_custom(grob = linesGrob(), xmin = -0.75, xmax = -0.75, ymin = -3.25, ymax = -0.75) +
-	coord_cartesian(clip="off") +
-	ggtitle("Physical dormancy seed bank")
-
-
+# Combine Plots
 library(patchwork)
-combined <- (p1 + p2 + p3 + p4 + p5 + p6)
-combined + plot_layout(guides = "collect")
+combined <- (p1 / p2) | (p5 / p6) | (p3 / p4)
+combined
 
-ggsave("Output/Seed-survival.png",
-			 width = 14, height = 8, dpi = 300, units = 'in')
+## --------------- MEDIAN COMPARISONS ------------------------------------------
+
+# Filter the data for only the "Scavenger exclusion" treatments
+scavenger_exclusion_data <- surv.means %>%
+  filter(TREATMENT == "Scavenger exclusion")
+
+# Group by dormancy class and calculate the median odds ratio
+results <- scavenger_exclusion_data %>%
+  group_by(DORMANCY.CLASS) %>%
+  summarise(
+    median_odds_ratio = median(odds.ratio)
+  )
+
+# Print the final results table
+print(results)
+
+
+# Define the grouping variables for each comparison
+comparison_groups <- list(
+  "Overall Seed Rain" = quote(TMP.PACKET == 'A'),
+  "Overall Seed Bank" = quote(TMP.PACKET == 'B'),
+  "Seed Rain - Adjacent" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent'),
+  "Seed Rain - Adjacent with Scavengers" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent' & EXCLUSION %in% c('Open', 'Herbivore exclusion')),
+  "Seed Rain - Contact" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nproximal'),
+  "Seed Rain - Contact with Scavengers" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nproximal' & EXCLUSION %in% c('Open', 'Herbivore exclusion')),
+  "Seed Rain - Adjacent, Scavengers (ND only)" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent' & EXCLUSION %in% c('Open', 'Herbivore exclusion') & DORMANCY.CLASS == 'No dormancy'),
+  "Seed Rain - Physical Dormancy" = quote(TMP.PACKET == 'A' & DORMANCY.CLASS == 'Physical dormancy'),
+  "Seed Rain - Physiological Dormancy" = quote(TMP.PACKET == 'A' & DORMANCY.CLASS == 'Physiological dormancy'),
+  "Seed Bank - Physical Dormancy" = quote(TMP.PACKET == 'B' & DORMANCY.CLASS == 'Physical dormancy'),
+  "Seed Bank - Physiological Dormancy" = quote(TMP.PACKET == 'B' & DORMANCY.CLASS == 'Physiological dormancy')
+)
+
+# Function to calculate median OR for a given filter condition
+calculate_median <- function(data, filter_condition) {
+  data %>%
+    filter(!!filter_condition) %>%
+    summarise(median_or = median(odds.ratio, na.rm = TRUE)) %>%
+    pull(median_or)
+}
+
+# Apply the function to each group and store the results
+results <- purrr::map_dfr(comparison_groups, ~{
+  tibble(median_or = calculate_median(surv.means, .x))
+}, .id = "Comparison")
+
+# Print the final table
+print(results)
+
+

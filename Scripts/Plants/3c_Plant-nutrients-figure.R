@@ -35,6 +35,11 @@ means <- plant %>%
 
 ## --------------- ADD NUDGE FACTOR --------------------------------------------
 
+means$DATE <- mdy(means$DATE)
+means$DATE <- as.factor(means$DATE)
+means$DATE <- factor(means$DATE, c("2021-05-04",
+																	 "2020-08-01"))
+
 # Initialize column for Nudge factor (to separate points)
 means["Nudge"] <- NA
 
@@ -45,10 +50,6 @@ for (i in 1:nrow(means)) {
 		means$Nudge[i] <- -0.2
 	}
 }
-
-means$DATE <- as.factor(means$DATE)
-means$DATE <- factor(means$DATE, c("2021-05-04",
-																	 "2020-08-01"))
 
 means$TREATMENT <- paste(means$BIOMASS, means$EXCLUSION)
 
@@ -61,8 +62,9 @@ means <- as.data.frame(means)
 means$BIOMASS <- factor(x = means$BIOMASS, levels=c('Single carcass', 'MME'),
 												ordered = TRUE)
 means$EXCLUSION <- factor(means$EXCLUSION, levels=c('Open', 
-																								'Herbivore',
-																								'Scavenger'))
+																								'Scavenger',
+																								'Herbivore'),
+													ordered = TRUE)
 
 ggplot(means, aes(x = Mean.es, y = DATE))+
 	geom_errorbar(aes(xmin = Mean.es - se, xmax = Mean.es + se),

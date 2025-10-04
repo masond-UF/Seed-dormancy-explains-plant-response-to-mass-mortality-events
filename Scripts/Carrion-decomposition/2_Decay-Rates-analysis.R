@@ -13,7 +13,7 @@
 # Also has both a categorical (treatment) and numerical (ADD) affecting variables
 
 #Clear
-rm(list=ls())
+rm(list=ls()) 
 
 #Library downloads
 library(dplyr)
@@ -39,7 +39,7 @@ hist(early$DAY.REACHED) # All the same?
 shapiro.test(early$DAY.REACHED)
 # Non-normal
 
-early.model <- glmer(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=early,family=poisson)
+early.model <- lm(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=early)
 Anova(early.model, type =)
 summary(early.model)
 #No significance, all one day so wouldn't run
@@ -58,6 +58,10 @@ shapiro.test(advanced$DAY.REACHED)
 # Non-normal
 
 advanced.model <- glm(DAY.REACHED~BIOMASS*EXCLUSION+ SITE,data=advanced,family=poisson)
+
+library(performance)
+check_overdispersion(advanced.model)
+
 Anova(advanced.model, type = 3)
 summary(advanced.model)
 
@@ -78,6 +82,10 @@ shapiro.test(skeletal$DAY.REACHED)
 # Non-normal
 
 skeletal.model <- glm(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=skeletal,family=poisson)
+check_overdispersion(skeletal.model)
+
+skeletal.model <- glm.nb(DAY.REACHED~BIOMASS*EXCLUSION+SITE,data=skeletal)
+
 Anova(skeletal.model, type = 3)
 summary(skeletal.model)
 
