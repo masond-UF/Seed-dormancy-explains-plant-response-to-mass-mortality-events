@@ -35,7 +35,6 @@ seed.surv <- read.csv("Clean-data/Seeds/Seed-survival.csv")
 # Final status is 0 if not 1
 seed.surv$FINAL.STATUS[is.na(seed.surv$FINAL.STATUS)] <- 0
 
-
 ## --------------- GET ESTIMATED MARGINAL MEANS FOR REF ------------------------
 
 ref <- seed.surv %>% 
@@ -518,7 +517,6 @@ results <- scavenger_exclusion_data %>%
 
 # Print the final results table
 print(results)
-
 
 # Define the grouping variables for each comparison
 comparison_groups <- list(

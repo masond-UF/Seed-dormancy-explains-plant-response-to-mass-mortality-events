@@ -10,6 +10,7 @@
 ## Purpose of script: This will be a script for visualizing the seed survival data
 
 ## --------------- SET—UP WORKSPACE --------------------------------------------
+
 library(tidyverse)
 library(tidylog)
 library(lubridate)
@@ -22,6 +23,7 @@ library(broom.mixed)
 library(MuMIn)
 library(grid)
 library(tidyr)
+
 options(scipen=999)
 
 rm(list=ls())
@@ -37,7 +39,6 @@ survival_probs <- seed.surv |>
     total = n(),
     .groups = "drop"
   ) |>
-  # Add a small constant to prevent probabilities of 0 or 1
   mutate(
     prob = (survived + 0.5) / (total + 1)
   )
@@ -72,8 +73,7 @@ block.specific.ors <- block.specific.data |>
   )
 
 final.mean.or <- block.specific.ors |>
-  # log transform, average, exponentiate
-  mutate(log_or = log(odds_ratio)) |>
+  mutate(log_or = log(odds_ratio)) |> # log transform, average, exponentiate
   group_by(BIOMASS, EXCLUSION, PACKET, DORMANCY.CLASS) |>
   dplyr::summarize(
     mean_log_or = mean(log_or, na.rm = TRUE),
@@ -91,16 +91,13 @@ final.mean.or <- block.specific.ors |>
 final.mean.or <- final.mean.or |>
   mutate(BIOMASS = forcats::fct_relevel(BIOMASS, "MME", "Single carcass"))
 
-
 # Reorder factor levels
 final.mean.or$EXCLUSION <- factor(final.mean.or$EXCLUSION, 
 														 levels = c("Open", "Scavenger",
 														 					 "Herbivore"))
 
 final.mean.or <- final.mean.or |>
-  # Rename mean_odds_ratio to geometric_mean_or
   dplyr::rename(geometric_mean_or = mean_odds_ratio) |>
-  # Create Timing and Location columns from PACKET
   mutate(
     Timing = case_when(
       substr(PACKET, 1, 1) == "A" ~ "Seed rain",
@@ -110,12 +107,10 @@ final.mean.or <- final.mean.or |>
       substr(PACKET, 2, 2) == "A" ~ "Adjacent",
       substr(PACKET, 2, 2) %in% c("T", "U") ~ "Contact"
     ),
-    # Rename BIOMASS levels
     BIOMASS = dplyr::recode(BIOMASS,
       "MME" = "Mass mortality",
       "Single carcass" = "Single carcass"
     ),
-    # Expand DORMANCY.CLASS to full names
     DORMANCY.CLASS = dplyr::recode(DORMANCY.CLASS,
       "ND" = "No dormancy",
       "PD" = "Physiological dormancy",
