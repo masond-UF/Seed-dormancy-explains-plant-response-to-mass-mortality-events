@@ -505,18 +505,12 @@ combined
 ## --------------- MEDIAN COMPARISONS ------------------------------------------
 
 # Filter the data for only the "Scavenger exclusion" treatments
-scavenger_exclusion_data <- surv.means %>%
-  filter(TREATMENT == "Scavenger exclusion")
-
-# Group by dormancy class and calculate the median odds ratio
-results <- scavenger_exclusion_data %>%
+surv.means |>
+  filter(EXCLUSION == "Scavenger exclusion") |>
   group_by(DORMANCY.CLASS) %>%
   summarise(
     median_odds_ratio = median(odds.ratio)
   )
-
-# Print the final results table
-print(results)
 
 # Define the grouping variables for each comparison
 comparison_groups <- list(
