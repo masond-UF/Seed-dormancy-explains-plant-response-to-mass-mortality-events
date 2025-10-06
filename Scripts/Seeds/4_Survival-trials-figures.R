@@ -502,45 +502,318 @@ library(patchwork)
 combined <- (p1 / p2) | (p5 / p6) | (p3 / p4)
 combined
 
-## --------------- MEDIAN COMPARISONS ------------------------------------------
+## --------------- MEDIAN & GM COMPARISONS -------------------------------------
 
 # Filter the data for only the "Scavenger exclusion" treatments
 surv.means |>
   filter(EXCLUSION == "Scavenger exclusion") |>
   group_by(DORMANCY.CLASS) %>%
   summarise(
-    median_odds_ratio = median(odds.ratio)
+    median_odds_ratio = median(odds.ratio),
+    mean_log_odds_ratio = mean(log(odds.ratio), na.rm = TRUE),
+    geometric_mean_odds_ratio = exp(mean(log(odds.ratio), na.rm = TRUE))
+ )
+
+# Scavenger interaction with dormancy class and biomass
+surv.means |>
+	filter(DORMANCY.CLASS %in% c("No dormancy", "Physical dormancy")) |>
+  mutate(scavenger_activity = if_else(
+    EXCLUSION == "Scavenger exclusion", 
+    "Without Scavengers", 
+    "With Scavengers"
+  )) |>
+    group_by(DORMANCY.CLASS, BIOMASS, scavenger_activity) |>
+    summarise(
+    median_odds_ratio = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_odds_ratio = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop" # Drop grouping after summarising
   )
 
-# Define the grouping variables for each comparison
+
+# Create comparisons
 comparison_groups <- list(
   "Overall Seed Rain" = quote(TMP.PACKET == 'A'),
   "Overall Seed Bank" = quote(TMP.PACKET == 'B'),
   "Seed Rain - Adjacent" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent'),
   "Seed Rain - Adjacent with Scavengers" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent' & EXCLUSION %in% c('Open', 'Herbivore exclusion')),
   "Seed Rain - Contact" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nproximal'),
-  "Seed Rain - Contact with Scavengers" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nproximal' & EXCLUSION %in% c('Open', 'Herbivore exclusion')),
+  "Seed Rain - Adjacent, Scavengers (PY only)" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent' & EXCLUSION %in% c('Open', 'Herbivore exclusion') & DORMANCY.CLASS == 'Physical dormancy'),
   "Seed Rain - Adjacent, Scavengers (ND only)" = quote(TMP.PACKET == 'A' & PACKET == 'Rain\nadjacent' & EXCLUSION %in% c('Open', 'Herbivore exclusion') & DORMANCY.CLASS == 'No dormancy'),
-  "Seed Rain - Physical Dormancy" = quote(TMP.PACKET == 'A' & DORMANCY.CLASS == 'Physical dormancy'),
-  "Seed Rain - Physiological Dormancy" = quote(TMP.PACKET == 'A' & DORMANCY.CLASS == 'Physiological dormancy'),
-  "Seed Bank - Physical Dormancy" = quote(TMP.PACKET == 'B' & DORMANCY.CLASS == 'Physical dormancy'),
   "Seed Bank - Physiological Dormancy" = quote(TMP.PACKET == 'B' & DORMANCY.CLASS == 'Physiological dormancy')
 )
 
-# Function to calculate median OR for a given filter condition
-calculate_median <- function(data, filter_condition) {
-  data %>%
-    filter(!!filter_condition) %>%
-    summarise(median_or = median(odds.ratio, na.rm = TRUE)) %>%
-    pull(median_or)
+# Function to calculate median OR and GM for a given filter condition
+calculate_summary <- function(data, filter_condition) {
+  data |>
+    filter(!!filter_condition) |>
+    summarise(median_or = median(odds.ratio, na.rm = TRUE),
+  						mean_log_odds_ratio = mean(log(odds.ratio), na.rm = TRUE),
+    					geometric_mean_odds_ratio = exp(mean(log(odds.ratio), na.rm = TRUE)))
 }
 
-# Apply the function to each group and store the results
-results <- purrr::map_dfr(comparison_groups, ~{
-  tibble(median_or = calculate_median(surv.means, .x))
-}, .id = "Comparison")
+# Apply the function to each group
+results <- purrr::map_dfr(comparison_groups,
+													~calculate_summary(surv.means, .x), .id = "Comparison")
 
-# Print the final table
-print(results)
+# Check
+results |>
+	 dplyr::select(Comparison,median_or, GM_or = geometric_mean_odds_ratio) |>
+	 mutate(across(where(is.numeric), ~round(., 2)))
 
+# 83 % claim
+seed.bank <- surv.means |>
+  filter(TMP.PACKET == "B") |>
+	filter(DORMANCY.CLASS == "No dormancy" | DORMANCY.CLASS == "Physical dormancy" )
 
+rows <- nrow(seed.bank)
+
+rows.less.1 <- seed.bank %>%
+  filter(odds.ratio < 1) %>%
+  nrow()
+
+(rows.less.1 / rows) * 100
+
+seed.bank <- surv.means |>
+  filter(TMP.PACKET == "B") |>
+	filter(DORMANCY.CLASS == "Physiological dormancy")
+
+rows <- nrow(seed.bank)
+
+rows.less.1 <- seed.bank %>%
+  filter(odds.ratio < 1) %>%
+  nrow()
+
+(rows.less.1 / rows) * 100
+
+surv.means |>
+  filter(TMP.PACKET == "B") |>
+	group_by(DORMANCY.CLASS) |>
+	summarise(
+    median_odds_ratio = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_odds_ratio = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop" # Drop grouping after summarising
+  )
+
+# Dormancy class
+surv.means |>
+  group_by(DORMANCY.CLASS) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE))
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = DORMANCY.CLASS, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.3), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  labs(
+    title = "Overall Seed Survival by Dormancy Class",
+    x = "Dormancy Class",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal()
+
+# Bank vs rain
+surv.means |>
+  group_by(TMP.PACKET) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE))
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = TMP.PACKET, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.3), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  labs(
+    title = "Overall Seed Survival: Seed Rain vs. Seed Bank",
+    x = "Timing of Arrival",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_x_discrete(labels = timing_labels) + 
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal()
+
+# Location
+surv.means |>
+  mutate(LOCATION = if_else(str_detect(PACKET, "adjacent"), "Adjacent", "Contact")) |>
+  group_by(LOCATION) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE))
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = LOCATION, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.3), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  labs(
+    title = "Overall Seed Survival: Adjacent vs. Contact",
+    x = "Location Relative to Carrion",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal()
+
+# Biomass
+surv.means |>
+  group_by(BIOMASS) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE))
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = BIOMASS, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.3), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  labs(
+    title = "Overall Seed Survival: MME vs. Single Carrion",
+    x = "Biomass Level",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal()
+
+# Dormancy class, exclusion
+surv.means |>
+  group_by(DORMANCY.CLASS, EXCLUSION) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = EXCLUSION, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.4), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  facet_wrap(~ DORMANCY.CLASS, scales = "free_y") +
+  labs(
+    title = "Seed Survival by Dormancy and Exclusion Treatment",
+    x = "Exclusion Treatment",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Combine open and herbivore
+surv.means |>
+  mutate(scavenger_activity = if_else(
+    EXCLUSION == "Scavenger exclusion", 
+    "Without Scavengers", 
+    "With Scavengers"
+    )) |>
+  group_by(DORMANCY.CLASS, scavenger_activity) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = scavenger_activity, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.4), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  facet_wrap(~ DORMANCY.CLASS, scales = "free_y") +
+  labs(
+    title = "Effect of Scavenger Presence on Seed Survival by Dormancy Class",
+    x = "Scavenger Activity",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Combine open and herbivore add biomass
+surv.means |>
+  mutate(scavenger_activity = if_else(
+    EXCLUSION == "Scavenger exclusion", 
+    "Without Scavengers", 
+    "With Scavengers"
+    )) |>
+  group_by(DORMANCY.CLASS, scavenger_activity, BIOMASS) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = scavenger_activity, y = value, color = statistic)) +
+  geom_point(position = position_dodge(width = 0.4), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  facet_grid(rows = vars(DORMANCY.CLASS), cols = vars(BIOMASS), scales = "free_y") +
+  labs(
+    title = "Effect of Scavenger Presence by Dormancy and Biomass",
+    x = "Scavenger Activity",
+    y = "Odds Ratio (OR)",
+    color = "Statistic"
+  ) +
+  scale_color_manual(labels = c("Geometric Mean", "Median"), values = c("skyblue", "goldenrod")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# All factors
+surv.means |>
+  mutate(scavenger_activity = if_else(
+    EXCLUSION == "Scavenger exclusion", 
+    "Without Scavengers", 
+    "With Scavengers"
+    )) |>
+  group_by(DORMANCY.CLASS, scavenger_activity, BIOMASS, PACKET) |>
+  summarise(
+    median_or = median(odds.ratio, na.rm = TRUE),
+    geometric_mean_or = exp(mean(log(odds.ratio), na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  pivot_longer(
+    cols = c(median_or, geometric_mean_or),
+    names_to = "statistic",
+    values_to = "value"
+  ) |>
+  ggplot(aes(x = scavenger_activity, y = value, color = BIOMASS, shape = statistic)) +
+  geom_point(position = position_dodge(width = 0.6), size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  facet_grid(rows = vars(DORMANCY.CLASS), cols = vars(PACKET), scales = "free_y") +
+  labs(
+    title = "Seed Survival Across All Interacting Factors",
+    x = "Scavenger Activity",
+    y = "Odds Ratio (OR)",
+    color = "Biomass",
+    shape = "Statistic"
+  ) +
+  scale_color_manual(values = c("High biomass" = "black", "Low biomass" = "grey70")) +
+  scale_shape_manual(labels = c("Geometric Mean", "Median"), values = c(16, 17)) + # Circle and Triangle
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        strip.text = element_text(size = 8)) # Adjust facet label size
