@@ -86,6 +86,10 @@ nrow(model.frame(m1))   # how many obs used in model
 nrow(seed.surv)         # how many in original data
 
 sim <- simulateResiduals(fittedModel = m1, plot = TRUE)
+
+check_overdispersion(m1)
+vif(m1)
+
 ## --------------- SUMMARY COMPARISONS -----------------------------------------
 
 # Value range

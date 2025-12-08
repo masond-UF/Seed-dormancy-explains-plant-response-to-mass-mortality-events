@@ -40,18 +40,38 @@ colnames(dormancy.col)[7] <- "DORMANCY.CLASS"
 
 ## --------------- COLONIZATION MODEL ------------------------------------------
 
+dormancy.col$SITE <- as_factor(dormancy.col$SITE)
 dormancy.col$TRANSECT <- as_factor(dormancy.col$TRANSECT)
 dormancy.col$DISTANCE <- as_factor(dormancy.col$DISTANCE)
-dormancy.col$TRANSECT.ID <- factor(paste(dormancy.col$SITE, dormancy.col$TRANSECT, sep = "_"))
 
+dormancy.col$TRANSECT.ID <- factor(paste(dormancy.col$SITE, dormancy.col$TRANSECT, sep = "_"))
 dormancy.col$PlotID      <- paste(dormancy.col$SITE, dormancy.col$TREATMENT, sep = "_")
+class(dormancy.col$PlotID)
 dormancy.col$TransectID  <- paste(dormancy.col$PlotID, dormancy.col$TRANSECT, sep = "_")
+class(dormancy.col$TransectID)
 dormancy.col$PointID     <- paste(dormancy.col$TransectID, dormancy.col$DISTANCE, sep = "_")
+class(dormancy.col$PointID)
+
+str(dormancy.col)
 
 # Random effects provide no value
-# mod <- glmer(COLONIZED.END ~ DORMANCY * TREATMENT +
-#               (1 | SITE/PlotID/TransectID/PointID),
-#               data = df, family = binomial)
+mod <- glmer(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT +
+               (1 | SITE/PlotID/TransectID/PointID),
+               data = dormancy.col, family = binomial)
+
+mod <- glmer(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT +
+               (1 | SITE/PlotID/TransectID),
+               data = dormancy.col, family = binomial)
+
+mod <- glmer(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT +
+               (1 | SITE/PlotID),
+               data = dormancy.col, family = binomial)
+
+mod <- glmer(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT +
+               (1 | SITE),
+               data = dormancy.col, family = binomial)
+
+rm(mod)
 
 col.ever.m <- glm(COLONIZED.END ~ DORMANCY.CLASS * TREATMENT,
   data = dormancy.col, family = binomial

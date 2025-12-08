@@ -211,7 +211,7 @@ p2 <- ggplot(inf, aes(x = MH, y = VALUE, fill = MH))+
 	geom_point(aes(x = MH, y = smean, size = 5))+
 	theme_bw()+
 	xlab('')+
-	ylab('Inflorescences')+
+	ylab('Flower heads')+
 	theme(legend.position = 'none',
 				panel.grid.major.x =  element_blank(),
 				panel.grid.minor.y =  element_blank(),

@@ -191,7 +191,7 @@ spec.func.list <- rbind(
   data.frame(SPECIES = c("AGHE4"), GENUS.SPECIES = c("Agalinis heterophylla")),
   data.frame(SPECIES = c("ANDRO2"), GENUS.SPECIES = c("Andropogon sp")),
   data.frame(SPECIES = c("LEVI"), GENUS.SPECIES = c("Lepidium virginicum")),
-  data.frame(SPECIES = c("LOBEL"), GENUS.SPECIES = c("Lobelia sp")),
+  data.frame(SPECIES = c("LOBEL"), GENUS.SPECIES = c("Unknown plant")), # Mike Proctor said Lobelia is unknown
   data.frame(SPECIES = c("NIP"), GENUS.SPECIES = c("Lapsana communis")),
   data.frame(SPECIES = c("OENOT"), GENUS.SPECIES = c("Oenothera biennis")),
   data.frame(SPECIES = c("SACA"), GENUS.SPECIES = c("Sabatia campestris")),
@@ -396,9 +396,9 @@ for (i in 1:nrow(comb.transect)) {
 	if (comb.transect$GENUS.SPECIES[i] == "Cirsium texanum") {
 		comb.transect$DORMANCY.CLASS[i] <- "PD"
 	}
-	if (comb.transect$GENUS.SPECIES[i] == "Lobelia sp") {
-		comb.transect$DORMANCY.CLASS[i] <- "PD"
-	}
+	# if (comb.transect$GENUS.SPECIES[i] == "Lobelia sp") { Mike Proctor said no Lobelia
+	# 	comb.transect$DORMANCY.CLASS[i] <- "PD"
+	# }
 	if (comb.transect$GENUS.SPECIES[i] == "Dalea purpurea") {
 		comb.transect$DORMANCY.CLASS[i] <- "PY"
 	}
@@ -511,7 +511,7 @@ for (i in 1:nrow(comb.transect)){
 ## --------------- SUMMARIZE BY DORMANCY CLASS ---------------------------------
 
 # Save as date
-comb.transect$DATE <- as.DATE(comb.transect$DATE)
+comb.transect$DATE <- mdy(comb.transect$DATE)
 
 # Round the date
 comb.transect <- comb.transect %>% 
@@ -526,7 +526,7 @@ for(i in 1:nrow(comb.transect)){
 
 # Rearrange
 comb.transect <- comb.transect %>% 
-	dplyr::select(Rounded.date, SITE, TREATMENT, BIOMASS, EXCLUSION,
+	dplyr::select(ROUNDED.DATE, SITE, TREATMENT, BIOMASS, EXCLUSION,
 				 TRANSECT, DISTANCE, DORMANCY.CLASS, GENUS.SPECIES, PRESENT)
 
 # Summarize the data by dormancy class

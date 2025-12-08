@@ -81,6 +81,9 @@ herbivory.sum <- herbivory.sum %>%
   filter(FUNCTIONAL == "Herbivore")
 herbivory.sum <- as.data.frame(herbivory.sum)
 
+ggplot(herbivory.sum, aes(x = TREATMENT, y = Total.detections, color = SITE))+
+	geom_jitter()
+
 # Clear the decks
 rm(herbivory, herbivory.sum.wd)
 
@@ -128,6 +131,7 @@ Anova(m1)
 # Means
 library(emmeans)
 emmeans(m1, pairwise ~ TREATMENT, type = "response")
+emmeans(m1, pairwise ~ SITE, type = "response")
 
 decomp.means <- data.frame(
   TREATMENT = c("CH", "CO", "CS", "MH", "MO", "MS"),
@@ -217,6 +221,7 @@ Anova(m2)
 
 # Means
 options(scipen = 999)
+emmeans(m2, pairwise ~ SITE, type = "response")
 herb.means <- emmeans(m2, pairwise ~ TREATMENT, type = "response")
 herb.means <- as.data.frame(herb.means)
 herb.means <- herb.means[1:6, c(-2, -5)]
